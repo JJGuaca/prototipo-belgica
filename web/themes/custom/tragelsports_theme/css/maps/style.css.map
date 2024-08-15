@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss","style.css"],"names":[],"mappings":"AAGQ;EACI,eAAA;ACFZ","file":"../style.css","sourcesContent":["// This file can be used to import all other styles.\n.header, .footer{\n    .logo{\n        img{\n            max-width: 50px;\n        }\n    }\n}",".header .logo img, .footer .logo img {\n  max-width: 50px;\n}"]}
