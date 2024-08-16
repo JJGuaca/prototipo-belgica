@@ -1,4 +1,7 @@
 global-styling:
   css:
     theme:
-      css/style.css: {}
+      css/style.css: { }
+  js:
+    theme:
+      js/script.js: { }

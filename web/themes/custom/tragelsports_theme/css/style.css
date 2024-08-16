@@ -1,4 +1,2 @@
-.header .logo img, .footer .logo img {
-  max-width: 50px;
-}
-/*# sourceMappingURL=maps/style.css.map */
+.footer .logo img,.header .logo img{max-width:50px}.prueba{color:orange!important}
+/*# sourceMappingURL=style.css.map */

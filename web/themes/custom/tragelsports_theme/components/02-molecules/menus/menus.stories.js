@@ -22,3 +22,4 @@ export const inline = () => inlineMenu(inlineMenuData);
 export const main = () => mainMenu(mainMenuData);
 
 export const social = () => socialMenu(socialMenuData);
+

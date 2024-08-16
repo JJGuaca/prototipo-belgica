@@ -2,29 +2,29 @@
   "name": "tragelsports_theme",
   "version": "1.0.0",
   "description": "[Bootstrap 5](https://www.drupal.org/project/bootstrap5) subtheme.",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Jorge Guaca",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.1.0",
-    "bootstrap-icons": "^1.4.0"
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "node-sass": "^9.0.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "breakpoint-sass": "^3.0.0",
     "browser-sync": "^3.0.2",
-    "css-loader": "^7.1.2",
+    "cssnano": "^7.0.5",
     "del": "^7.1.0",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-cli": "^3.0.0",
+    "gulp-clean-css": "4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-connect-php": "^1.0.3",
     "gulp-html-replace": "^1.6.2",
     "gulp-load-plugins": "^2.0.8",
     "gulp-postcss": "^10.0.0",
@@ -35,13 +35,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "merge-stream": "^2.0.0",
-    "node-sass": "^9.0.0",
     "postcss-inline-svg": "^6.0.0",
     "postcss-pxtorem": "^6.1.0",
-    "sass": "^1.77.8",
-    "sass-loader": "^16.0.0",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4"
+    "sass": "^1.77.8"
   }
 }
