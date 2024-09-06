@@ -10,20 +10,35 @@
 
 {% set logo__attributes = {
   class: bem(logo__base_class, logo__modifiers, logo__blockname),
+  class:'col-4',
 } %}
 
-<div {{ add_attributes(logo__attributes) }}>
-  {% embed "@atoms/links/link/link.twig" with {
-    link_base_class: 'logo__link',
-    link_url: logo__url|default('/'),
-  } %}
-    {% block link_content %}
-      {% include "@atoms/images/image/responsive-image.twig" with {
-        output_image_tag: true,
-        image_src: './sites/default/files/logo.png',
-        image_alt: 'Logo',
-        responsive_image_blockname: 'logo',
+<div class="container-fluid headerprimario">
+  <div class="row">
+    <div {{ add_attributes(logo__attributes) }}>
+      {% embed "@atoms/links/link/link.twig" with {
+        link_base_class: 'logo__link',
+        link_url: logo__url|default('/'),
       } %}
-    {% endblock %}
-  {% endembed %}
+        {% block link_content %}
+          {% include "@atoms/images/image/responsive-image.twig" with {
+            output_image_tag: true,
+            image_src: './sites/default/files/logo.png',
+            image_alt: 'Logo',
+            responsive_image_blockname: 'logo',
+          } %}
+        {% endblock %}
+      {% endembed %}
+    </div>
+    <div class="col-4">
+        <ul class="nav nav-buttons" role="menu">
+          <li class="nav-item" role="menuitem">
+              <a href="/contact" class="nav-link btn btn-primary" aria-haspopup="true" data-drupal-link-query="{&quot;radius&quot;:&quot;25&quot;}">Boek een evenement</a>
+          </li>
+          <li class="nav-item" role="menuitem">
+              <a target="_blank" href="https://portal.nostium.com/reservering/pgzmzij0jxjg/tragelsport" class="nav-link btn btn-primary" aria-haspopup="true">reserveer een baan</a>
+          </li>
+        </ul>
+    </div>
+  </div>
 </div>

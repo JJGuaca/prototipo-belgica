@@ -1,53 +1,17 @@
 {{ attach_library('emulsify/main-menu') }}
 
-<nav class="navbar navbar-expand-lg bg-dark">
-  <a href="#" id="toggle-expand" class="toggle-expand">
-    <span class="toggle-expand__open">
-      {% include "@atoms/images/icons/_icon.twig" with {
-        icon__base_class: "icon",
-        icon__blockname: "toggle-expand",
-        icon__name: "menu",
-      } %}
-      <span class="toggle-expand__text">Main Menu</span>
-    </span>
-    <span class="toggle-expand__close">
-            {% include "@atoms/images/icons/_icon.twig" with {
-              icon__base_class: "icon",
-              icon__blockname: "toggle-expand",
-              icon__name: "menu-close",
-            } %}
-      <span class="toggle-expand__text">Close</span>
-    </span>
-  </a>
-  <div id="main-nav" class="main-nav">
-    {% include "@molecules/menus/_menu.twig" with {
-      menu_class: "main-menu",
-      items: menu_items,
-    } %}
-  </div>
-</nav>
-
-<nav class="navbar navbar-expand-lg bg-dark">
+<nav class="navbar navbar-expand-md menu-ppal">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+    <a href="#" class="navbar-brand">
+      <img class="logo__image" src="./sites/default/files/logo.png" alt="Logo">
+    </a>
+    <button id="botonMenu" class="navbar-toggler" type="button" data-bs-toggle="show" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list"></i>
+    </button>    
+    <div class="navbar-collapse  collapse" id="navbarNavDropdown">
+      {% include "@molecules/menus/_menu.twig" with {
+        items: menu_items,
+      } %}
     </div>
   </div>
 </nav>

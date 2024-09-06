@@ -1,27 +1,25 @@
-Drupal.behaviors.mainMenu = {
-  attach(context) {
-    const toggleExpand = context.getElementById("toggle-expand");
-    const menu = context.getElementById("main-nav");
-    if (menu) {
-      const expandMenu = menu.getElementsByClassName("expand-sub");
+document.addEventListener("DOMContentLoaded", function(event) {
+  let dropdown = document.querySelectorAll('.dropdown-toggle');
+  for(let i=0; i< dropdown.length; i++){
+    dropdown[i].addEventListener('mouseenter', function(e){
+      dropdownShow(e.target);
+    });
+    dropdown[i].addEventListener('click', function(e){
+      dropdownShow(e.target);
+    });
+  }
 
-      // Mobile Menu Show/Hide.
-      toggleExpand.addEventListener("click", (e) => {
-        toggleExpand.classList.toggle("toggle-expand--open");
-        menu.classList.toggle("main-nav--open");
-        e.preventDefault();
-      });
+  let boton = document.getElementById('botonMenu');
+   boton.addEventListener('click', function(){
+    let navBar = document.getElementById('navbarNavDropdown');
+     navBar.classList.toggle('show');
+    //  navBar.classList.toggle('collapse');
+    
+  })
+});
 
-      // Expose mobile sub menu on click.
-      Array.from(expandMenu).forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const menuItem = e.currentTarget;
-          const subMenu = menuItem.nextElementSibling;
-
-          menuItem.classList.toggle("expand-sub--open");
-          subMenu.classList.toggle("main-menu--sub-open");
-        });
-      });
-    }
-  },
-};
+function dropdownShow(val){
+  for(let i = 0; i< val.parentNode.children.length; i++){
+    val.parentNode.children[i].classList.toggle('show');
+  }
+}

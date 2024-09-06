@@ -80,6 +80,7 @@ class ComposerStaticInite49a4858f977ed5788490498f5d800d4
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
             'SelfUpdate\\' => 11,
+            'Sabberworm\\CSS\\' => 15,
         ),
         'R' => 
         array (
@@ -304,6 +305,10 @@ class ComposerStaticInite49a4858f977ed5788490498f5d800d4
         'SelfUpdate\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/self-update/src',
+        ),
+        'Sabberworm\\CSS\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
         ),
         'Robo\\' => 
         array (

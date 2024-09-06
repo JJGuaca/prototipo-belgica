@@ -1,1 +1,1 @@
-{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAGQ,oCACI,cAAA,CAIZ,QACI,sBAAA","file":"style.css","sourcesContent":["// This file can be used to import all other styles.\n.header, .footer{\n    .logo{\n        img{\n            max-width: 50px;\n        }\n    }\n}\n.prueba{\n    color:orange !important;\n}"]}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"style.css","sourcesContent":[]}

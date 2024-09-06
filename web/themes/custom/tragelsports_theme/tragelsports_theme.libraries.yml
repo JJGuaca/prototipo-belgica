@@ -5,3 +5,7 @@ global-styling:
   js:
     theme:
       js/script.js: { }
+      
+main-menu:
+  js:
+    components/02-molecules/menus/main-menu/main-menu.js: {}
