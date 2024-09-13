@@ -6,9 +6,10 @@ html {
 }
 
 body {
-  background-color: clr(background);
-  color: clr(text);
-
+  width: 100% !important;
+  max-width: unset !important;
+  padding: unset !important;
+  margin: auto !important;
   @include body-copy;
 }
 

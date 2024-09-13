@@ -1,0 +1,15 @@
+<ul class="items-menu">
+{% for item in fields %}
+    {% if item.is_expanded == true %}        
+        <li class="item-link"><a href= "#">{{item.title|render|striptags|trim}}</a>
+            <ul class="items-menu nivel2">
+                {% for below in item.below %}
+                    <li class="item-link"><a href= "{{below.url}}" target="_self">{{below.title|render|striptags|trim}}</a></li>    
+                {% endfor %}
+            </ul>
+        </li>
+    {% else %}
+        <li class="item-link"><a href= "{{item.url}}" target="_self">{{item.title|render|striptags|trim}}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>

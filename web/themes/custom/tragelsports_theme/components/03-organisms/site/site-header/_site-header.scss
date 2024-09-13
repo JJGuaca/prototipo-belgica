@@ -5,33 +5,40 @@
 
 .header {
   margin-bottom: $space-quadruple;
+  width: 100%;
+  margin: auto;
+  padding: unset;
 }
 
 .header__inner {
   @include wrapper;
 
   & {
-    display: flex;
-    flex-flow: column nowrap;
+    width: 100%;
+    padding: unset;
   }
 }
 
 .header__primary {
   @include breakpoint("medium") {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding: $space 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: unset;
+    width: 100%;
+    margin: auto;
   }
 }
 
 .header__branding {
-  max-width: 190px;
-  padding: 1rem 0;
-
+  width: 100%;
   @include breakpoint("medium") {
-    margin-right: $space;
-    max-width: 300px;
+    margin-right: auto;
     padding: 0;
   }
+}
+.header__menu{
+  width: 100%;
 }

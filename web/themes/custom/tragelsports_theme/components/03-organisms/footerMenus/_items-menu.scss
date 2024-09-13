@@ -1,0 +1,32 @@
+.items-menu{
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: unset;
+    margin: unset;
+    li{
+        list-style-type: none;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2rem;
+        color: #fff;
+        font-size: 80%;
+        text-decoration: unset;
+        text-transform: uppercase;
+        a{
+            color: #fff;
+            font-size: 80%;
+            text-decoration: unset;
+            text-transform: uppercase;
+            transition: all 0.5s ease;
+            text-align: left;
+            &:hover{
+                color: red;
+                text-decoration: underline;
+            }
+        }
+    }
+}

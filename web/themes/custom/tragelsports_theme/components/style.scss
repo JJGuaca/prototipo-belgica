@@ -1,3 +1,24 @@
+//IMPRTES DE LOS ESTILOS
+@import '00-base/*.scss';
+@import '01-atoms/*.scss';
+@import '02-molecules/*.scss';
+@import '03-organisms/*.scss';
+@import '03-organisms/**/*.scss';
+@import '03-organisms/**/**/*.scss';
+@import '04-templates/*.scss';
+@import '05-pages/*.scss';
+@import '04-pages/**/*.scss';
+
+
+//FUENTE TIPOGRAFICA DE LA PÁGINA
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+body{
+    font-family: "Josefin Sans", system-ui !important;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
 // This file can be used to import all other styles.
 /*HEADER PRIMARIO*/
 .headerprimario{
@@ -39,10 +60,10 @@
 }
 /*ESTILOS PERSONALES PARA EL MENÚ PRINCIPAL*/
 .menu-ppal{
-    background-color: #12100f;
+    background-color: #000;
     .container-fluid{
         flex-direction: column;
-        @media (max-width:768px){
+        @media (max-width:990px){
             flex-direction: row;
         }
         .navbar-brand{
@@ -64,7 +85,7 @@
             align-items: center;
             .navbar-nav{
                 gap: 1rem;
-                background-color: #12100f;
+                background-color: #000;
                 .nav-item{
                     text-transform: uppercase;
                     font-weight: 600;
@@ -103,7 +124,7 @@
                     .dropdown-menu{
                         &.show{
                             top: 100%;
-                            background-color: #12100f;
+                            background-color: #000;
                         }
                         .nav-item{
                             height: fit-content;
@@ -128,6 +149,105 @@
                             .dropdown-menu{
                                 padding: 1rem;
                                 width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*ESTILOS PARA EL MODAL DEL HOME*/
+
+#popuphome{
+    .modal-body{
+      padding: 0;
+      .btn-close{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        font-size: 2rem;
+        background-color: white;
+        box-shadow: inset 0px 0px 8px 4px red;
+      }
+    }
+}
+
+/*ESTILOS FOOTER,  MARCA REGISTRADA*/
+footer.footer{
+    background-color: #000;
+    box-shadow: 0 -8px 15px -1px #e21a23;
+    .footer__menu{
+        .footerMenus{
+            padding: 4rem 1rem 1rem 1rem;
+            .contac-redes{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                a.btn{
+                    background-color: #fff;
+                    color: #000;
+                    border: 2px solid #000;
+                    text-transform: uppercase;
+                    padding: 0.5rem 1rem;
+                    margin: 1rem;
+                }
+                ul.navbar-nav{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                }
+            }
+            .col-12{
+                @media (max-width:768px) {
+                    border-top: 1px solid #fff;
+                    margin-top: 1rem;
+                    padding: 1rem;
+                }
+                h3{
+                    text-transform: uppercase;
+                    line-height: 25px;
+                    font-weight: 300;
+                }
+            }
+        }
+        #block-tragelsports-theme-footermarcaregistrada{
+            .marcaRegistrada{
+                background-color: #000;
+                @media (max-width:768px) {
+                    border-top: 1px solid #fff;
+                    margin-top: 1rem;
+                    padding: 1rem;
+                }
+                .row{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    .col-12.col-md-6{
+                        max-height: 48px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        .logo__link{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-end;
+                            align-items: center;
+                            img.logo__image{
+                                width: 100%;
+                                height: auto;
+                                max-width: 48px;
                             }
                         }
                     }
