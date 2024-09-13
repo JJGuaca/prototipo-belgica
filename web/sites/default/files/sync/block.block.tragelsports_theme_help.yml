@@ -1,0 +1,22 @@
+uuid: d46a5db0-1ec9-4d55-8541-5b3ba4d9e804
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tragelsports_theme
+_core:
+  default_config_hash: sVYbdNqhPpx1UX_2pP-YIT9ZN34vTxkCLTbyLnDSqbU
+id: tragelsports_theme_help
+theme: tragelsports_theme
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

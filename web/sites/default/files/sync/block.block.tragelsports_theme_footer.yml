@@ -1,0 +1,27 @@
+uuid: 3e6c2cde-2287-41b2-9099-12b44aee94d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - tragelsports_theme
+_core:
+  default_config_hash: wQbjpvn68OQIJbPXQrhBMvWPWoMKkj6WRP5iXdADJ6I
+id: tragelsports_theme_footer
+theme: tragelsports_theme
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Pie de página'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

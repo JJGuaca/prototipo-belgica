@@ -1,0 +1,22 @@
+uuid: 98f8e72f-862a-439e-bc77-31f362febf91
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tragelsports_theme
+_core:
+  default_config_hash: 7CZ1UkYcIp5ps3Qj-qccdJRETtIxFk5geNukZ-aaMkg
+id: tragelsports_theme_breadcrumbs
+theme: tragelsports_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }

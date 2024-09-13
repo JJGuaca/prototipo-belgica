@@ -1,0 +1,22 @@
+uuid: 1d40900f-6886-4d21-9f32-9ce9a8e1b470
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tragelsports_theme
+_core:
+  default_config_hash: 0lVnh1xTgCBO0xKnpwi5Agbs-ZjRZqRR42OPToH5BL0
+id: tragelsports_theme_messages
+theme: tragelsports_theme
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Mensajes
+  label_display: '0'
+  provider: system
+visibility: {  }

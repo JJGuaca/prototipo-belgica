@@ -1,0 +1,27 @@
+uuid: 1fc5018c-6d8f-4bb2-a011-183253331316
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - tragelsports_theme
+_core:
+  default_config_hash: mmT8W3SckNXcMmYz2fXemuyaFeKK7nSG05uhRIKL2fQ
+id: tragelsports_theme_main_navigation
+theme: tragelsports_theme
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }
