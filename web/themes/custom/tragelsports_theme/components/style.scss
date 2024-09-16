@@ -17,6 +17,13 @@ body{
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    div.main{
+        background-position: center;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        margin-bottom: unset;
+        overflow-x: hidden;
+    }
 }
 
 // This file can be used to import all other styles.
@@ -255,4 +262,56 @@ footer.footer{
             }
         }
     }
+}
+
+/*ESTILOS PARA LOS TÍTULOS DE LAS PÁGINAS*/
+div#block-tragelsports-theme-page-title {
+    position: relative;
+    top: -18px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    @media (min-width:768px){
+        top: 180px;
+    }
+    .heading{
+        font-size: 2rem;
+        line-height: 85px;
+        word-break: break-word;
+        margin: unset;
+        text-align: center;
+        @media (min-width:768px){
+            font-size: 7rem;
+        }
+    }
+}
+
+/*ESTILOS PARA LAS MIGAS DE PAN*/
+.region-breadcrumb{
+    max-width: 768px;
+    margin: auto;
+    nav{
+        ol{
+            margin-bottom: unset;
+            li{
+                font-size: 1rem;
+                a{
+                    color: #fff !important;
+                    font-weight: 800;
+                    &::after{
+                        content: "/";
+                    }
+                } 
+            }
+        }
+    }
+}
+
+/*ESTILOS PARA ACCIONES*/
+#block-tragelsports-theme-local-tasks{
+    background: #fff;
+    z-index: 99;
 }

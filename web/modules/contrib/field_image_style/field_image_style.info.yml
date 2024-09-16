@@ -1,0 +1,13 @@
+name: Field Image Style
+type: module
+description: Defines a field type for images styles.
+core_version_requirement: ^9.3 || ^10
+package: Field types
+dependencies:
+  - drupal:field
+  - drupal:options
+
+# Information added by Drupal.org packaging script on 2023-11-10
+version: '2.0.1'
+project: 'field_image_style'
+datestamp: 1699610974

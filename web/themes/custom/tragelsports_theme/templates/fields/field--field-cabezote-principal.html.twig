@@ -1,0 +1,84 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{% set key = 0 %}
+{% set key2 = 0 %}
+{% if items|length > 1  %}
+<div id="sliderCabezote" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+  {% for item in items %}
+    {% if key2 == 0 %}
+      <button type="button" data-bs-target="#sliderCabezote" data-bs-slide-to="{{key2}}" class="active" aria-current="true" aria-label="Slide {{key2}}"></button>
+    {% else %}
+      <button type="button" data-bs-target="#sliderCabezote" data-bs-slide-to="{{key2}}" aria-label="Slide {{key2}}"></button>
+    {% endif %}
+    {% set key2 = key2+1 %}
+  {% endfor %}
+  </div>
+  <div class="carousel-inner">
+    {% for item in items %}
+      {% if key == 0 %}
+        <div class="carousel-item active">
+      {% else %}
+        <div class="carousel-item">
+      {% endif %}
+        {{ item.content }}
+      </div>
+      {% set key = key+1 %}
+    {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#sliderCabezote" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#sliderCabezote" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{% else %}
+  <div class="container-fluid">
+      <div class="row">
+        {% for item in items %}
+            <div{{ item.attributes.addClass('col-12') }}>{{ item.content }}</div>
+        {% endfor %}
+      </div>
+    </div>
+{% endif %}
+  

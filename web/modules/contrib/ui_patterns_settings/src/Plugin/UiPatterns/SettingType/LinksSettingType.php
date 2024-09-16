@@ -30,7 +30,7 @@ class LinksSettingType extends ComplexSettingTypeBase {
    * @return array
    */
   public static function normalize(array $items): array {
-    foreach ($items as $index => &$item) {
+    foreach ($items as $index => $item) {
       if (!is_array($item)) {
         unset($items[$index]);
         continue;
@@ -52,13 +52,16 @@ class LinksSettingType extends ComplexSettingTypeBase {
       if (!isset($item["url"]) && isset($item["link"])) {
         // Example: links.html.twig.
         $item["url"] = $item["link"]["#url"];
-        $item["url"]->setOptions($item["link"]["#options"]);
+        if (isset($item["link"]["#options"])) {
+          $item["url"]->mergeOptions($item["link"]["#options"]);
+        }
         unset($item["link"]);
       }
       $item = self::normalizeUrl($item);
       if (array_key_exists("below", $item)) {
         $item["below"] = self::normalize($item["below"]);
       }
+      $items[$index] = $item;
     }
     $items = array_values($items);
     return $items;

@@ -100,6 +100,12 @@ foo_settings:
         key2:
           label: select_config 2
           configuration: config key2
+    role_checkboxes:
+      type: role_checkboxes
+      label: Role checkboxes
+    role_access:
+      type: role_checkboxes
+      label: Role Access
     language_checkboxes:
       type: language_checkboxes
       label: Language selection

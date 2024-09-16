@@ -3637,6 +3637,118 @@ pre {
   margin-bottom: 2rem;
 }
 
+article.container-fluid {
+  position: relative;
+  top: -100px;
+  padding: unset;
+  margin: auto;
+}
+article.container-fluid .cabezote {
+  max-width: 2560px;
+  margin: auto;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 {
+  padding: unset;
+  margin: auto;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid {
+  padding: unset;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid .card .media--type-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 500px;
+  -o-object-position: center;
+     object-position: center;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid .card .card-img-overlay {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid .card .card-img-overlay a {
+  background-color: #000;
+  color: #fff;
+  border: 1.5px solid #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid .card .card-img-overlay a:hover {
+  color: #000;
+  border-color: #000;
+  background-color: #fff;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .media--type-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 500px;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (max-width: 48rem) {
+  article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .media--type-image img {
+    height: 250px;
+  }
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .card-img-overlay {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .card-img-overlay a {
+  background-color: #000;
+  color: #fff;
+  border: 1.5px solid #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 4rem;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .card-img-overlay a:hover {
+  color: #000;
+  border-color: #000;
+  background-color: #fff;
+}
+article.container-fluid .cuerpo {
+  max-width: 1024px;
+  margin: auto;
+  font-size: 1.125rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8117647059);
+  color: #000;
+}
+
 /*
  * General Variables
  * Note: colors should go into
@@ -4156,6 +4268,118 @@ pre {
 }
 .grid--card {
   margin-bottom: 2rem;
+}
+
+article.container-fluid {
+  position: relative;
+  top: -100px;
+  padding: unset;
+  margin: auto;
+}
+article.container-fluid .cabezote {
+  max-width: 2560px;
+  margin: auto;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 {
+  padding: unset;
+  margin: auto;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid {
+  padding: unset;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid .card .media--type-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 500px;
+  -o-object-position: center;
+     object-position: center;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid .card .card-img-overlay {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid .card .card-img-overlay a {
+  background-color: #000;
+  color: #fff;
+  border: 1.5px solid #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .container-fluid .card .card-img-overlay a:hover {
+  color: #000;
+  border-color: #000;
+  background-color: #fff;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .media--type-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 500px;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (max-width: 48rem) {
+  article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .media--type-image img {
+    height: 250px;
+  }
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .card-img-overlay {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .card-img-overlay a {
+  background-color: #000;
+  color: #fff;
+  border: 1.5px solid #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 4rem;
+}
+article.container-fluid .cabezote .w-100 .row .col-12 .block .carousel .carousel-inner .carousel-item .card .card-img-overlay a:hover {
+  color: #000;
+  border-color: #000;
+  background-color: #fff;
+}
+article.container-fluid .cuerpo {
+  max-width: 1024px;
+  margin: auto;
+  font-size: 1.125rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8117647059);
+  color: #000;
 }
 
 /*
@@ -4809,6 +5033,14 @@ body {
   font-weight: 500;
   font-style: normal;
 }
+body div.main {
+  background-position: center;
+  background-repeat: repeat-y;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  margin-bottom: unset;
+  overflow-x: hidden;
+}
 
 /*HEADER PRIMARIO*/
 .headerprimario {
@@ -5195,5 +5427,74 @@ footer.footer .footer__menu #block-tragelsports-theme-footermarcaregistrada .mar
   width: 100%;
   height: auto;
   max-width: 48px;
+}
+
+/*ESTILOS PARA LOS TÍTULOS DE LAS PÁGINAS*/
+div#block-tragelsports-theme-page-title {
+  position: relative;
+  top: -18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+@media (min-width: 48rem) {
+  div#block-tragelsports-theme-page-title {
+    top: 180px;
+  }
+}
+div#block-tragelsports-theme-page-title .heading {
+  font-size: 2rem;
+  line-height: 5.3125rem;
+  word-break: break-word;
+  margin: unset;
+  text-align: center;
+}
+@media (min-width: 48rem) {
+  div#block-tragelsports-theme-page-title .heading {
+    font-size: 7rem;
+  }
+}
+
+/*ESTILOS PARA LAS MIGAS DE PAN*/
+.region-breadcrumb {
+  max-width: 768px;
+  margin: auto;
+}
+.region-breadcrumb nav ol {
+  margin-bottom: unset;
+}
+.region-breadcrumb nav ol li {
+  font-size: 1rem;
+}
+.region-breadcrumb nav ol li a {
+  color: #fff !important;
+  font-weight: 800;
+}
+.region-breadcrumb nav ol li a::after {
+  content: "/";
+}
+
+/*ESTILOS PARA ACCIONES*/
+#block-tragelsports-theme-local-tasks {
+  background: #fff;
+  z-index: 99;
 }
 /*# sourceMappingURL=maps/style.css.map */

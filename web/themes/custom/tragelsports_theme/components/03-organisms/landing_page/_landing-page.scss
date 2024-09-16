@@ -1,0 +1,95 @@
+article.container-fluid {
+    position: relative;
+    top: -100px;
+    padding: unset;
+    margin: auto;
+    .cabezote{
+        max-width: 2560px;
+        margin: auto;
+        .w-100{
+            .row{
+                .col-12{
+                    padding: unset;
+                    margin: auto;
+                    .block{
+                        .container-fluid{
+                            padding: unset;
+                            .card{
+                                .media--type-image{
+                                    img{
+                                        width: 100%;
+                                        object-fit: cover;
+                                        max-height: 500px;
+                                        object-position: center;
+                                    }
+                                }
+                                .card-img-overlay{
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: flex-end;
+                                    a{
+                                        background-color: #000;
+                                        color: #fff;
+                                        border: 1.5px solid #fff;
+                                        transition: all 0.2s ease-in-out;
+                                        &:hover{
+                                            color:#000;
+                                            border-color: #000;
+                                            background-color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .carousel{
+                            .carousel-inner{
+                                .carousel-item{
+                                    .card{
+                                        .media--type-image{
+                                            img{
+                                                width: 100%;
+                                                object-fit: cover;
+                                                height: 500px;
+                                                object-position: center;
+                                                @media (max-width:768px) {
+                                                    height: 250px;
+                                                }
+                                            }
+                                        }
+                                        .card-img-overlay{
+                                            display: flex;
+                                            flex-direction: row;
+                                            justify-content: center;
+                                            align-items: flex-end;
+                                            a{
+                                                background-color: #000;
+                                                color: #fff;
+                                                border: 1.5px solid #fff;
+                                                transition: all 0.2s ease-in-out;
+                                                margin-bottom: 4rem;
+                                                &:hover{
+                                                    color:#000;
+                                                    border-color: #000;
+                                                    background-color: #fff;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cuerpo{
+        max-width: 1024px;
+        margin: auto;
+        font-size: 1.125rem;
+        padding: 1rem;
+        background-color: #ffffffcf;
+        color: #000;
+    }
+}
