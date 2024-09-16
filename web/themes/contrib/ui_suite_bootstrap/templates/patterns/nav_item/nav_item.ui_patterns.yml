@@ -1,0 +1,30 @@
+nav_item:
+  label: "(Nav item)"
+  description: "Internal: to be used in the 'nav' components (nav, navbar-nav, etc)."
+  links:
+    - 'https://getbootstrap.com/docs/5.3/components/navs-tabs/'
+  category: "Navs and tabs"
+  settings:
+    active:
+      type: "boolean"
+      label: "Active link"
+      description: "Css class for whether the link corresponds to the current url."
+    disabled:
+      type: "boolean"
+      label: "Disabled link"
+      description: "Html attribute to render the link unclickable."
+    toggle:
+      type: "machine_name"
+      label: "Toggle"
+      description: "The HTML ID of the pane to activate."
+  fields:
+    link:
+      type: "render"
+      label: "Link"
+      description: "The link item."
+      preview:
+        type: 'html_tag'
+        tag: 'a'
+        value: 'Link'
+        attributes:
+          href: 'https://example.com'

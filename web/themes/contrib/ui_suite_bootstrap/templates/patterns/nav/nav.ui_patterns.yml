@@ -1,0 +1,95 @@
+nav:
+  label: "Nav"
+  description: "The base .nav component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling."
+  links:
+    - 'https://getbootstrap.com/docs/5.3/components/navs-tabs/'
+  category: "Navs and tabs"
+  variants:
+    default:
+      label: "Default"
+    tabs:
+      label: "Tabs"
+    tabs__fill:
+      label: "Tabs"
+    tabs__justified:
+      label: "Tabs"
+    pills:
+      label: "Pills"
+    pills__fill:
+      label: "Pills filled"
+    pills__justified:
+      label: "Pills filled with same width"
+    underline:
+      label: "Underline"
+  settings:
+    nav_type:
+      type: "select"
+      label: "List type"
+      options:
+        ul: "ul (Default)"
+        ol: "ol"
+        nav: "nav"
+      preview: "ul"
+      allow_expose: true
+      allow_token: true
+  fields:
+    items:
+      type: "list"
+      label: "Nav items"
+      description: "Nav items that appear inside the navigation component."
+      preview:
+        - type: "pattern"
+          id: "nav_item"
+          active: true
+          link:
+            type: 'html_tag'
+            tag: 'a'
+            value: 'Active'
+            attributes:
+              href: 'https://example.com'
+        - type: "pattern"
+          id: "dropdown"
+          button_type: "a"
+          dropdown_navbar: true
+          attributes:
+            class:
+              'nav-item'
+          title: "Dropdown"
+          content:
+            - title: "Dropdown header"
+              link_attributes:
+                class: [dropdown-header]
+            - title: "Action"
+              url: '#'
+            - title: "Dropdown item text"
+            - title: "Another action"
+              url: '#'
+            - title: "Something else here"
+              url: '#'
+            - {}
+            - title: "Separated link"
+              url: '#'
+            - title: "Action (button)"
+              link_attributes:
+                class: [dropdown-item]
+            - title: "Another action (button)"
+              link_attributes:
+                class: [dropdown-item]
+            - title: "Something else here (text)"
+        - type: "pattern"
+          id: "nav_item"
+          link:
+            type: 'html_tag'
+            tag: 'a'
+            value: 'Much longer nav link'
+            attributes:
+              href: 'https://example.com'
+        - type: "pattern"
+          id: "nav_item"
+          disabled: true
+          link:
+            type: 'html_tag'
+            tag: 'a'
+            value: 'Disabled'
+            attributes:
+              href: 'https://example.com'

@@ -1,0 +1,7 @@
+<li{{ attributes.addClass('nav-item') }}>
+  {% set link = active ? link|add_class('active') : link %}
+  {% set link = disabled ? link|add_class('disabled') : link %}
+  {% set link = toggle ? link|set_attribute('role', 'tab')|set_attribute('data-bs-toggle', 'tab') : link %}
+  {% set link = toggle ? link|set_attribute('aria-controls', toggle)|set_attribute('data-bs-target', '#' ~ toggle) : link %}
+  {{ link|add_class('nav-link') }}
+</li>
