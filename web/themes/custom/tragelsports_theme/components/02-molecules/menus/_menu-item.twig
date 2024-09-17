@@ -22,7 +22,7 @@
 {% set list__item__base_class = 'nav-item' %}
 {% set list__item__modifiers = item_modifiers %}
 {% set list__item__blockname = item_blockname %}
-
+{% set targetLink = "" %}
 {% import "@molecules/menus/_menu.twig" as menus %}
 
 {% extends "@atoms/lists/_list-item.twig" %}
@@ -32,7 +32,12 @@
       {% if item.below %}
         {{ link(item.title, item.url, {'class': item_modifiers2,'role': 'button', 'data-bs-toggle': 'dropdown', 'aria-expanded': 'false', 'title': ('Expand menu' | t) ~ ' ' ~ item.title}) }}
       {% else %}
-        {{ link(item.title, item.url, bem(item_base_class|default('nav-link'))) }}
+        {% if item.url.external == true %}
+          {% set targetLink = "_blank" %}
+        {% else %}
+          {% set targetLink = "_self" %}
+        {% endif %}
+        {{ link(item.title, item.url,{'target':targetLink,'class':'nav-link'}) }}
       {% endif %}
     {% else %}
       {% include "@atoms/links/link/link.twig" with {
