@@ -3748,6 +3748,41 @@ article.container-fluid .cuerpo {
   background-color: rgba(255, 255, 255, 0.8117647059);
   color: #000;
 }
+article.container-fluid .formulario-contacto {
+  max-width: 1024px;
+  margin: auto;
+  font-size: 1.125rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8117647059);
+  color: #000;
+  border-top: 4px solid rgba(0, 0, 0, 0.5803921569);
+}
+article.container-fluid .formulario-contacto .container .row .col-12 .block form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 100%;
+}
+article.container-fluid .formulario-contacto .container .row .col-12 .block form .js-form-item.form-item {
+  width: 100%;
+  margin: auto;
+}
+article.container-fluid .formulario-contacto .container .row .col-12 .block form .form-actions input {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+article.container-fluid .formulario-contacto .container .row .col-12 .block .container .row .col-12 p {
+  font-style: italic;
+}
 
 /*
  * General Variables
@@ -4380,6 +4415,41 @@ article.container-fluid .cuerpo {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.8117647059);
   color: #000;
+}
+article.container-fluid .formulario-contacto {
+  max-width: 1024px;
+  margin: auto;
+  font-size: 1.125rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8117647059);
+  color: #000;
+  border-top: 4px solid rgba(0, 0, 0, 0.5803921569);
+}
+article.container-fluid .formulario-contacto .container .row .col-12 .block form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 100%;
+}
+article.container-fluid .formulario-contacto .container .row .col-12 .block form .js-form-item.form-item {
+  width: 100%;
+  margin: auto;
+}
+article.container-fluid .formulario-contacto .container .row .col-12 .block form .form-actions input {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+article.container-fluid .formulario-contacto .container .row .col-12 .block .container .row .col-12 p {
+  font-style: italic;
 }
 
 /*

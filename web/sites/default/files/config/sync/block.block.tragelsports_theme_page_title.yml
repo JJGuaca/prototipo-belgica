@@ -1,0 +1,20 @@
+uuid: 18d4eb41-4a13-48b0-88d3-07ab434bb83d
+langcode: es
+status: true
+dependencies:
+  theme:
+    - tragelsports_theme
+_core:
+  default_config_hash: eeDmdip9FH2oz-844U3uXIVk1teJsNpBUCEO6I-u7Y8
+id: tragelsports_theme_page_title
+theme: tragelsports_theme
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility: {  }

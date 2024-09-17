@@ -1,0 +1,29 @@
+uuid: f5471e9f-2daf-4f8d-bac9-ff90f27487cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imagencabezote
+    - media.type.image
+    - node.type.page
+id: node.page.field_imagencabezote
+field_name: field_imagencabezote
+entity_type: node
+bundle: page
+label: 'imagen principal'
+description: 'Indica la imagen que va en la parte superior de la página'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: bb504309-d75a-450a-be0d-e1cae2f0bc20
+langcode: und
+status: true
+dependencies: {  }
+id: menu-acceso-rapido
+label: 'Menú ACCESO RÁPIDO'
+description: ''
+locked: false

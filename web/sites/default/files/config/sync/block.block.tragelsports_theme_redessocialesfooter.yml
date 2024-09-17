@@ -1,0 +1,25 @@
+uuid: c1541f05-ba68-42b1-b68a-20a7298c9938
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.redes-sociales-footer
+  module:
+    - system
+  theme:
+    - tragelsports_theme
+id: tragelsports_theme_redessocialesfooter
+theme: tragelsports_theme
+region: footer
+weight: -7
+provider: null
+plugin: 'system_menu_block:redes-sociales-footer'
+settings:
+  id: 'system_menu_block:redes-sociales-footer'
+  label: 'Redes sociales footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

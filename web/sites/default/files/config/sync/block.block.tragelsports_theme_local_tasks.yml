@@ -1,0 +1,22 @@
+uuid: c11506b0-70ed-4222-9882-6af2075ca057
+langcode: es
+status: true
+dependencies:
+  theme:
+    - tragelsports_theme
+_core:
+  default_config_hash: yyUNbxKGsA8AoXOvB7OX_eWlyKs7EDs8POd78sRvdOQ
+id: tragelsports_theme_local_tasks
+theme: tragelsports_theme
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

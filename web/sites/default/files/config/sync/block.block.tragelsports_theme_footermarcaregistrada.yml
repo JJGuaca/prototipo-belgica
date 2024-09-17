@@ -1,0 +1,25 @@
+uuid: 4dfed4c0-e8b2-427f-bc36-79c4513e4aa7
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9e686dd5-f82a-48fb-bfc2-f1718b059960'
+  module:
+    - block_content
+  theme:
+    - tragelsports_theme
+id: tragelsports_theme_footermarcaregistrada
+theme: tragelsports_theme
+region: footer
+weight: -3
+provider: null
+plugin: 'block_content:9e686dd5-f82a-48fb-bfc2-f1718b059960'
+settings:
+  id: 'block_content:9e686dd5-f82a-48fb-bfc2-f1718b059960'
+  label: 'Footer marca registrada'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

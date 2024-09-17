@@ -1,0 +1,17 @@
+uuid: e95c6a30-a22b-44df-8d47-7b89bb26817e
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'landing Page'
+type: landing_page
+description: 'Tipo de contenido habilitado para crear los diferentes páginas del sistema'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

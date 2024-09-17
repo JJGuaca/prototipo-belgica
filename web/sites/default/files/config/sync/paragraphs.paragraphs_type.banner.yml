@@ -1,0 +1,10 @@
+uuid: d5c7fbc7-9e17-49c2-93e7-dc2e28b16e12
+langcode: es
+status: true
+dependencies: {  }
+id: banner
+label: Banner
+icon_uuid: null
+icon_default: null
+description: 'Imagen principal del cabezote '
+behavior_plugins: {  }

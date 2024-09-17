@@ -1,0 +1,25 @@
+uuid: 6a5eebdf-7ed1-4479-9a53-2a14b760f711
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-principal-footer
+  module:
+    - system
+  theme:
+    - tragelsports_theme
+id: tragelsports_theme_menuprincipalfooter
+theme: tragelsports_theme
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:menu-principal-footer'
+settings:
+  id: 'system_menu_block:menu-principal-footer'
+  label: 'Tragel Sport'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

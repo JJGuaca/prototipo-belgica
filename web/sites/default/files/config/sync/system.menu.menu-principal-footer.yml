@@ -1,0 +1,8 @@
+uuid: adc611db-7d78-495e-825f-42f207e89547
+langcode: und
+status: true
+dependencies: {  }
+id: menu-principal-footer
+label: 'Menú principal Footer'
+description: 'menú del footer'
+locked: false

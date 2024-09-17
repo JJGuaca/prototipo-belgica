@@ -1,0 +1,20 @@
+uuid: 5f1def9a-7f4a-4835-9c13-e538fd0093f9
+langcode: es
+status: true
+dependencies:
+  theme:
+    - tragelsports_theme
+_core:
+  default_config_hash: M8LQPzGzuHOOV1_d06W-LuCTeq37bC_zpEt8tBYT7fY
+id: tragelsports_theme_local_actions
+theme: tragelsports_theme
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

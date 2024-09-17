@@ -1,0 +1,8 @@
+uuid: 7ae8934c-c171-4c2f-8363-9ceed228ef14
+langcode: und
+status: true
+dependencies: {  }
+id: redes-sociales-footer
+label: 'Redes sociales footer'
+description: ''
+locked: false

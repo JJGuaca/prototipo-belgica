@@ -1,0 +1,25 @@
+uuid: a0ec83e6-cfcc-4950-94c8-cdc7879d4ab3
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-acceso-rapido
+  module:
+    - system
+  theme:
+    - tragelsports_theme
+id: tragelsports_theme_menuaccesorapido
+theme: tragelsports_theme
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:menu-acceso-rapido'
+settings:
+  id: 'system_menu_block:menu-acceso-rapido'
+  label: 'SNELLE TOEGANG'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

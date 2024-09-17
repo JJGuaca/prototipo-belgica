@@ -34,12 +34,14 @@
         "drupal/field_image_style": "^2.0",
         "drupal/fontawesome": "^2.26",
         "drupal/fontawesome_menu_icons": "^3.0",
+        "drupal/imce": "^3.1",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/paragraphs": "^1.18",
         "drupal/svg_image": "^3.0",
         "drupal/twig_tweak": "^3.4",
         "drupal/ui_patterns": "^1.8",
         "drupal/ui_suite_bootstrap": "^5.0@alpha",
+        "drupal/webform": "^6.2",
         "drush/drush": "^12.0"
     },
     "conflict": {

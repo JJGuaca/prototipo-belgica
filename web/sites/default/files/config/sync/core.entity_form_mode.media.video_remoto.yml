@@ -1,0 +1,11 @@
+uuid: 98733640-9b05-4d04-ab7e-80b4cc6c1db7
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+id: media.video_remoto
+label: 'Video remoto'
+description: 'Video desde fuentes externas'
+targetEntityType: media
+cache: true

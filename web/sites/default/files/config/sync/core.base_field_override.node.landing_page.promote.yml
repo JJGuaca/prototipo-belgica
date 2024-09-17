@@ -1,0 +1,22 @@
+uuid: acbc80f5-c8c9-4e9f-8ac0-21cd99c633d0
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page.promote
+field_name: promote
+entity_type: node
+bundle: landing_page
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

@@ -1,0 +1,137 @@
+uuid: e707cfe8-10c4-45a2-a14e-052f6ce22988
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_cabezote_principal
+    - field.field.node.landing_page.field_imagen_de_background
+    - field.field.node.landing_page.layout_builder__layout
+    - node.type.landing_page
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+    - svg_image
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          088f0a87-130b-44d3-a0fb-c09655ae99d6:
+            uuid: 088f0a87-130b-44d3-a0fb-c09655ae99d6
+            region: content
+            configuration:
+              id: 'extra_field_block:node:landing_page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          75f4da04-a840-407f-9147-75c50bbdcea2:
+            uuid: 75f4da04-a840-407f-9147-75c50bbdcea2
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          cca41b05-a1ae-4565-aec0-9d6223ddc53a:
+            uuid: cca41b05-a1ae-4565-aec0-9d6223ddc53a
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_cabezote_principal'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          f98886dd-6f92-40c3-b957-c865bdeb65cb:
+            uuid: f98886dd-6f92-40c3-b957-c865bdeb65cb
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_imagen_de_background'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                  svg_attributes:
+                    width: null
+                    height: null
+                  svg_render_as_image: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_cabezote_principal:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_imagen_de_background:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true

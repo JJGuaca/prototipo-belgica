@@ -1,0 +1,14 @@
+uuid: fd1a0cb3-38d3-4cb2-800e-d3bfa4f9fe19
+langcode: es
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 8rVcRXLnTAEoWs7zl8du-7RIUnayqUcGYnvb3JT21-o
+id: time_zones
+label: 'Zonas horarias'
+category: 'Fecha y hora'
+likert: false
+options: ''

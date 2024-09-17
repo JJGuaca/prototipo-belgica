@@ -92,4 +92,48 @@ article.container-fluid {
         background-color: #ffffffcf;
         color: #000;
     }
+    .formulario-contacto{
+        max-width: 1024px;
+        margin: auto;
+        font-size: 1.125rem;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.8117647059);
+        color: #000;
+        border-top: 4px solid #00000094;
+        .container{
+            .row{
+                .col-12{
+                    .block{
+                        form{
+                            display: flex;
+                            flex-direction: column;
+                            margin: auto;
+                            width: 100%;
+                            .js-form-item.form-item {
+                                width: 100%;
+                                margin: auto;
+                            }
+                            .form-actions{
+                                input{
+                                    display: block;
+                                    width: 100%;
+                                    max-width: 300px;
+                                    margin: auto;
+                                }
+                            }
+                        }
+                        .container{
+                            .row{
+                                .col-12{
+                                    p{
+                                        font-style: italic;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,25 @@
+uuid: a619160c-8630-44f6-afea-b57d06f3f234
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-nuestra-empresa
+  module:
+    - system
+  theme:
+    - tragelsports_theme
+id: tragelsports_theme_menunuestraempresa
+theme: tragelsports_theme
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:menu-nuestra-empresa'
+settings:
+  id: 'system_menu_block:menu-nuestra-empresa'
+  label: 'ONS BEDRIJF'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

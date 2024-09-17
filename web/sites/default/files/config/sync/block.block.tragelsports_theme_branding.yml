@@ -1,0 +1,25 @@
+uuid: 81f3d5ed-8060-4b12-8c1c-d3cf9b2efe90
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tragelsports_theme
+_core:
+  default_config_hash: AQR9erx2trIwGNqOSRcspQZPVRqWjDR1aMDcstKbgkA
+id: tragelsports_theme_branding
+theme: tragelsports_theme
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

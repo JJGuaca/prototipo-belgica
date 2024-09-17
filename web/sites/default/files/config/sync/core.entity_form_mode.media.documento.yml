@@ -1,0 +1,11 @@
+uuid: cf5b04ce-15fb-4665-a6f3-4748e506cc9e
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+id: media.documento
+label: Documento
+description: 'Documento a cargar'
+targetEntityType: media
+cache: true

@@ -7,7 +7,7 @@ package: 'Layout Builder'
 dependencies:
   - bootstrap_styles:bootstrap_styles
 
-# Information added by Drupal.org packaging script on 2024-09-16
-version: '2.2.0'
+# Information added by Drupal.org packaging script on 2024-09-17
+version: '2.2.1'
 project: 'bootstrap_layout_builder'
-datestamp: 1726498177
+datestamp: 1726576905
