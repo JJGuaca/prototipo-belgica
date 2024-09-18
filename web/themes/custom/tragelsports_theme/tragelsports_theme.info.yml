@@ -9,6 +9,7 @@ base theme: bootstrap5
 libraries:
   - tragelsports_theme/global-styling
   - tragelsports_theme/main-menu
+  - tragelsports_theme/main-js
 ckeditor_stylesheets:
   - css/style.css
 ckeditor5-stylesheets:

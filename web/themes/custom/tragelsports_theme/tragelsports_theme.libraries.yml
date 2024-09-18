@@ -9,3 +9,7 @@ global-styling:
 main-menu:
   js:
     components/02-molecules/menus/main-menu/main-menu.js: {}
+
+main-js:
+  js:
+    js/script.min.js: {}
