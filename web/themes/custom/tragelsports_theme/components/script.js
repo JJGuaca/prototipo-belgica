@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 function activeMenu(location){
-    let cadena = location.split('/',4);
+    let cadena = location.split('/',6);
     //cadena = location;
     console.log(cadena.reverse());
     cadena = cadena[0];
