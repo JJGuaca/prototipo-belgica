@@ -10,8 +10,8 @@ function activeMenu(location){
     let menuPpal = document.getElementById('navbarNavDropdown');
     let itemsMenduMain = menuPpal.querySelectorAll('.itemMenuMain');
     for(let i =0; i< itemsMenduMain.length; i++){
+        console.log(itemsMenduMain[i].children[0].pathname, cadena)
         if(itemsMenduMain[i].children[0].pathname === '/'+cadena){
-            console.log(itemsMenduMain[i].children[0].pathname, cadena)
             addActive(itemsMenduMain[i].children[0], cadena)
         }
     }
