@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function activeMenu(location){
     let cadena = location.split('/',6);
-    //cadena = location;
     console.log(cadena.reverse());
     cadena = cadena[0];
     let menuPpal = document.getElementById('navbarNavDropdown');
     let itemsMenduMain = menuPpal.querySelectorAll('.itemMenuMain');
     for(let i =0; i< itemsMenduMain.length; i++){
         if(itemsMenduMain[i].children[0].pathname === '/'+cadena){
+            console.log(itemsMenduMain[i].children[0].pathname, cadena)
             addActive(itemsMenduMain[i].children[0], cadena)
         }
     }
