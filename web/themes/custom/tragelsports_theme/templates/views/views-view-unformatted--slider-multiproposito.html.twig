@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if view.current_display == "eten_drinken"%}
+<div class="col-8 mx-auto text-center">
+  <p>Hier kun je heerlijk eten & drinken terwijl je plezier hebt!</p>
+</div>
+{% endif %}
+<div id="id-{{view.current_display}}" class="carousel " data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    {% set key = 0 %}
+    {% for row in rows %}
+      {% if key == 0 %}
+        <button type="button" data-bs-target="#id-{{view.current_display}}" data-bs-slide-to="{{key}}" class="active" aria-current="true" aria-label="Slide {{key}}"></button>
+      {% else %}
+        <button type="button" data-bs-target="#id-{{view.current_display}}" data-bs-slide-to="{{key}}" aria-label="Slide {{key}}"></button>
+      {% endif %}
+      {% set key = key+1 %}
+    {% endfor %}
+  </div>
+  <div class="carousel-inner">
+  {% set key = 0 %}
+  {% for row in rows %}
+    {% if key == 0 %}
+      <div class="carousel-item active">
+    {% else %}
+      <div class="carousel-item">
+    {% endif %}
+        <div class="col-md-5">
+            {{ row.content }}
+        </div>
+      </div>
+    {% set key = key+1 %}
+  {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#id-{{view.current_display}}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#id-{{view.current_display}}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

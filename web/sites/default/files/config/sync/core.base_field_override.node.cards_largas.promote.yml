@@ -1,0 +1,22 @@
+uuid: e5fe206a-ca7c-42bd-aaae-48d406b08970
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.cards_largas
+id: node.cards_largas.promote
+field_name: promote
+entity_type: node
+bundle: cards_largas
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

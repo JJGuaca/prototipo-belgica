@@ -1,0 +1,34 @@
+uuid: 21caaf05-8041-41b8-a222-c3b2c52b0d49
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imagen_con_enlace
+    - node.type.slider_multiproposito
+    - paragraphs.paragraphs_type.slider_multiproposito
+  module:
+    - entity_reference_revisions
+id: node.slider_multiproposito.field_imagen_con_enlace
+field_name: field_imagen_con_enlace
+entity_type: node
+bundle: slider_multiproposito
+label: 'Imagen con enlace'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slider_multiproposito: slider_multiproposito
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 3
+        enabled: false
+      slider_multiproposito:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

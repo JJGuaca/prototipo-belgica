@@ -1,0 +1,50 @@
+uuid: b16cb311-c21d-48d3-8006-d09d3cb5c0f3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.slider_multiproposito.field_categoria_de_slider
+    - field.field.node.slider_multiproposito.field_imagen_con_enlace
+    - field.field.node.slider_multiproposito.field_imagen_de_slider
+    - node.type.slider_multiproposito
+  module:
+    - entity_reference_revisions
+    - user
+id: node.slider_multiproposito.default
+targetEntityType: node
+bundle: slider_multiproposito
+mode: default
+content:
+  field_categoria_de_slider:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_imagen_con_enlace:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_imagen_de_slider:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

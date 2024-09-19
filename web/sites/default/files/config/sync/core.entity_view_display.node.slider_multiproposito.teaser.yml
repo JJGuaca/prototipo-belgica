@@ -1,0 +1,27 @@
+uuid: 9f29edf9-cfe6-4d49-9a8a-83067cbc3bb4
+langcode: es
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.slider_multiproposito.field_categoria_de_slider
+    - field.field.node.slider_multiproposito.field_imagen_con_enlace
+    - field.field.node.slider_multiproposito.field_imagen_de_slider
+    - node.type.slider_multiproposito
+  module:
+    - user
+id: node.slider_multiproposito.teaser
+targetEntityType: node
+bundle: slider_multiproposito
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_categoria_de_slider: true
+  field_imagen_con_enlace: true
+  field_imagen_de_slider: true
+  langcode: true

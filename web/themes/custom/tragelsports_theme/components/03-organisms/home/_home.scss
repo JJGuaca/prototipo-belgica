@@ -1,0 +1,208 @@
+.container-fluid{
+    .cabezote{
+        .w-100{
+            .row{
+                .col-12{
+                    .block{
+                        .container-fluid{
+                            .row{
+                                .col-12{
+                                    .card{
+                                        .card-img-overlay{
+                                            a{
+                                                text-transform: uppercase;
+                                                font-size: 1.5rem;
+                                                @media (max-width:768px){
+                                                    font-size: 100%;
+                                                }
+                                                &:hover{
+                                                    border: 1px solid red;
+                                                    box-shadow: 0px 0px 6px 2px #f826d4;
+                                                    text-shadow: 0 0 3px #f826d4;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cards-largas{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .slider-eten{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        .container{
+            .row{
+                .col-12{
+                    .block{
+                        h2{
+                            font-size: 5.3125rem;
+                            margin: auto;
+                            width: fit-content;
+                            margin-bottom: 2rem;
+                        }
+                        .view-slider-multiproposito{
+                            .view-content{
+                                .carousel{
+                                    .carousel-inner{
+                                        @media (max-width: 767px) {
+                                            .carousel-item > div {
+                                                display: none;
+                                            }
+                                            .carousel-item > div:first-child {
+                                                display: block;
+                                            }
+                                        }                                 
+                                        .carousel-item.active,
+                                        .carousel-item-next,
+                                        .carousel-item-prev{
+                                            display: flex !important;
+                                            gap: 2rem;
+                                            
+                                        }
+                                        @media (min-width: 768px) {    
+                                            .carousel-item-end.active,
+                                            .carousel-item-next {
+                                              transform: translateX(25%);
+                                            }                                            
+                                            .carousel-item-start.active, 
+                                            .carousel-item-prev {
+                                              transform: translateX(-25%);
+                                            }
+                                        }
+                                        .carousel-item-end,
+                                        .carousel-item-start { 
+                                            transform: translateX(0);
+                                        }
+                                    }
+                                    .carousel-inner{
+                                        .carousel-item{
+                                            .col-md-5{
+                                                .views-field{
+                                                    .field-content{
+                                                        img{
+                                                            width: 100%;
+                                                            max-width: 600px;
+                                                            height: auto;
+                                                            object-fit: cover;
+                                                            object-position: center;
+                                                            max-height: 300px;
+                                                            min-height: 300px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .carousel-indicators{
+                                        margin-bottom: -3rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .slider-sport{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        .container{
+            .row{
+                .col-12{
+                    .block{
+                        .view-slider-multiproposito{
+                            .view-content{
+                                .carousel{
+                                    .carousel-inner{
+                                        @media (max-width: 767px) {
+                                            .carousel-item > div {
+                                                display: none;
+                                            }
+                                            .carousel-item > div:first-child {
+                                                display: block;
+                                            }
+                                        }                                 
+                                        .carousel-item.active,
+                                        .carousel-item-next,
+                                        .carousel-item-prev{
+                                            display: flex !important;
+                                            gap: 2rem;
+                                            
+                                        }
+                                        @media (min-width: 768px) {    
+                                            .carousel-item-end.active,
+                                            .carousel-item-next {
+                                              transform: translateX(25%);
+                                            }                                            
+                                            .carousel-item-start.active, 
+                                            .carousel-item-prev {
+                                              transform: translateX(-25%);
+                                            }
+                                        }
+                                        .carousel-item-end,
+                                        .carousel-item-start { 
+                                            transform: translateX(0);
+                                        }
+                                    }
+                                    .carousel-inner{
+                                        .carousel-item{
+                                            .col-md-5{
+                                                .views-field{
+                                                    .field-content{
+                                                        .card{
+                                                            .field{
+                                                                img{
+                                                                    width: 100%;
+                                                                    max-width: 600px;
+                                                                    height: auto;
+                                                                    object-fit: cover;
+                                                                    object-position: center;
+                                                                    max-height: 300px;
+                                                                    min-height: 300px;
+                                                                }
+                                                            }
+                                                            .card-img-overlay{
+                                                                display: flex;
+                                                                flex-direction: row;
+                                                                justify-content: center;
+                                                                align-items: flex-end;
+                                                                a.btn.btn-outline-light.btn-lg{
+                                                                    background-color: #000;
+                                                                    color: #fff;
+                                                                    border: 1.5px solid #fff;
+                                                                    transition: all 0.2s ease-in-out;
+                                                                    text-transform: uppercase;
+                                                                    &:hover{
+                                                                        border: 1px solid red;
+                                                                        box-shadow: 0px 0px 6px 2px #f82626;
+                                                                        text-shadow: 0 0 3px #f82626;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .carousel-indicators{
+                                        margin-bottom: -3rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

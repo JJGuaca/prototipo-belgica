@@ -1,0 +1,29 @@
+uuid: d4f56fae-df26-45a8-bc06-4b2d2a3961ff
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imagen_de_slider
+    - media.type.image
+    - node.type.slider_multiproposito
+id: node.slider_multiproposito.field_imagen_de_slider
+field_name: field_imagen_de_slider
+entity_type: node
+bundle: slider_multiproposito
+label: 'imagen de slider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

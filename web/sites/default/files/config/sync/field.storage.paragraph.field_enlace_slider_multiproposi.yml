@@ -1,0 +1,19 @@
+uuid: 39e5be90-ffe7-49d9-8713-9d13e3433d89
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_enlace_slider_multiproposi
+field_name: field_enlace_slider_multiproposi
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

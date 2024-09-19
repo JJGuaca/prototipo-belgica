@@ -1,0 +1,35 @@
+uuid: c08c7610-3843-49f2-963f-37dbe270127a
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cards_largas.body
+    - field.field.node.cards_largas.field_enlace_card_larga
+    - field.field.node.cards_largas.field_imagen_card_larga
+    - node.type.cards_largas
+  module:
+    - text
+    - user
+id: node.cards_largas.teaser
+targetEntityType: node
+bundle: cards_largas
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_enlace_card_larga: true
+  field_imagen_card_larga: true
+  langcode: true

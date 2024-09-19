@@ -26,3 +26,4 @@ permissions:
   - 'use text format restricted_html'
   - 'view media'
   - 'view paragraph content banner'
+  - 'view paragraph content slider_multiproposito'

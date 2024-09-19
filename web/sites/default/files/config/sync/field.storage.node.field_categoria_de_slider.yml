@@ -1,0 +1,20 @@
+uuid: f5238d31-4087-40e2-a2f5-3a112209ae67
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_categoria_de_slider
+field_name: field_categoria_de_slider
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

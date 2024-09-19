@@ -1,0 +1,17 @@
+uuid: 7753fa43-0114-4140-a9b8-3a662905bad2
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Cards Largas'
+type: cards_largas
+description: 'Tarjetas que cuentan con imagen, título, resumen y enlace, se pueden ordenar de manera horizontal de izquierda a derecha en pantallas grandes y en vertical, poniendo primero la imagen y luego el contenido en móviles.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

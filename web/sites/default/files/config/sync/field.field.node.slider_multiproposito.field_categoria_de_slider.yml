@@ -1,0 +1,29 @@
+uuid: f1717612-eab1-49f4-8d45-cecd5ee616a7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria_de_slider
+    - node.type.slider_multiproposito
+    - taxonomy.vocabulary.tipo_de_slider_home
+id: node.slider_multiproposito.field_categoria_de_slider
+field_name: field_categoria_de_slider
+entity_type: node
+bundle: slider_multiproposito
+label: 'Categoria de Slider'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipo_de_slider_home: tipo_de_slider_home
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

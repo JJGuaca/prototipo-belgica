@@ -1,0 +1,17 @@
+{% set title = fields.title.content|render|striptags|trim %}
+<div class="card">
+    <div class="row">
+        <div class="col-12 col-md-7 col-lg-7 imagen-card mx-auto">
+            <figure class="card-img">
+                {{fields.field_imagen_card_larga.content}}
+            </figure>
+        </div>
+        <div class="col-12 col-md-5 col-lg-5 cuerpo-card mx-auto">
+            <div class="card-body">
+                <h3>{{title}}</h3>
+                {{fields.body.content}}
+                {{fields.field_enlace_card_larga.content}}
+            </div>
+        </div>
+    </div>
+</div>

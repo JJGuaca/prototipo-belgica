@@ -1,0 +1,17 @@
+uuid: b921a2f7-eb71-47b5-b3cf-1bb8589438b6
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Slider multiproposito'
+type: slider_multiproposito
+description: 'Carrusel de imágenes de dimensiones varias para la implementación en las páginas que lo requieran'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

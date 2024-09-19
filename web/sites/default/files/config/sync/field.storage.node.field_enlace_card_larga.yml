@@ -1,0 +1,19 @@
+uuid: d08a5bc2-245c-4216-956e-e9d610925eb1
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_enlace_card_larga
+field_name: field_enlace_card_larga
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

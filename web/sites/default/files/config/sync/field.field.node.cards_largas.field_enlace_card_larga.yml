@@ -1,0 +1,23 @@
+uuid: aa1a626b-5d7b-47bf-89bb-7702d21d0cc0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enlace_card_larga
+    - node.type.cards_largas
+  module:
+    - link
+id: node.cards_largas.field_enlace_card_larga
+field_name: field_enlace_card_larga
+entity_type: node
+bundle: cards_largas
+label: 'enlace card larga'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

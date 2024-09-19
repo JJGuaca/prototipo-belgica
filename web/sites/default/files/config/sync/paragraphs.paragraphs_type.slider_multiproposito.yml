@@ -1,0 +1,10 @@
+uuid: 18fbffe7-9aee-4569-9b0d-30da87bcea1a
+langcode: es
+status: true
+dependencies: {  }
+id: slider_multiproposito
+label: 'Slider multiproposito'
+icon_uuid: null
+icon_default: null
+description: 'Carrusel habilitado para cuando la imagen cuenta con un enlace personalizado'
+behavior_plugins: {  }

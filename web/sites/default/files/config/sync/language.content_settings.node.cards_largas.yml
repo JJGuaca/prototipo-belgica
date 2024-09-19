@@ -1,0 +1,11 @@
+uuid: 07f4083b-9986-4862-8be7-9ceaf51aeb44
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.cards_largas
+id: node.cards_largas
+target_entity_type_id: node
+target_bundle: cards_largas
+default_langcode: authors_default
+language_alterable: false

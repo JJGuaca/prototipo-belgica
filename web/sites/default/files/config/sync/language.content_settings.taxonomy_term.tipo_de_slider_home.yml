@@ -1,0 +1,11 @@
+uuid: 5fbae7b3-0ae6-4d38-8f39-4432171aec02
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_slider_home
+id: taxonomy_term.tipo_de_slider_home
+target_entity_type_id: taxonomy_term
+target_bundle: tipo_de_slider_home
+default_langcode: authors_default
+language_alterable: true

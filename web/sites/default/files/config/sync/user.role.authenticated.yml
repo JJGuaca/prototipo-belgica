@@ -38,3 +38,4 @@ permissions:
   - 'use text format webform_default'
   - 'view media'
   - 'view paragraph content banner'
+  - 'view paragraph content slider_multiproposito'

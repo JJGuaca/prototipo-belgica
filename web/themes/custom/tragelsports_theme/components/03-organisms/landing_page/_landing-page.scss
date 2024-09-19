@@ -3,6 +3,9 @@ article.container-fluid {
     top: -100px;
     padding: unset;
     margin: auto;
+    @media (max-width:768px){
+        top: 0px;
+    }
     .cabezote{
         max-width: 2560px;
         margin: auto;

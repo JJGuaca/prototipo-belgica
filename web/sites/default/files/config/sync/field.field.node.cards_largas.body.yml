@@ -1,0 +1,24 @@
+uuid: a6e350e1-029a-4bac-bfa6-af2c3191e54e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.cards_largas
+  module:
+    - text
+id: node.cards_largas.body
+field_name: body
+entity_type: node
+bundle: cards_largas
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

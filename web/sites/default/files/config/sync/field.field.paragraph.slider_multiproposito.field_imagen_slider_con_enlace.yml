@@ -1,0 +1,29 @@
+uuid: 2fc5f1f1-6053-4c8c-9e35-ffc4f2b3d095
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_imagen_slider_con_enlace
+    - media.type.image
+    - paragraphs.paragraphs_type.slider_multiproposito
+id: paragraph.slider_multiproposito.field_imagen_slider_con_enlace
+field_name: field_imagen_slider_con_enlace
+entity_type: paragraph
+bundle: slider_multiproposito
+label: 'Imagen slider con enlace'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

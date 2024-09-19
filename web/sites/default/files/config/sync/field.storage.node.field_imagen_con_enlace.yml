@@ -1,0 +1,21 @@
+uuid: b016153e-e610-456c-8eaa-3f79186fc56b
+langcode: es
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+id: node.field_imagen_con_enlace
+field_name: field_imagen_con_enlace
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

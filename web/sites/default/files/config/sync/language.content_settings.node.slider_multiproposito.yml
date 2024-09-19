@@ -1,0 +1,11 @@
+uuid: 82b717e1-bfc9-4604-b363-83246e3f9deb
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.slider_multiproposito
+id: node.slider_multiproposito
+target_entity_type_id: node
+target_bundle: slider_multiproposito
+default_langcode: authors_default
+language_alterable: false

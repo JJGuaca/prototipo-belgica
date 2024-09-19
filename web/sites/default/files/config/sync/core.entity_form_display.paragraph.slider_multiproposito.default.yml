@@ -1,0 +1,34 @@
+uuid: 8f5c5a05-f370-4a8b-a864-19214a86b64c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_multiproposito.field_enlace_slider_multiproposi
+    - field.field.paragraph.slider_multiproposito.field_imagen_slider_con_enlace
+    - paragraphs.paragraphs_type.slider_multiproposito
+  module:
+    - link
+    - media_library
+id: paragraph.slider_multiproposito.default
+targetEntityType: paragraph
+bundle: slider_multiproposito
+mode: default
+content:
+  field_enlace_slider_multiproposi:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_imagen_slider_con_enlace:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
