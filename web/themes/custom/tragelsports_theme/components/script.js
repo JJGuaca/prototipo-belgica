@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     let location  = window.location.pathname;
-    if(window.location.pathname == "/" || window.location.pathname == "/home" || window.location.pathname=="/kidsparty"){
+    if(window.location.pathname == "/prototipo/web/" || window.location.pathname == "/prototipo/web/home" || window.location.pathname=="/prototipo/web/kidsparty"){
         sliderSportEtten();
         if(window.localStorage.getItem('fecha') == null || window.localStorage.getItem('veces') == null){
             let hoy = Date.now();
@@ -21,8 +21,8 @@ function activeMenu(location){
         }
     }
     let titulo = document.getElementById('block-tragelsports-theme-page-title');
-    if(titulo.children[0].innerText.toLowerCase() == "home" || titulo.children[0].innerText.toLowerCase() == "steengrill"|| titulo.children[0].innerText.toLowerCase() == "sports"){
-        titulo.children[0].classList.add('d-none');
+    if(titulo.children[1].innerText.toLowerCase() == "home" || titulo.children[1].innerText.toLowerCase() == "steengrill"|| titulo.children[1].innerText.toLowerCase() == "sports"){
+        titulo.children[1].classList.add('d-none');
         titulo.classList.add('d-none');
     }
     
@@ -30,12 +30,12 @@ function activeMenu(location){
 function addActive(valor,cadena){
     let item = "/"+valor.innerText.toLowerCase();
     item= item.replace(/ /g,"")
-    if(item == "/home"){
+    if(item == "/prototipo/web/home"){
         item = "/";
     }
     if(item === cadena){
         valor.parentNode.classList.add('active');
-        if(item === "/kidsparty" || item === "/steengrill" ||item === "/feesten"){
+        if(item === "/prototipo/web/kidsparty" || item === "/prototipo/web/steengrill" ||item === "/prototipo/web/feesten"){
             valor.parentNode.parentNode.parentNode.classList.add('active');
         } 
     } 
@@ -44,11 +44,11 @@ function addActive(valor,cadena){
 
 function menusFooter(cadena){
     let region ="";
-    if(cadena == "/privacy-policy" || cadena == "/over_ons" || cadena == "/algemene_voorwaarden"){
+    if(cadena == "/prototipo/web/privacy-policy" || cadena == "/prototipo/web/over_ons" || cadena == "/prototipo/web/algemene_voorwaarden"){
         region = "nuestraEmpresa"
     }else if(cadena == "/contacteer-ons"){
         region="accesoRapido";
-    }else if(cadena == "/" || cadena =="/steengrill"|| cadena =="/kidsparty" || cadena =="/feesten" || cadena =="/karaoke" || cadena =="/sports" || cadena =="/menu"|| cadena =="/bowling"){
+    }else if(cadena == "/prototipo/web/" || cadena =="/prototipo/web/steengrill"|| cadena =="/prototipo/web/prototipo/web/kidsparty" || cadena =="/prototipo/web/feesten" || cadena =="/prototipo/web/karaoke" || cadena =="/prototipo/web/sports" || cadena =="/prototipo/web/menu"|| cadena =="/prototipo/web/bowling"){
         region= "principalFooter";
     }
     togleActiveMenuFooter(region, cadena)
@@ -59,7 +59,7 @@ function togleActiveMenuFooter(region, cadena){
     for(let i=0; i< items.length;i++){
         if(items[i].children[0].attributes[0].value == cadena){
             items[i].classList.add('active')
-            if(cadena =="/steengrill"|| cadena =="/kidsparty" || cadena =="/feesten"){
+            if(cadena =="/prototipo/web/steengrill"|| cadena =="/prototipo/web/kidsparty" || cadena =="/prototipo/web/feesten"){
                 items[i].parentNode.parentNode.classList.add('active');
             }
         }
