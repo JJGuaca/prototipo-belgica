@@ -1,0 +1,11 @@
+uuid: 39711c8d-75ff-4857-990d-a199583b8bb4
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.paginas
+id: taxonomy_term.paginas
+target_entity_type_id: taxonomy_term
+target_bundle: paginas
+default_langcode: site_default
+language_alterable: false

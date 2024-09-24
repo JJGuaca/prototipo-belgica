@@ -1,0 +1,27 @@
+uuid: b9745254-f332-4b5f-b404-e064d03322fc
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.horarios_de_funcionamiento.field_horario_de_funcionamiento
+    - field.field.node.horarios_de_funcionamiento.field_imagen_del_horario
+    - field.field.node.horarios_de_funcionamiento.field_pagina_en_la_que_aparecera
+    - node.type.horarios_de_funcionamiento
+  module:
+    - user
+id: node.horarios_de_funcionamiento.teaser
+targetEntityType: node
+bundle: horarios_de_funcionamiento
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_horario_de_funcionamiento: true
+  field_imagen_del_horario: true
+  field_pagina_en_la_que_aparecera: true
+  langcode: true

@@ -1,0 +1,10 @@
+uuid: ba638cc8-365d-4090-ad6b-126106130c4e
+langcode: es
+status: true
+dependencies: {  }
+id: horarios_de_la_semana
+label: 'Horarios de la semana'
+icon_uuid: null
+icon_default: null
+description: 'Paragrap para visualizar los días de la semana'
+behavior_plugins: {  }

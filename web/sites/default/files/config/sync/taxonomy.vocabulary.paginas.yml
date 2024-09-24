@@ -1,0 +1,9 @@
+uuid: d0dbb4fb-6f48-4758-a023-ffccc251f20d
+langcode: es
+status: true
+dependencies: {  }
+name: Páginas
+vid: paginas
+description: 'En que páginas del menú principal aparecerá'
+weight: 0
+new_revision: false

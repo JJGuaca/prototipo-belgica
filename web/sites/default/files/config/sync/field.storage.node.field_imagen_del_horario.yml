@@ -1,0 +1,20 @@
+uuid: 8c2fc721-d26a-44ca-8189-1095739a2624
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_imagen_del_horario
+field_name: field_imagen_del_horario
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

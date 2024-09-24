@@ -1,0 +1,37 @@
+uuid: fa72477a-9ffc-40ea-bb52-d6a262b1fe20
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_horario_de_funcionamiento
+    - node.type.horarios_de_funcionamiento
+    - paragraphs.paragraphs_type.horarios_de_la_semana
+  module:
+    - entity_reference_revisions
+id: node.horarios_de_funcionamiento.field_horario_de_funcionamiento
+field_name: field_horario_de_funcionamiento
+entity_type: node
+bundle: horarios_de_funcionamiento
+label: 'Horario de funcionamiento'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      horarios_de_la_semana: horarios_de_la_semana
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 4
+        enabled: false
+      horarios_de_la_semana:
+        weight: 5
+        enabled: true
+      slider_multiproposito:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

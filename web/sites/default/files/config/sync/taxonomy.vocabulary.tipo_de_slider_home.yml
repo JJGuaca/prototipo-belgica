@@ -2,7 +2,7 @@ uuid: 2098a171-7371-4ebd-b345-1f7dccf229d4
 langcode: und
 status: true
 dependencies: {  }
-name: 'Tipo de slider home'
+name: 'Tipo de slider'
 vid: tipo_de_slider_home
 description: 'taxonomía para identificar los slider por categorias'
 weight: 0

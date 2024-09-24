@@ -1,0 +1,29 @@
+uuid: d81c0113-2d39-4c2b-bb9b-f7c8737eb8cb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pagina_en_la_que_aparecera
+    - node.type.horarios_de_funcionamiento
+    - taxonomy.vocabulary.paginas
+id: node.horarios_de_funcionamiento.field_pagina_en_la_que_aparecera
+field_name: field_pagina_en_la_que_aparecera
+entity_type: node
+bundle: horarios_de_funcionamiento
+label: 'Página en la que aparecerá'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      paginas: paginas
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

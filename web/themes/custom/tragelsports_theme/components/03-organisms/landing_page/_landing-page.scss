@@ -92,8 +92,30 @@ article.container-fluid {
         margin: auto;
         font-size: 1.125rem;
         padding: 1rem;
-        background-color: #ffffffcf;
+        background-color: transparent;
         color: #000;
+        .container{
+            .row{
+                .col-12{
+                    .block{
+                        .text-long{
+                            img{
+                                margin-top: 6rem;
+                                padding: 3rem;
+                                object-fit: contain;
+                                object-position: center;
+                                @media (max-width:768px) {
+                                    margin-top: unset;
+                                    padding: unset;
+                                    min-height: 500px;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     .formulario-contacto{
         max-width: 1024px;

@@ -1,0 +1,42 @@
+uuid: a91cc696-a538-4589-b596-a2558acfd79e
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_dia_de_la_semana
+field_name: field_dia_de_la_semana
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: maandag
+      label: Maandag
+    -
+      value: dinsdag
+      label: Dinsdag
+    -
+      value: woensdag
+      label: Woensdag
+    -
+      value: donderdag
+      label: Donderdag
+    -
+      value: vrijdag
+      label: Vrijdag
+    -
+      value: zaterdag
+      label: Zaterdag
+    -
+      value: zondag
+      label: Zondag
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

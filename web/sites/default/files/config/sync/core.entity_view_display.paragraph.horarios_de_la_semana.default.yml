@@ -1,0 +1,31 @@
+uuid: 608d11b7-bc26-472c-a204-9772015948bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horarios_de_la_semana.field_dia_de_la_semana
+    - field.field.paragraph.horarios_de_la_semana.field_horario_del_dia
+    - paragraphs.paragraphs_type.horarios_de_la_semana
+  module:
+    - options
+id: paragraph.horarios_de_la_semana.default
+targetEntityType: paragraph
+bundle: horarios_de_la_semana
+mode: default
+content:
+  field_dia_de_la_semana:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_horario_del_dia:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.cards_largas.body
     - field.field.node.cards_largas.field_enlace_card_larga
     - field.field.node.cards_largas.field_imagen_card_larga
+    - field.field.node.cards_largas.field_pagina_en_la_que_aparecera
     - node.type.cards_largas
   module:
     - text
@@ -32,4 +33,5 @@ content:
 hidden:
   field_enlace_card_larga: true
   field_imagen_card_larga: true
+  field_pagina_en_la_que_aparecera: true
   langcode: true

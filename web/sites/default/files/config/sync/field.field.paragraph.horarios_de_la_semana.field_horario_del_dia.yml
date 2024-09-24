@@ -1,0 +1,21 @@
+uuid: 8e4d4277-559d-488e-8aa5-d2835e84fcee
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_horario_del_dia
+    - paragraphs.paragraphs_type.horarios_de_la_semana
+id: paragraph.horarios_de_la_semana.field_horario_del_dia
+field_name: field_horario_del_dia
+entity_type: paragraph
+bundle: horarios_de_la_semana
+label: 'Horario del día'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '00:00 - 23:00'
+default_value_callback: ''
+settings: {  }
+field_type: string

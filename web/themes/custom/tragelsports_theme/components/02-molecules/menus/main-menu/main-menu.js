@@ -12,9 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let boton = document.getElementById('botonMenu');
    boton.addEventListener('click', function(){
     let navBar = document.getElementById('navbarNavDropdown');
-     navBar.classList.toggle('show');
-    //  navBar.classList.toggle('collapse');
-    
+     navBar.classList.toggle('show');    
   })
 });
 

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.cards_largas.body
     - field.field.node.cards_largas.field_enlace_card_larga
     - field.field.node.cards_largas.field_imagen_card_larga
+    - field.field.node.cards_largas.field_pagina_en_la_que_aparecera
     - node.type.cards_largas
   module:
     - link
@@ -43,6 +44,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_pagina_en_la_que_aparecera:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
     region: content
   links:
     settings: {  }

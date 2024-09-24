@@ -1,0 +1,21 @@
+uuid: 9f75ea14-5ff9-4ec0-a9bf-284481a33a84
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dia_de_la_semana
+    - paragraphs.paragraphs_type.horarios_de_la_semana
+  module:
+    - options
+id: paragraph.horarios_de_la_semana.field_dia_de_la_semana
+field_name: field_dia_de_la_semana
+entity_type: paragraph
+bundle: horarios_de_la_semana
+label: 'Día de la semana'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,17 +1,7 @@
 {% set dir = '_self' %}
-{% if items|length >= 1 %}
-    {% if items[0].content['#url'].external == true %}
-        {% set dir = "_blank" %}
-    {% endif %}
-    <div class="card-img-overlay">
-    {% if items[0].content['#url'].external == false %}
-        {% set base = items[0].content["#url"].uri|split(':') %}
-        {% set base = base[1] %}
-        <a target="{{ dir }}" href="/{{base}}#{{items[0].content['#url'].options.fragment}}"  class="btn btn-outline-light btn-lg">{{items[0].content['#title']}}</a>
-    {% else %}
-        <a target="{{ dir }}" href="{{ items[0].content['#url'].uri }}"  class="btn btn-outline-light btn-lg">{{items[0].content['#title']}}</a>
-    {% endif %}
-</div>
-{% else %}
-<div class="card-img-overlay"></div>
+{% if items[0].content['#url'].external == true %}
+{% set dir = '_blank' %}
 {% endif %}
+<div class="card-img-overlay">
+    <a target="{{dir}}" href="{{items[0].content['#url']}}" class="btn btn-outline-light btn-lg">{{items[0].content['#title']}}</a>
+</div>

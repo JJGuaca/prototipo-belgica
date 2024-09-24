@@ -3616,7 +3616,10 @@ pre {
 .view-cards-largas .view-content .views-row .card .row .col-12 .card-body h3 {
   text-transform: uppercase;
 }
-.view-cards-largas .view-content .views-row .card .row .col-12 .card-body a.btn.btn-outline-light.btn-lg {
+.view-cards-largas .view-content .views-row .card .row .col-12 .card-body .card-footer {
+  background-color: transparent;
+}
+.view-cards-largas .view-content .views-row .card .row .col-12 .card-body .card-footer a.btn.btn-outline-light.btn-lg {
   background-color: #000;
   color: #fff;
   border: 1.5px solid #fff;
@@ -3625,7 +3628,7 @@ pre {
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
 }
-.view-cards-largas .view-content .views-row .card .row .col-12 .card-body a.btn.btn-outline-light.btn-lg:hover {
+.view-cards-largas .view-content .views-row .card .row .col-12 .card-body .card-footer a.btn.btn-outline-light.btn-lg:hover {
   border: 1px solid red;
   -webkit-box-shadow: 0px 0px 6px 2px #f826d4;
           box-shadow: 0px 0px 6px 2px #f826d4;
@@ -3720,6 +3723,18 @@ pre {
   color: red;
   text-decoration: underline;
 }
+.items-menu .active a {
+  color: red;
+  text-decoration: underline;
+}
+.items-menu .active .nivel2 .item-link a {
+  color: #fff;
+  text-decoration: unset;
+}
+.items-menu .active .nivel2 .item-link.active a {
+  color: red;
+  text-decoration: underline;
+}
 
 /*
  * General Variables
@@ -3801,7 +3816,7 @@ pre {
   text-shadow: 0 0 3px #f826d4;
 }
 .container-fluid .cards-largas {
-  margin-top: 2rem;
+  margin-top: 4.5rem;
   margin-bottom: 2rem;
 }
 .container-fluid .slider-eten {
@@ -3957,6 +3972,214 @@ pre {
   margin-bottom: -3rem;
 }
 
+@media (min-width: 48rem) {
+  .horarios-funcionamiento {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block h2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: block;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  line-height: 3rem;
+  color: #fff;
+  font-size: 370%;
+  letter-spacing: 0.25rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 48rem) {
+  .horarios-funcionamiento .container .row .col-12 .block h2 {
+    font-size: 180%;
+    margin-top: 5rem;
+    line-height: 1.5rem;
+    margin-bottom: -2rem;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: unset;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row {
+  margin: auto;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 {
+  padding: 0;
+  height: auto;
+  min-height: 430px;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 3px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 48rem) {
+  .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo {
+    margin-top: 1rem;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido {
+  -webkit-transform: translateZ(-20px);
+          transform: translateZ(-20px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  height: 60px;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  position: relative;
+  top: 0px;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido:hover {
+  -webkit-transform: translateZ(-20px) rotateX(90deg);
+          transform: translateZ(-20px) rotateX(90deg);
+}
+@media (max-width: 48rem) {
+  .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido {
+    top: -20px;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div p {
+  margin: unset;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .cubo-text, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono {
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 3rem;
+  color: #FFF;
+  padding: 0.625rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  font-size: 2.5rem;
+}
+@media (max-width: 48rem) {
+  .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .cubo-text, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono {
+    font-size: 1.5rem;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .cubo-text {
+  line-height: 3.75rem;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.368627451);
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .cubo-text {
+  text-shadow: 0 0 10px #ed6810, 0 0 10px #ed6810, 0 0 10px #ed6810, 0 0 10px #ed6810, 0 0 40px #ff00de;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 3.75rem;
+  padding: 0 0.625rem;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje {
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono {
+  text-shadow: 0 0 10px #03bd15, 0 0 10px #03bd15, 0 0 10px #03bd15, 0 0 10px #03bd15, 0 0 10px #03bd15;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje.cerrado, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono.cerrado {
+  text-shadow: 0 0 10px #bc0e0e, 0 0 10px #bc0e0e, 0 0 10px #bc0e0e, 0 0 10px #bc0e0e, 0 0 10px #bc0e0e;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div:nth-child(1) {
+  -webkit-transform: rotateX(0deg) translateY(0px) translateZ(0px);
+          transform: rotateX(0deg) translateY(0px) translateZ(0px);
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div:nth-child(2) {
+  -webkit-transform: rotateX(-90deg) translateY(0px) translateZ(-30px);
+          transform: rotateX(-90deg) translateY(0px) translateZ(-30px);
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .imagenTragelBOWLING img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 650px;
+  max-height: 438px;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6:nth-child(1) {
+  background-color: rgba(0, 0, 0, 0.368627451);
+}
+
 article.container-fluid {
   position: relative;
   top: -100px;
@@ -4070,8 +4293,23 @@ article.container-fluid .cuerpo {
   margin: auto;
   font-size: 1.125rem;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8117647059);
+  background-color: transparent;
   color: #000;
+}
+article.container-fluid .cuerpo .container .row .col-12 .block .text-long img {
+  margin-top: 6rem;
+  padding: 3rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (max-width: 48rem) {
+  article.container-fluid .cuerpo .container .row .col-12 .block .text-long img {
+    margin-top: unset;
+    padding: unset;
+    min-height: 500px;
+  }
 }
 article.container-fluid .formulario-contacto {
   max-width: 1024px;
@@ -4609,7 +4847,10 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
 .view-cards-largas .view-content .views-row .card .row .col-12 .card-body h3 {
   text-transform: uppercase;
 }
-.view-cards-largas .view-content .views-row .card .row .col-12 .card-body a.btn.btn-outline-light.btn-lg {
+.view-cards-largas .view-content .views-row .card .row .col-12 .card-body .card-footer {
+  background-color: transparent;
+}
+.view-cards-largas .view-content .views-row .card .row .col-12 .card-body .card-footer a.btn.btn-outline-light.btn-lg {
   background-color: #000;
   color: #fff;
   border: 1.5px solid #fff;
@@ -4618,7 +4859,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
 }
-.view-cards-largas .view-content .views-row .card .row .col-12 .card-body a.btn.btn-outline-light.btn-lg:hover {
+.view-cards-largas .view-content .views-row .card .row .col-12 .card-body .card-footer a.btn.btn-outline-light.btn-lg:hover {
   border: 1px solid red;
   -webkit-box-shadow: 0px 0px 6px 2px #f826d4;
           box-shadow: 0px 0px 6px 2px #f826d4;
@@ -4713,6 +4954,18 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   color: red;
   text-decoration: underline;
 }
+.items-menu .active a {
+  color: red;
+  text-decoration: underline;
+}
+.items-menu .active .nivel2 .item-link a {
+  color: #fff;
+  text-decoration: unset;
+}
+.items-menu .active .nivel2 .item-link.active a {
+  color: red;
+  text-decoration: underline;
+}
 
 /*
  * General Variables
@@ -4794,7 +5047,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   text-shadow: 0 0 3px #f826d4;
 }
 .container-fluid .cards-largas {
-  margin-top: 2rem;
+  margin-top: 4.5rem;
   margin-bottom: 2rem;
 }
 .container-fluid .slider-eten {
@@ -4950,6 +5203,214 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   margin-bottom: -3rem;
 }
 
+@media (min-width: 48rem) {
+  .horarios-funcionamiento {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block h2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: block;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  line-height: 3rem;
+  color: #fff;
+  font-size: 370%;
+  letter-spacing: 0.25rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 48rem) {
+  .horarios-funcionamiento .container .row .col-12 .block h2 {
+    font-size: 180%;
+    margin-top: 5rem;
+    line-height: 1.5rem;
+    margin-bottom: -2rem;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: unset;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row {
+  margin: auto;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 {
+  padding: 0;
+  height: auto;
+  min-height: 430px;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 3px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 48rem) {
+  .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo {
+    margin-top: 1rem;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido {
+  -webkit-transform: translateZ(-20px);
+          transform: translateZ(-20px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  height: 60px;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  position: relative;
+  top: 0px;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido:hover {
+  -webkit-transform: translateZ(-20px) rotateX(90deg);
+          transform: translateZ(-20px) rotateX(90deg);
+}
+@media (max-width: 48rem) {
+  .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido {
+    top: -20px;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div p {
+  margin: unset;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .cubo-text, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono {
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 3rem;
+  color: #FFF;
+  padding: 0.625rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  font-size: 2.5rem;
+}
+@media (max-width: 48rem) {
+  .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .cubo-text, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono {
+    font-size: 1.5rem;
+  }
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .cubo-text {
+  line-height: 3.75rem;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.368627451);
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .cubo-text {
+  text-shadow: 0 0 10px #ed6810, 0 0 10px #ed6810, 0 0 10px #ed6810, 0 0 10px #ed6810, 0 0 40px #ff00de;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 3.75rem;
+  padding: 0 0.625rem;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje {
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono {
+  text-shadow: 0 0 10px #03bd15, 0 0 10px #03bd15, 0 0 10px #03bd15, 0 0 10px #03bd15, 0 0 10px #03bd15;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .mensaje.cerrado, .horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div .icono.cerrado {
+  text-shadow: 0 0 10px #bc0e0e, 0 0 10px #bc0e0e, 0 0 10px #bc0e0e, 0 0 10px #bc0e0e, 0 0 10px #bc0e0e;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div:nth-child(1) {
+  -webkit-transform: rotateX(0deg) translateY(0px) translateZ(0px);
+          transform: rotateX(0deg) translateY(0px) translateZ(0px);
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6 .cubo .contenido div:nth-child(2) {
+  -webkit-transform: rotateX(-90deg) translateY(0px) translateZ(-30px);
+          transform: rotateX(-90deg) translateY(0px) translateZ(-30px);
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .imagenTragelBOWLING img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 650px;
+  max-height: 438px;
+}
+.horarios-funcionamiento .container .row .col-12 .block .view-horario-de-funcionamiento .view-content .views-row .horario-KLIMUUR .row .col-md-6:nth-child(1) {
+  background-color: rgba(0, 0, 0, 0.368627451);
+}
+
 article.container-fluid {
   position: relative;
   top: -100px;
@@ -5063,8 +5524,23 @@ article.container-fluid .cuerpo {
   margin: auto;
   font-size: 1.125rem;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8117647059);
+  background-color: transparent;
   color: #000;
+}
+article.container-fluid .cuerpo .container .row .col-12 .block .text-long img {
+  margin-top: 6rem;
+  padding: 3rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (max-width: 48rem) {
+  article.container-fluid .cuerpo .container .row .col-12 .block .text-long img {
+    margin-top: unset;
+    padding: unset;
+    min-height: 500px;
+  }
 }
 article.container-fluid .formulario-contacto {
   max-width: 1024px;
@@ -6174,6 +6650,9 @@ div#block-tragelsports-theme-page-title {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5490196078);
+  padding: 1rem;
+  border-radius: 10px;
 }
 @media (min-width: 48rem) {
   div#block-tragelsports-theme-page-title {
@@ -6186,10 +6665,11 @@ div#block-tragelsports-theme-page-title .heading {
   word-break: break-word;
   margin: unset;
   text-align: center;
+  text-transform: uppercase;
 }
 @media (min-width: 48rem) {
   div#block-tragelsports-theme-page-title .heading {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }
 

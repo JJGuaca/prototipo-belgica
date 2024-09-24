@@ -1,0 +1,50 @@
+uuid: 836543e7-ad56-4d8a-88ec-aca34418f41a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.horarios_de_funcionamiento.field_horario_de_funcionamiento
+    - field.field.node.horarios_de_funcionamiento.field_imagen_del_horario
+    - field.field.node.horarios_de_funcionamiento.field_pagina_en_la_que_aparecera
+    - node.type.horarios_de_funcionamiento
+  module:
+    - entity_reference_revisions
+    - user
+id: node.horarios_de_funcionamiento.default
+targetEntityType: node
+bundle: horarios_de_funcionamiento
+mode: default
+content:
+  field_horario_de_funcionamiento:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_imagen_del_horario:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_pagina_en_la_que_aparecera:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

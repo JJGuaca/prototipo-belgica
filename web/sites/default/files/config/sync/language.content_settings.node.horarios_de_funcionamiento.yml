@@ -1,0 +1,11 @@
+uuid: 5866547f-cc63-4f63-80ce-97980686cf83
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.horarios_de_funcionamiento
+id: node.horarios_de_funcionamiento
+target_entity_type_id: node
+target_bundle: horarios_de_funcionamiento
+default_langcode: authors_default
+language_alterable: false

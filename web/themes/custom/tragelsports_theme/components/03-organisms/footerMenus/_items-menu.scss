@@ -29,4 +29,25 @@
             }
         }
     }
+    .active{
+        a{
+            color: red;
+            text-decoration: underline;
+        }
+        .nivel2{
+            .item-link{
+                a{
+                    color: #fff;
+                    text-decoration: unset;
+                }
+                &.active{
+                    a{
+                        color: red;
+                        text-decoration: underline;
+                    }
+                }
+            }
+           
+        }
+    }
 }

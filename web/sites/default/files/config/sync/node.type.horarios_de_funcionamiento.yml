@@ -1,0 +1,17 @@
+uuid: 8990fc6c-c145-4c92-9e74-1761d9fa48fe
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Horarios de funcionamiento'
+type: horarios_de_funcionamiento
+description: 'Componente creado para mostrar los horarios de funcionamiento del establecimiento para las diferentes actividades o servicios que presta'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

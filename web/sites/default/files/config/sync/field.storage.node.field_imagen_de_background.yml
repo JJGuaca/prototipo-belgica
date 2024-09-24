@@ -16,7 +16,7 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: 979fd24f-30b2-4ecc-88ad-6a9e3b504c1e
+    uuid: ''
     alt: 'Fondo de pantalla principal'
     title: 'Fondo de pantalla principal'
     width: 1800

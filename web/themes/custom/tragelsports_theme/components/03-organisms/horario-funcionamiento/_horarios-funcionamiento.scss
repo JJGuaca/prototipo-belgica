@@ -1,0 +1,159 @@
+.horarios-funcionamiento{
+    @media (min-width:768px){
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        padding: 3rem;
+    }
+    .container{
+        .row{
+            .col-12{
+                .block{
+                    h2{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        justify-content: center;
+                        align-items: center;
+                        display: block;
+                        text-transform: uppercase;
+                        font-style: normal;
+                        font-weight: 400;
+                        text-align: center;
+                        line-height: 3rem;
+                        color: #fff;
+                        font-size: 370%;
+                        letter-spacing: 4px;
+                        margin-top: 2rem;
+                        margin-bottom: 2rem;
+                        @media (max-width:768px) {
+                            font-size: 180%;
+                            margin-top: 5rem;
+                            line-height: 1.5rem;
+                            margin-bottom: -2rem;
+                        }                                    
+                    }
+                    .view-horario-de-funcionamiento{
+                        .view-content{
+                            .views-row{                                
+                                .horario-KLIMUUR{
+                                    margin-top: 2rem;
+                                    margin-bottom: 2rem;
+                                    padding: unset;
+                                    .row{
+                                        margin: auto;
+                                        .col-md-6{
+                                            padding: 0;
+                                            height: auto;
+                                            min-height: 430px;
+                                            .cubo{
+                                                display: flex;
+                                                flex-direction: column;
+                                                flex-wrap: nowrap;
+                                                align-items: stretch;
+                                                gap: 3px;
+                                                justify-content: center;
+                                                width: 100%;
+                                                height: 100%;
+                                                @media (max-width:768px) {
+                                                    margin-top: 1rem;
+                                                }
+                                                .contenido{
+                                                    transform: translateZ(-20px);
+                                                    transform-style: preserve-3d;
+                                                    height: 60px;
+                                                    transition: all 0.35s;
+                                                    position: relative;
+                                                    top: 0px;
+                                                    &:hover{
+                                                        transform: translateZ(-20px) rotateX(90deg);
+                                                    }
+                                                    @media (max-width:768px) {
+                                                        top: -20px;
+                                                    }
+                                                    div{
+                                                        p{
+                                                            margin: unset;
+                                                        }
+                                                        .cubo-text, .mensaje, .icono {
+                                                            font-optical-sizing: auto;
+                                                            font-weight: bold;
+                                                            font-style: normal;
+                                                            font-size: 3rem;
+                                                            color: #FFF;
+                                                            padding: 10px;
+                                                            text-align: center;
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            flex-wrap: nowrap;
+                                                            font-size: 2.5rem;
+                                                            @media (max-width:768px) {
+                                                                font-size: 1.5rem;
+                                                            }
+                                                        }
+                                                        
+                                                        .cubo-text {
+                                                            line-height: 60px;
+                                                            height: 60px;
+                                                            background: #0000005e;
+                                                        }
+                                                        .cubo-text {
+                                                            text-shadow: 0 0 10px #ed6810, 0 0 10px #ed6810, 0 0 10px #ed6810, 0 0 10px #ed6810, 0 0 40px #ff00de;
+                                                        }
+                                                        .icono {
+                                                            position: absolute;
+                                                            top: 0;
+                                                            right: 0;
+                                                            line-height: 60px;
+                                                            padding: 0 10px;
+                                                            transition: all 0.5s;
+                                                        }
+                                                        .mensaje {
+                                                            color: #fff;
+                                                            display: block;
+                                                            width: 100%;
+                                                            padding: 0;
+                                                            box-sizing: border-box;
+                                                            text-transform: uppercase;
+                                                        }
+                                                        .mensaje, .icono {
+                                                            text-shadow: 0 0 10px #03bd15, 0 0 10px #03bd15, 0 0 10px #03bd15, 0 0 10px #03bd15, 0 0 10px #03bd15;
+                                                            &.cerrado {
+                                                                text-shadow: 0 0 10px #bc0e0e, 0 0 10px #bc0e0e, 0 0 10px #bc0e0e, 0 0 10px #bc0e0e, 0 0 10px #bc0e0e;
+                                                            }
+                                                        }
+                                                    }
+                                                    div:nth-child(1) {
+                                                        transform: rotateX(0deg) translateY(0px) translateZ(0px);
+                                                    }
+                                                    div:nth-child(2) {
+                                                        transform: rotateX(-90deg) translateY(0px) translateZ(-30px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .imagenTragelBOWLING{
+                                            img{
+                                                object-fit: cover;
+                                                object-position: center;
+                                                width: 100%;
+                                                height: 100%;
+                                                max-width: 650px;
+                                                max-height: 438px;
+                                            }
+                                        }
+                                        .col-md-6:nth-child(1) {
+                                            background-color: #0000005e;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

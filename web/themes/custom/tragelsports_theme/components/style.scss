@@ -274,6 +274,9 @@ div#block-tragelsports-theme-page-title {
     justify-content: center;
     align-items: center;
     z-index: 1;
+    background-color: #0000008c;
+    padding: 1rem;
+    border-radius: 10px;
     @media (min-width:768px){
         top: 180px;
     }
@@ -283,8 +286,9 @@ div#block-tragelsports-theme-page-title {
         word-break: break-word;
         margin: unset;
         text-align: center;
+        text-transform: uppercase;
         @media (min-width:768px){
-            font-size: 7rem;
+            font-size: 5rem;
         }
     }
 }

@@ -1,0 +1,13 @@
+<div class="contenido">
+    <div>
+        <p class="cubo-text">{{content.field_dia_de_la_semana[0]['#markup']|render|striptags|trim}}</p>
+    </div>
+    <div>
+    {% if content.field_horario_del_dia[0]['#context'].value|render|striptags|trim|lower == "gesloten" %}
+        <p class="mensaje cubo-text cerrado ">{{content.field_horario_del_dia[0]['#context'].value|render|striptags|trim}}</p>
+    {% else %}
+        <label class="icono "><i class="bi bi-calendar3"></i></label>
+        <p class="mensaje cubo-text ">{{content.field_horario_del_dia[0]['#context'].value|render|striptags|trim}}</p>
+    {% endif %}
+    </div>
+</div>
