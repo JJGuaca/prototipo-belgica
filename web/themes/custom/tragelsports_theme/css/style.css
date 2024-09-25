@@ -4554,6 +4554,331 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   width: 100%;
 }
 
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  text-align: center;
+  font-weight: 700;
+  color: #3f3b3b;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  max-width: 450px;
+  height: 550px;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 72, 112, 0);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card:hover::before {
+  background: rgba(148, 38, 143, 0.5098039216);
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card:hover .informations-container {
+  -webkit-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card:hover .informations-container .more-information {
+  opacity: 1;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card:hover .book-container .content {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .book-container {
+  height: 200px;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .book-container .content {
+  position: relative;
+  opacity: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateY(-200px);
+       -o-transform: translateY(-200px);
+          transform: translateY(-200px);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .book-container .content .btn {
+  border: 3px solid white;
+  padding: 0.625rem 0.9375rem;
+  background: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  background: #f0f0f0;
+  -webkit-transform: translateY(75%);
+       -o-transform: translateY(75%);
+          transform: translateY(75%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .title {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: auto;
+  padding: 1rem;
+  top: 5%;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information .info-and-date-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 1rem;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information .info-and-date-container .box {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  padding: 0.625rem;
+  margin-top: 1.25rem;
+  border-radius: 10px;
+  background: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.25rem;
+  color: inherit;
+  text-decoration: unset;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information .info-and-date-container .box:hover {
+  outline-width: 2px !important;
+  outline-style: solid !important;
+  outline-color: #ff74d6 !important;
+  -webkit-box-shadow: #efa7da 0px 0px 6px 5px;
+          box-shadow: #efa7da 0px 0px 6px 5px;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information .info-and-date-container .box span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  width: 100%;
+  font-size: 1.875rem;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container h2.title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  width: 50px;
+  margin: auto;
+  background: #0a4870;
+}
+
+.cuerpo {
+  margin-top: 2rem !important;
+  margin-bottom: 3rem !important;
+}
+.cuerpo .container .row .col-12 .block .text-long p {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2rem;
+  color: #FFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  line-height: 2.5rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: auto;
+}
+.cuerpo .container .row .col-12 .block .text-long .texto {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.cuerpo .container .row .col-12 .block .text-long .texto li {
+  font-style: normal;
+  font-size: 2rem;
+  color: #FFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  line-height: 2.5rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: auto;
+}
+
 /*
  * General Variables
  * Note: colors should go into
@@ -4742,6 +5067,140 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
 
 .header__menu {
   width: 100%;
+}
+
+.slider-basico .container .row .col-12 .block .view-slider-basico .view-content .carousel .carousel-inner .carousel-item .views-field .field-content img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: top;
+     object-position: top;
+  max-height: 700px;
+}
+
+.reservas-salas {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+.reservas-salas .container .row .col-12 .block .h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-weight: 500;
+  line-height: 0.825em;
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.26875rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row {
+  width: 100%;
+  max-width: 350px;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover figcaption {
+  background-color: #ffffff;
+  padding: 1rem;
+  top: -13px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate3d(0px, -225px, 0px);
+          transform: translate3d(0px, -225px, 0px);
+  height: 240px;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover img {
+  -webkit-transform: translate3d(0px, -240px, 0px);
+          transform: translate3d(0px, -240px, 0px);
+  opacity: 0;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: all 0.32s ease;
+  -o-transition: all 0.32s ease;
+  transition: all 0.32s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption {
+  -webkit-transition: all 0.32s ease;
+  -o-transition: all 0.32s ease;
+  transition: all 0.32s ease;
+  width: 100%;
+  position: relative;
+  -webkit-transform: translate3d(0px, 10px, 10px);
+          transform: translate3d(0px, 10px, 10px);
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table {
+  margin: unset;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table tbody tr th {
+  font-size: 90%;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table tbody tr th .btn.btn-primary {
+  background-color: #000;
+  color: #fff;
+  border: 1.5px solid #fff;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table tbody tr th .btn.btn-primary:hover {
+  background-color: #2d1d1d;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table .thead-dark th {
+  color: #fff;
+  background-color: #212529;
+  border-color: #32383e;
+  text-align: center;
+  text-transform: uppercase;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table .thead-dark th h2 {
+  margin: unset;
 }
 
 .view-cards-largas .view-content {
@@ -5785,6 +6244,331 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   width: 100%;
 }
 
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  text-align: center;
+  font-weight: 700;
+  color: #3f3b3b;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  max-width: 450px;
+  height: 550px;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 72, 112, 0);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card:hover::before {
+  background: rgba(148, 38, 143, 0.5098039216);
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card:hover .informations-container {
+  -webkit-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card:hover .informations-container .more-information {
+  opacity: 1;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card:hover .book-container .content {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .book-container {
+  height: 200px;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .book-container .content {
+  position: relative;
+  opacity: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateY(-200px);
+       -o-transform: translateY(-200px);
+          transform: translateY(-200px);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .book-container .content .btn {
+  border: 3px solid white;
+  padding: 0.625rem 0.9375rem;
+  background: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  background: #f0f0f0;
+  -webkit-transform: translateY(75%);
+       -o-transform: translateY(75%);
+          transform: translateY(75%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .title {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: auto;
+  padding: 1rem;
+  top: 5%;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information .info-and-date-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 1rem;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information .info-and-date-container .box {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  padding: 0.625rem;
+  margin-top: 1.25rem;
+  border-radius: 10px;
+  background: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.25rem;
+  color: inherit;
+  text-decoration: unset;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information .info-and-date-container .box:hover {
+  outline-width: 2px !important;
+  outline-style: solid !important;
+  outline-color: #ff74d6 !important;
+  -webkit-box-shadow: #efa7da 0px 0px 6px 5px;
+          box-shadow: #efa7da 0px 0px 6px 5px;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container .more-information .info-and-date-container .box span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  width: 100%;
+  font-size: 1.875rem;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card .informations-container h2.title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  width: 50px;
+  margin: auto;
+  background: #0a4870;
+}
+
+.cuerpo {
+  margin-top: 2rem !important;
+  margin-bottom: 3rem !important;
+}
+.cuerpo .container .row .col-12 .block .text-long p {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2rem;
+  color: #FFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  line-height: 2.5rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: auto;
+}
+.cuerpo .container .row .col-12 .block .text-long .texto {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.cuerpo .container .row .col-12 .block .text-long .texto li {
+  font-style: normal;
+  font-size: 2rem;
+  color: #FFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  line-height: 2.5rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: auto;
+}
+
 /*
  * General Variables
  * Note: colors should go into
@@ -5973,6 +6757,140 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
 
 .header__menu {
   width: 100%;
+}
+
+.slider-basico .container .row .col-12 .block .view-slider-basico .view-content .carousel .carousel-inner .carousel-item .views-field .field-content img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: top;
+     object-position: top;
+  max-height: 700px;
+}
+
+.reservas-salas {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+.reservas-salas .container .row .col-12 .block .h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-weight: 500;
+  line-height: 0.825em;
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.26875rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row {
+  width: 100%;
+  max-width: 350px;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover figcaption {
+  background-color: #ffffff;
+  padding: 1rem;
+  top: -13px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate3d(0px, -225px, 0px);
+          transform: translate3d(0px, -225px, 0px);
+  height: 240px;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover img {
+  -webkit-transform: translate3d(0px, -240px, 0px);
+          transform: translate3d(0px, -240px, 0px);
+  opacity: 0;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: all 0.32s ease;
+  -o-transition: all 0.32s ease;
+  transition: all 0.32s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption {
+  -webkit-transition: all 0.32s ease;
+  -o-transition: all 0.32s ease;
+  transition: all 0.32s ease;
+  width: 100%;
+  position: relative;
+  -webkit-transform: translate3d(0px, 10px, 10px);
+          transform: translate3d(0px, 10px, 10px);
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table {
+  margin: unset;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table tbody tr th {
+  font-size: 90%;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table tbody tr th .btn.btn-primary {
+  background-color: #000;
+  color: #fff;
+  border: 1.5px solid #fff;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table tbody tr th .btn.btn-primary:hover {
+  background-color: #2d1d1d;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table .thead-dark th {
+  color: #fff;
+  background-color: #212529;
+  border-color: #32383e;
+  text-align: center;
+  text-transform: uppercase;
+}
+.reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table .thead-dark th h2 {
+  margin: unset;
 }
 
 /*
@@ -6696,5 +7614,15 @@ div#block-tragelsports-theme-page-title .heading {
 #block-tragelsports-theme-local-tasks {
   background: #fff;
   z-index: 99;
+}
+
+.cuerpo .container .row .col-12 .block .text-long video {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 /*# sourceMappingURL=maps/style.css.map */

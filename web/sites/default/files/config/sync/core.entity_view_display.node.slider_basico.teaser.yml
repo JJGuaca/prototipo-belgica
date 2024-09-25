@@ -1,0 +1,25 @@
+uuid: aa8763b1-c910-4580-ac2d-b49cfd8ca86b
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.slider_basico.field_imagen
+    - field.field.node.slider_basico.field_pagina_en_la_que_aparecera
+    - node.type.slider_basico
+  module:
+    - user
+id: node.slider_basico.teaser
+targetEntityType: node
+bundle: slider_basico
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_imagen: true
+  field_pagina_en_la_que_aparecera: true
+  langcode: true

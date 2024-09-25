@@ -1,0 +1,23 @@
+uuid: ee4e32ea-8ec9-410f-befd-d6b7eb6606d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enlace_por_juego
+    - node.type.cards_multiple
+  module:
+    - link
+id: node.cards_multiple.field_enlace_por_juego
+field_name: field_enlace_por_juego
+entity_type: node
+bundle: cards_multiple
+label: 'enlace por juego'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

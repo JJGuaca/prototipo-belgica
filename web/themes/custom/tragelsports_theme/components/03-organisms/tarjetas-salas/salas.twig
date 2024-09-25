@@ -1,0 +1,26 @@
+<figure class="tarjeta">
+    {{fields.field_imagen_de_la_tarjeta.content}}
+    <figcaption>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">
+                        <h2>{{fields.title.content|render|striptags|trim|raw}}</h2>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">{{fields.field_descripcion_capacidad.content|render|striptags|trim|raw}}</th>
+                </tr>
+                <tr>
+                    <th scope="row">{{fields.field_descripcion_costo.content|render|striptags|trim|raw}}</th>
+                </tr>
+                <tr>
+                    <th><a target="_blank" href="{{fields.field_enlace_de_reserva.content|render|striptags|trim}}" class="btn btn-primary d-block">RESERVEER</a></th>
+                </tr>
+            </tbody>
+        </table>
+    </figcaption>
+</figure>

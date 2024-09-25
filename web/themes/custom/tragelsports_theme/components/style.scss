@@ -320,3 +320,22 @@ div#block-tragelsports-theme-page-title {
     z-index: 99;
 }
 
+.cuerpo{
+    .container{
+        .row{
+            .col-12{
+                .block{
+                    .text-long{
+                        video {
+                            width: 100%;
+                            height: auto;
+                            margin: auto;
+                            object-fit: contain;
+                            object-position: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

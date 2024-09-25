@@ -1,0 +1,39 @@
+uuid: 96c67a38-e8eb-4d8a-b29a-62ba8359ae56
+langcode: es
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cards_multiple.field_enlace_de_reserva
+    - field.field.node.cards_multiple.field_enlace_por_hora
+    - field.field.node.cards_multiple.field_enlace_por_juego
+    - field.field.node.cards_multiple.field_imagen_de_card
+    - field.field.node.cards_multiple.field_pagina_en_la_que_aparecera
+    - field.field.node.cards_multiple.field_texto_complementario
+    - field.field.node.cards_multiple.field_texto_de_horario
+    - field.field.node.cards_multiple.field_valor_por_hora
+    - field.field.node.cards_multiple.field_valor_por_juego
+    - node.type.cards_multiple
+  module:
+    - user
+id: node.cards_multiple.teaser
+targetEntityType: node
+bundle: cards_multiple
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_enlace_de_reserva: true
+  field_enlace_por_hora: true
+  field_enlace_por_juego: true
+  field_imagen_de_card: true
+  field_pagina_en_la_que_aparecera: true
+  field_texto_complementario: true
+  field_texto_de_horario: true
+  field_valor_por_hora: true
+  field_valor_por_juego: true
+  langcode: true

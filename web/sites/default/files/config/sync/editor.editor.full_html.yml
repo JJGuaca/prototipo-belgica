@@ -28,12 +28,15 @@ settings:
       - blockQuote
       - drupalInsertImage
       - insertTable
+      - drupalMedia
       - horizontalLine
       - '|'
       - heading
-      - codeBlock
       - '|'
       - sourceEditing
+      - imce_image
+      - undo
+      - redo
   plugins:
     ckeditor5_codeBlock:
       languages:
@@ -81,6 +84,7 @@ settings:
           language: xml
     ckeditor5_heading:
       enabled_headings:
+        - heading1
         - heading2
         - heading3
         - heading4
@@ -95,6 +99,8 @@ settings:
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    media_media:
+      allow_view_mode_override: false
 image_upload:
   status: true
   scheme: public

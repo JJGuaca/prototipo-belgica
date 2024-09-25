@@ -1,0 +1,213 @@
+.cards-reservas{
+    .container{
+        .row{
+            .col-12{
+                .block{
+                    .view-tarjetas-de-reservas{
+                        .view-content{
+                            display: flex;
+                            flex-wrap: wrap;
+                            list-style: none;
+                            padding: 0;
+                            flex-direction: row;
+                            align-content: center;
+                            justify-content: space-around;
+                            align-items: center;
+                            gap: 1rem;
+                            .views-row{
+                                .booking-card{
+                                    position: relative;
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;                                    
+                                    border-radius: 10px;
+                                    overflow: hidden;
+                                    background-position: center center;
+                                    background-size: cover;
+                                    text-align: center;
+                                    font-weight: 700;
+                                    color: #3f3b3b;
+                                    transition: 0.3s;
+                                    max-width: 450px;
+                                    height: 550px;
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        background: rgba(10, 72, 112, 0);
+                                        transition: 0.3s;
+                                    }
+                                    &:hover{
+                                        &::before{
+                                            background: #94268f82;
+                                        }
+                                        .informations-container {
+                                            transform: translateY(0px);
+                                            .more-information{
+                                                opacity: 1;
+                                            }
+                                        }
+                                        .book-container{
+                                            .content{
+                                                opacity: 1;
+                                                transform: translateY(0px);
+                                            }
+                                        }
+                                    }
+                                    .book-container{
+                                        height: 200px;
+                                        .content{
+                                            position: relative;
+                                            opacity: 0;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            height: 100%;
+                                            width: 100%;
+                                            transform: translateY(-200px);
+                                            transition: 0.3s;
+                                            .btn{
+                                                border: 3px solid white;
+                                                padding: 10px 15px;
+                                                background: none;
+                                                text-transform: uppercase;
+                                                font-weight: bold;
+                                                font-size: 1.3em;
+                                                color: white;
+                                                cursor: pointer;
+                                                transition: 0.3s;
+                                            }
+                                        }
+                                    }
+                                    .informations-container{
+                                        flex: 1 0 auto;
+                                        background: #f0f0f0;
+                                        transform: translateY(75%);
+                                        transition: 0.3s;
+                                        .title{
+                                            position: relative;
+                                            font-weight: bold;
+                                            font-size: 1.2em;
+                                            margin: auto;
+                                            padding: 1rem;
+                                            top: 5%;
+                                        }
+                                        .more-information{
+                                            opacity: 0;
+                                            transition: 0.3s;
+                                            .info-and-date-container{
+                                                display: flex;
+                                                gap: 1rem;
+                                                flex-direction: row;
+                                                flex-wrap: nowrap;
+                                                justify-content: center;
+                                                align-items: stretch;
+                                                padding: 1rem;
+                                                .box{
+                                                    flex: 1 0;
+                                                    padding: 10px;
+                                                    margin-top: 20px;
+                                                    border-radius: 10px;
+                                                    background: white;
+                                                    font-weight: bold;
+                                                    font-size: 18px;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    flex-wrap: nowrap;
+                                                    justify-content: space-between;
+                                                    align-items: center;
+                                                    margin-bottom: 20px;
+                                                    color: inherit;
+                                                    text-decoration: unset;
+                                                    transition: all 0.5s ease-in-out;
+                                                    &:hover{
+                                                        outline-width: 2px !important;
+                                                        outline-style: solid !important;
+                                                        outline-color: #ff74d6 !important;
+                                                        box-shadow: #efa7da 0px 0px 6px 5px;
+                                                    }
+                                                    span{
+                                                        display: flex;
+                                                        flex: 1 0;
+                                                        width: 100%;
+                                                        font-size: 30px;
+                                                        justify-content: space-evenly;
+                                                        gap: 1rem;
+                                                        flex-direction: row;
+                                                        flex-wrap: nowrap;
+                                                        align-items: center;
+                                                        margin-top: 1rem;
+                                                        margin-bottom: 1rem;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        h2.title{
+                                            &::after{
+                                                content: '';
+                                                position: absolute;
+                                                bottom: 0;
+                                                left: 0;
+                                                right: 0;
+                                                height: 3px;
+                                                width: 50px;
+                                                margin: auto;
+                                                background: #0a4870;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.cuerpo{
+    margin-top: 2rem !important;
+    margin-bottom: 3rem !important;
+    .container{
+        .row{
+            .col-12{
+                .block{
+                    .text-long{
+                        p{
+                            font-weight: bold;
+                            font-style: normal;
+                            font-size: 2rem;
+                            color: #FFF;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            line-height: 2.5rem;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            margin: auto;
+                        }
+                        .texto{
+                            margin-top: 2rem;
+                            margin-bottom: 2rem;
+                            li{
+                                font-style: normal;
+                                font-size: 2rem;
+                                color: #FFF;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: nowrap;
+                                line-height: 2.5rem;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

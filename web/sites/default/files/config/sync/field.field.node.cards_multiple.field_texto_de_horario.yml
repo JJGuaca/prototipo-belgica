@@ -1,0 +1,19 @@
+uuid: b32a4ce2-0efd-4589-84ea-a1badab8f21a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_texto_de_horario
+    - node.type.cards_multiple
+id: node.cards_multiple.field_texto_de_horario
+field_name: field_texto_de_horario
+entity_type: node
+bundle: cards_multiple
+label: 'texto de horario'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

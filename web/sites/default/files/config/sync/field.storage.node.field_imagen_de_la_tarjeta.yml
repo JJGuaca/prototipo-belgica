@@ -1,0 +1,20 @@
+uuid: a838b6f3-8f1a-47da-a309-2dfa2ae89103
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_imagen_de_la_tarjeta
+field_name: field_imagen_de_la_tarjeta
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

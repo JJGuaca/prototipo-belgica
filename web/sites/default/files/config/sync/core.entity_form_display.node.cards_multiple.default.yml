@@ -1,0 +1,150 @@
+uuid: 84708b8b-1c32-4e9d-9e51-048b03e4b9f3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.cards_multiple.field_enlace_de_reserva
+    - field.field.node.cards_multiple.field_enlace_por_hora
+    - field.field.node.cards_multiple.field_enlace_por_juego
+    - field.field.node.cards_multiple.field_imagen_de_card
+    - field.field.node.cards_multiple.field_pagina_en_la_que_aparecera
+    - field.field.node.cards_multiple.field_texto_complementario
+    - field.field.node.cards_multiple.field_texto_de_horario
+    - field.field.node.cards_multiple.field_valor_por_hora
+    - field.field.node.cards_multiple.field_valor_por_juego
+    - node.type.cards_multiple
+  module:
+    - link
+    - media_library
+    - path
+id: node.cards_multiple.default
+targetEntityType: node
+bundle: cards_multiple
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_enlace_de_reserva:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_enlace_por_hora:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_enlace_por_juego:
+    type: link_default
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_imagen_de_card:
+    type: media_library_widget
+    weight: 9
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_pagina_en_la_que_aparecera:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_texto_complementario:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_texto_de_horario:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_valor_por_hora:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_valor_por_juego:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

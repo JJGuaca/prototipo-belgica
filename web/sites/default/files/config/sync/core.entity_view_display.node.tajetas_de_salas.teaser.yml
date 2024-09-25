@@ -1,0 +1,31 @@
+uuid: 67b086ae-68e8-4670-acc3-712ece76fe44
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tajetas_de_salas.field_descripcion_capacidad
+    - field.field.node.tajetas_de_salas.field_descripcion_costo
+    - field.field.node.tajetas_de_salas.field_enlace_de_reserva
+    - field.field.node.tajetas_de_salas.field_imagen_de_la_tarjeta
+    - field.field.node.tajetas_de_salas.field_pagina_en_la_que_aparecera
+    - node.type.tajetas_de_salas
+  module:
+    - user
+id: node.tajetas_de_salas.teaser
+targetEntityType: node
+bundle: tajetas_de_salas
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_descripcion_capacidad: true
+  field_descripcion_costo: true
+  field_enlace_de_reserva: true
+  field_imagen_de_la_tarjeta: true
+  field_pagina_en_la_que_aparecera: true
+  langcode: true

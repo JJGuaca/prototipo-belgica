@@ -1,0 +1,29 @@
+.slider-basico{
+    .container{
+        .row{
+            .col-12{
+                .block{
+                    .view-slider-basico{
+                        .view-content{
+                            .carousel{
+                                .carousel-inner{
+                                    .carousel-item{
+                                        .views-field{
+                                            .field-content{
+                                                img{
+                                                    object-fit: fill;
+                                                    object-position: top;
+                                                    max-height: 700px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

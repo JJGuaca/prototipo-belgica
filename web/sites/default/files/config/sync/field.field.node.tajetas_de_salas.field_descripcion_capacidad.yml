@@ -1,0 +1,19 @@
+uuid: bbcfb815-b5c0-4188-a4f8-ebd80c90209a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_capacidad
+    - node.type.tajetas_de_salas
+id: node.tajetas_de_salas.field_descripcion_capacidad
+field_name: field_descripcion_capacidad
+entity_type: node
+bundle: tajetas_de_salas
+label: 'descripcion capacidad'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

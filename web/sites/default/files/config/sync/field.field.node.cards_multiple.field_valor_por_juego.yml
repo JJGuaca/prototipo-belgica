@@ -1,0 +1,23 @@
+uuid: 288fbfcc-c837-4e64-8a72-607761e66f88
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_valor_por_juego
+    - node.type.cards_multiple
+id: node.cards_multiple.field_valor_por_juego
+field_name: field_valor_por_juego
+entity_type: node
+bundle: cards_multiple
+label: 'valor por juego'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.5
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

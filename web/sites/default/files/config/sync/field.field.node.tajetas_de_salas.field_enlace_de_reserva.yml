@@ -1,0 +1,23 @@
+uuid: 41f27ae3-01b8-4fbd-874b-d83acdfeca9f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enlace_de_reserva
+    - node.type.tajetas_de_salas
+  module:
+    - link
+id: node.tajetas_de_salas.field_enlace_de_reserva
+field_name: field_enlace_de_reserva
+entity_type: node
+bundle: tajetas_de_salas
+label: 'enlace de reserva'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

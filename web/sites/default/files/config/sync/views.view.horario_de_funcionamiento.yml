@@ -9,6 +9,7 @@ dependencies:
     - taxonomy.vocabulary.paginas
   content:
     - 'taxonomy_term:paginas:9ac16b8a-4fa6-40c8-b9b1-81b79d540101'
+    - 'taxonomy_term:paginas:b23efb03-c527-4605-98cc-40dd8a1f36e8'
     - 'taxonomy_term:paginas:db927ac1-486b-4fe4-be62-e71f09812f77'
   module:
     - entity_reference_revisions
@@ -352,6 +353,99 @@ display:
           operator: or
           value:
             8: 8
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: paginas
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        ui_styles: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_horario_de_funcionamiento'
+        - 'config:field.storage.node.field_imagen_del_horario'
+  block_3:
+    id: block_3
+    display_title: 'horario BOWLING'
+    display_plugin: block
+    position: 1
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            horarios_de_funcionamiento: horarios_de_funcionamiento
+        field_pagina_en_la_que_aparecera_target_id:
+          id: field_pagina_en_la_que_aparecera_target_id
+          table: node__field_pagina_en_la_que_aparecera
+          field: field_pagina_en_la_que_aparecera_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            12: 12
           group: 1
           exposed: false
           expose:

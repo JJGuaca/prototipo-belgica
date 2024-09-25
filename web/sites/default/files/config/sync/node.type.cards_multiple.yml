@@ -1,0 +1,17 @@
+uuid: 8743902f-3f91-470d-86d2-fa5f13eeccfd
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Cards Multiple'
+type: cards_multiple
+description: 'Tarjetas que permiten la interacción de usuarios'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

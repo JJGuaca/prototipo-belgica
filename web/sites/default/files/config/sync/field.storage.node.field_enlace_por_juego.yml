@@ -1,0 +1,19 @@
+uuid: c821e9e6-3f86-48e5-b895-96561c34663e
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_enlace_por_juego
+field_name: field_enlace_por_juego
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

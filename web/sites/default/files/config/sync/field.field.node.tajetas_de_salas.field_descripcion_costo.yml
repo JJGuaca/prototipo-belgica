@@ -1,0 +1,19 @@
+uuid: 71d94c67-6733-4a55-9f37-9d39246c7f52
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_costo
+    - node.type.tajetas_de_salas
+id: node.tajetas_de_salas.field_descripcion_costo
+field_name: field_descripcion_costo
+entity_type: node
+bundle: tajetas_de_salas
+label: 'descripcion costo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

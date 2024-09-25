@@ -1,0 +1,17 @@
+uuid: 815483ba-53f1-4feb-b1c3-a0bcbfa5f97a
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'tajetas de salas'
+type: tajetas_de_salas
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

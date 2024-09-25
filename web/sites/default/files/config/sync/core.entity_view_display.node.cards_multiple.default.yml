@@ -1,0 +1,121 @@
+uuid: b4c6320f-7797-411c-b8ae-85236ee4e00d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.cards_multiple.field_enlace_de_reserva
+    - field.field.node.cards_multiple.field_enlace_por_hora
+    - field.field.node.cards_multiple.field_enlace_por_juego
+    - field.field.node.cards_multiple.field_imagen_de_card
+    - field.field.node.cards_multiple.field_pagina_en_la_que_aparecera
+    - field.field.node.cards_multiple.field_texto_complementario
+    - field.field.node.cards_multiple.field_texto_de_horario
+    - field.field.node.cards_multiple.field_valor_por_hora
+    - field.field.node.cards_multiple.field_valor_por_juego
+    - node.type.cards_multiple
+  module:
+    - link
+    - user
+id: node.cards_multiple.default
+targetEntityType: node
+bundle: cards_multiple
+mode: default
+content:
+  field_enlace_de_reserva:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_enlace_por_hora:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_enlace_por_juego:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_imagen_de_card:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_pagina_en_la_que_aparecera:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_texto_complementario:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_texto_de_horario:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_valor_por_hora:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_valor_por_juego:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,110 @@
+.reservas-salas{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    .container{
+        .row{
+            .col-12{
+                .block{
+                    .h2{
+                        width: fit-content;
+                        margin: auto;
+                        font-weight: 500;
+                        line-height: .825em;
+                        color: #fff;
+                        font-size: 3rem;
+                        letter-spacing: 4.3px;
+                        text-transform: uppercase;
+                        margin-top: 2rem;
+                        margin-bottom: 2rem;
+                    }
+                    .view-tarjetas-salas{
+                        .view-content{
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            align-content: center;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 1rem;
+                            .views-row{
+                                width: 100%;
+                                max-width: 350px;
+                                .tarjeta {
+                                    box-sizing: border-box;
+                                    position: relative;
+                                    display: inline-block;
+                                    margin: 0;
+                                    max-width: 100%;
+                                    height: 240px;
+                                    overflow: hidden;
+                                    &:hover{
+                                        figcaption {
+                                            background-color: #ffffff;
+                                            padding: 1rem;
+                                            top: -13px;
+                                            bottom: 0;
+                                            left: 0;
+                                            right: 0;
+                                            transform: translate3d(0px, -225px, 0px);
+                                            height: 240px;
+                                        }
+                                        img{
+                                            transform: translate3d(0px, -240px, 0px);
+                                            opacity: 0;
+                                        }
+                                    }
+                                    img{
+                                        object-fit: contain;
+                                        object-position: center;
+                                        transition: all 0.32s ease;
+                                        backface-visibility: hidden;
+                                        transform: translate3d(0px, 0px, 0px);
+                                        opacity: 1;
+                                    }
+                                    figcaption{
+                                        transition: all 0.32s ease;
+                                        width: 100%;
+                                        position: relative;
+                                        transform: translate3d(0px, 10px, 10px);
+                                        table{
+                                            margin: unset;
+                                            tbody{
+                                                tr{
+                                                    th{
+                                                        font-size: 90%;
+                                                        .btn.btn-primary {
+                                                            background-color: #000;
+                                                            color: #fff;
+                                                            border: 1.5px solid #fff;
+                                                            transition: all 0.2s ease;
+                                                            &:hover{
+                                                                background-color: #2d1d1d;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .thead-dark{
+                                                th{
+                                                    color: #fff;
+                                                    background-color: #212529;
+                                                    border-color: #32383e;
+                                                    text-align: center;
+                                                    text-transform: uppercase;
+                                                    h2{
+                                                        margin: unset;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

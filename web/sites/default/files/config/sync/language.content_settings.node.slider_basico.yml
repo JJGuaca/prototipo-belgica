@@ -1,0 +1,11 @@
+uuid: de26b198-d60e-4732-8554-d2b0c90ea6ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.slider_basico
+id: node.slider_basico
+target_entity_type_id: node
+target_bundle: slider_basico
+default_langcode: site_default
+language_alterable: false

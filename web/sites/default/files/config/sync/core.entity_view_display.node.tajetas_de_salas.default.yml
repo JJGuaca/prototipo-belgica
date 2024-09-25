@@ -1,0 +1,71 @@
+uuid: 102a5715-f980-477a-9af3-d3cd5a1fa570
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tajetas_de_salas.field_descripcion_capacidad
+    - field.field.node.tajetas_de_salas.field_descripcion_costo
+    - field.field.node.tajetas_de_salas.field_enlace_de_reserva
+    - field.field.node.tajetas_de_salas.field_imagen_de_la_tarjeta
+    - field.field.node.tajetas_de_salas.field_pagina_en_la_que_aparecera
+    - node.type.tajetas_de_salas
+  module:
+    - link
+    - user
+id: node.tajetas_de_salas.default
+targetEntityType: node
+bundle: tajetas_de_salas
+mode: default
+content:
+  field_descripcion_capacidad:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_descripcion_costo:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_enlace_de_reserva:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_imagen_de_la_tarjeta:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_pagina_en_la_que_aparecera:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

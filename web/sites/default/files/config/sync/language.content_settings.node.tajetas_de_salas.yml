@@ -1,0 +1,11 @@
+uuid: 74e44fdf-3310-4705-b032-807ebe5d11be
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.tajetas_de_salas
+id: node.tajetas_de_salas
+target_entity_type_id: node
+target_bundle: tajetas_de_salas
+default_langcode: authors_default
+language_alterable: false

@@ -1,0 +1,23 @@
+uuid: ed800612-6c71-4c7a-8144-11fe3b54b54a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_valor_por_hora
+    - node.type.cards_multiple
+id: node.cards_multiple.field_valor_por_hora
+field_name: field_valor_por_hora
+entity_type: node
+bundle: cards_multiple
+label: 'valor por hora'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.5
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

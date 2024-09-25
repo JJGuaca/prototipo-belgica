@@ -1,0 +1,19 @@
+uuid: 13945a90-91fd-44f4-ae1a-31735c3573fe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_texto_complementario
+    - node.type.cards_multiple
+id: node.cards_multiple.field_texto_complementario
+field_name: field_texto_complementario
+entity_type: node
+bundle: cards_multiple
+label: 'texto complementario'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
