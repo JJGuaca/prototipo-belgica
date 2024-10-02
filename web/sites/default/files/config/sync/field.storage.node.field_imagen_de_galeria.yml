@@ -1,0 +1,21 @@
+uuid: ea5f4c2a-d411-4576-af2a-9a511d97eb4d
+langcode: es
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+id: node.field_imagen_de_galeria
+field_name: field_imagen_de_galeria
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

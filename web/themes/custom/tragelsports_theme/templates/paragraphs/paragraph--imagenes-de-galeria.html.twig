@@ -1,0 +1,10 @@
+<div class="card item">
+    <div class="card-body">
+        {{content.field_imagen_de_galeria}}
+        <div class="card-footer">
+            {% if content.field_titulo_de_la_imagen[0]["#context"].value|render|striptags|trim != "" %}
+                <p>{{content.field_titulo_de_la_imagen[0]["#context"].value|render|striptags|trim}}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>

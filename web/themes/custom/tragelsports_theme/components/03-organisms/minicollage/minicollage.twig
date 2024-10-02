@@ -1,0 +1,29 @@
+{% set imagen = fields.field_imagenesminicollage.content %}
+{% set startTag = '<li>' %}
+{% set endTag = '</li>' %}
+{% set startPos = imagen|split(startTag) %}
+{% set endPos1 = startPos[1]|split(endTag) %}
+{% set endPos2 = startPos[2]|split(endTag) %}
+{% set imagen1 = endPos1[0]|trim %}
+{% set imagen2 = endPos2[0]|trim %}
+<div class="row no-gutters">
+    <div class="item item1">
+        <div class="card">
+            <div class="col-12 cuerpo-card mx-auto">
+                <div class="card-body">
+                    <h3>{{fields.title.content|render|striptags|trim}}</h3>
+                    {{fields.body.content}}                    
+                    <div class="card-footer">
+                        <a class="btn btn-outline-light btn-lg" href="{{fields.field_enlace_de_reserva.content|render|striptags|trim}}" target="_blank">CONTACTEER ONS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item item2 d-none d-md-block">
+        {{imagen1|raw}}
+    </div>
+    <div class="item item3 d-none d-md-block">
+        {{imagen2|raw}}
+    </div>
+</div>

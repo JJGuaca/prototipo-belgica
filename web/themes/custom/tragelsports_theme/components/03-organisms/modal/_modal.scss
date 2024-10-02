@@ -1,0 +1,49 @@
+/*ESTILOS PARA EL MODAL DEL HOME*/
+.modal-emergente{
+    .container{
+        .row{
+            .col-12{
+                .block{
+                    .view-modales-basicos{
+                        .view-content{
+                            .views-row{
+                                .modal{
+                                    .modal-dialog{
+                                        .modal-content{
+                                            @media (min-width:768px) {
+                                                min-width: 650px;
+                                            }
+                                            background-color: transparent;
+                                            .modal-body{
+                                                padding: 0;
+                                                .btn-close{
+                                                  position: absolute;
+                                                  right: 0px;
+                                                  top: 0px;
+                                                  font-size: 2rem;
+                                                  background-color: white;
+                                                  box-shadow: inset 0px 0px 8px 4px red;
+                                                }
+                                                .container{
+                                                    background-color: #fff;
+                                                    border-radius: 10px;
+                                                    .row{
+                                                        padding: 1rem;
+        
+                                                        .col-12{
+                                                            color: #000;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

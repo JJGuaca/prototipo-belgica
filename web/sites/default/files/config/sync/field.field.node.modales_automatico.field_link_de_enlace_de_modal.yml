@@ -1,0 +1,23 @@
+uuid: 1dcb8858-b7e1-471e-85d1-4f06adeb5d6f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_de_enlace_de_modal
+    - node.type.modales_automatico
+  module:
+    - link
+id: node.modales_automatico.field_link_de_enlace_de_modal
+field_name: field_link_de_enlace_de_modal
+entity_type: node
+bundle: modales_automatico
+label: 'link de enlace de modal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

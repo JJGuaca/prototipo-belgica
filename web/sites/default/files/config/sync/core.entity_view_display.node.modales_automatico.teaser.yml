@@ -1,0 +1,37 @@
+uuid: 6a357ac9-efd6-491b-94bc-093c66fc1cc3
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.modales_automatico.body
+    - field.field.node.modales_automatico.field_imagen_del_modal
+    - field.field.node.modales_automatico.field_link_de_enlace_de_modal
+    - field.field.node.modales_automatico.field_pagina_en_la_que_aparecera
+    - node.type.modales_automatico
+  module:
+    - text
+    - user
+id: node.modales_automatico.teaser
+targetEntityType: node
+bundle: modales_automatico
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_imagen_del_modal: true
+  field_link_de_enlace_de_modal: true
+  field_pagina_en_la_que_aparecera: true
+  langcode: true

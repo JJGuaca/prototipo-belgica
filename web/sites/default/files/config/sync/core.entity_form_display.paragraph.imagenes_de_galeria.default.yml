@@ -1,0 +1,33 @@
+uuid: 75358151-d6cc-4b17-bc1e-32ec4eb92110
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.imagenes_de_galeria.field_imagen_de_galeria
+    - field.field.paragraph.imagenes_de_galeria.field_titulo_de_la_imagen
+    - paragraphs.paragraphs_type.imagenes_de_galeria
+  module:
+    - media_library
+id: paragraph.imagenes_de_galeria.default
+targetEntityType: paragraph
+bundle: imagenes_de_galeria
+mode: default
+content:
+  field_imagen_de_galeria:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_titulo_de_la_imagen:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,12 @@
+<div class="container-fluid seccion-galerias" style="background-image: url({{fields.field_imagen_de_background.content|render|striptags|trim}});">
+    <div class="row">
+    {% if fields.title.content|render|striptags|trim|lower != "menu" %}
+        <div class="col-12">
+            <h2 class="d-flex justify-content-center">{{fields.title.content|render|striptags|trim}}</h2>
+        </div>
+    {% endif %}
+        <div class="col-12">
+            {{fields.field_imagen_de_galeria.content}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+uuid: 7ad4feb6-0e5b-4a16-be41-f78acd202566
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: modales-automatico
+type: modales_automatico
+description: 'contenido para modificar o crear modales en las landinpages que lo requieran'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

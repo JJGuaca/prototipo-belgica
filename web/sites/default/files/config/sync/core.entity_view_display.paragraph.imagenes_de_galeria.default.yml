@@ -1,0 +1,31 @@
+uuid: fa23a4d8-4e72-42ee-80d0-fed4ff7c17e3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.imagenes_de_galeria.field_imagen_de_galeria
+    - field.field.paragraph.imagenes_de_galeria.field_titulo_de_la_imagen
+    - paragraphs.paragraphs_type.imagenes_de_galeria
+id: paragraph.imagenes_de_galeria.default
+targetEntityType: paragraph
+bundle: imagenes_de_galeria
+mode: default
+content:
+  field_imagen_de_galeria:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_titulo_de_la_imagen:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

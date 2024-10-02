@@ -1,0 +1,10 @@
+uuid: a9a9e545-f337-4812-8603-756c835aad16
+langcode: es
+status: true
+dependencies: {  }
+id: imagenes_de_galeria
+label: 'imagenes de galeria'
+icon_uuid: null
+icon_default: null
+description: 'imagen que se mostrará en los tipos de galerias'
+behavior_plugins: {  }

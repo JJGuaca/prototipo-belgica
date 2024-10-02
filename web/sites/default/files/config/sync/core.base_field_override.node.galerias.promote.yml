@@ -1,0 +1,22 @@
+uuid: f4ed1601-1a14-43ba-940a-9dc27dcd21b0
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.galerias
+id: node.galerias.promote
+field_name: promote
+entity_type: node
+bundle: galerias
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

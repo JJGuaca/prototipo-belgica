@@ -1,0 +1,22 @@
+uuid: 863608fd-ed3e-4b4b-80d6-e6817f847967
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.modales_automatico
+id: node.modales_automatico.promote
+field_name: promote
+entity_type: node
+bundle: modales_automatico
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

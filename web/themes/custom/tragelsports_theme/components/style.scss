@@ -165,22 +165,6 @@ body{
     }
 }
 
-/*ESTILOS PARA EL MODAL DEL HOME*/
-
-#popuphome{
-    .modal-body{
-      padding: 0;
-      .btn-close{
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        font-size: 2rem;
-        background-color: white;
-        box-shadow: inset 0px 0px 8px 4px red;
-      }
-    }
-}
-
 /*ESTILOS FOOTER,  MARCA REGISTRADA*/
 footer.footer{
     background-color: #000;
@@ -305,9 +289,6 @@ div#block-tragelsports-theme-page-title {
                 a{
                     color: #fff !important;
                     font-weight: 800;
-                    &::after{
-                        content: "/";
-                    }
                 } 
             }
         }
@@ -332,6 +313,7 @@ div#block-tragelsports-theme-page-title {
                             margin: auto;
                             object-fit: contain;
                             object-position: center;
+                            max-height: 700px;
                         }
                     }
                 }

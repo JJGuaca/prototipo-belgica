@@ -1,0 +1,29 @@
+uuid: 21c984e9-37bb-4c63-b5a0-cb88daa9d829
+langcode: es
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.galerias.field_imagen_de_background
+    - field.field.node.galerias.field_imagen_de_galeria
+    - field.field.node.galerias.field_nombre_de_seccion
+    - field.field.node.galerias.field_pagina_en_la_que_aparecera
+    - node.type.galerias
+  module:
+    - user
+id: node.galerias.teaser
+targetEntityType: node
+bundle: galerias
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_imagen_de_background: true
+  field_imagen_de_galeria: true
+  field_nombre_de_seccion: true
+  field_pagina_en_la_que_aparecera: true
+  langcode: true

@@ -1,0 +1,29 @@
+uuid: 98bfcdcd-ebdc-4cb5-8af6-131dd0b59987
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_imagen_de_galeria
+    - media.type.image
+    - paragraphs.paragraphs_type.imagenes_de_galeria
+id: paragraph.imagenes_de_galeria.field_imagen_de_galeria
+field_name: field_imagen_de_galeria
+entity_type: paragraph
+bundle: imagenes_de_galeria
+label: 'imagen de galeria'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

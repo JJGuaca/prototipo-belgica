@@ -27,4 +27,5 @@ permissions:
   - 'view media'
   - 'view paragraph content banner'
   - 'view paragraph content horarios_de_la_semana'
+  - 'view paragraph content imagenes_de_galeria'
   - 'view paragraph content slider_multiproposito'

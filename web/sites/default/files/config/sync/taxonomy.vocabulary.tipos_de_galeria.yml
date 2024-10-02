@@ -1,0 +1,9 @@
+uuid: ffddd903-3a1d-4e96-896a-c0d7eceb6754
+langcode: und
+status: true
+dependencies: {  }
+name: 'tipos de galeria'
+vid: tipos_de_galeria
+description: 'item para selecciónar tipos de galeria '
+weight: 0
+new_revision: false

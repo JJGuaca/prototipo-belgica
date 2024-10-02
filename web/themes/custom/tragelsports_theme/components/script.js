@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function(){
             window.localStorage.setItem('fecha', hoy);
             window.localStorage.setItem('veces', 0);
         }
-        modalHome();
     }
+    modalHome();
     activeMenu(location);
 })
 
@@ -81,37 +81,28 @@ function sliderSportEtten(){
     })
 }
 function modalHome(){
-    let botonCerrar = document.getElementById('botonCerrar');
-    let boton = document.getElementById("lanzadorModal");
-    let tiempo = window.localStorage.getItem('fecha');
-    tiempo = parseInt(tiempo);
-    let fecha = new Date(tiempo);
-    let hoy = Date.now();
-    let diferenciahoy = new Date(hoy);
-
-    if(fecha.toLocaleDateString() != diferenciahoy.toLocaleDateString()){
-        window.localStorage.setItem('veces',0);
-        window.localStorage.setItem('fecha',null);
-    }else if(window.localStorage.getItem('veces') == '0'){        
+    if(document.getElementById('botonCerrar') != null){
+        let botonCerrar = document.getElementById('botonCerrar');
+        let boton = document.getElementById("lanzadorModal");
+        let tiempo = window.localStorage.getItem('fecha');
+        tiempo = parseInt(tiempo);
+        let fecha = new Date(tiempo);
+        let hoy = Date.now();
+        let diferenciahoy = new Date(hoy);
         setTimeout(() => {
             boton.click();
             window.localStorage.setItem('veces',1);
         }, 2000);
-    }
+        boton.addEventListener('click', function(){
+            let body = document.querySelector('.path-frontpage');
+            body.classList.add('modal-open');
+        });
     
-    boton.addEventListener('click', function(){
-        let popuphome = document.getElementById('popuphome');
-        let body = document.querySelector('.path-frontpage');
-        popuphome.classList.add('show');
-        popuphome.classList.add('pop-up');
-        body.classList.add('modal-open');
-    });
-
-    botonCerrar.addEventListener('click', function(){
-        let popuphome = document.getElementById('popuphome');
-        let body = document.querySelector('.path-frontpage');
-        popuphome.classList.remove('show');
-        popuphome.classList.remove('pop-up');
-        body.classList.remove('modal-open');
-    });
+        botonCerrar.addEventListener('click', function(){
+            let body = document.querySelector('.path-frontpage');
+            body.classList.remove('modal-open');
+        });
+    }else{
+        console.log("no hay modal");
+    }    
 }

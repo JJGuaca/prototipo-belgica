@@ -1,0 +1,17 @@
+uuid: 9addd868-7199-4467-9dbb-5a432535b46f
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: MiniCollage
+type: minicollage
+description: 'Sección con 1 tarjeta y 2 imágenes para hacer un mini collage'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

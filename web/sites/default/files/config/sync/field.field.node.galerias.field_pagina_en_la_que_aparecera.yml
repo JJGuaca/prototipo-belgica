@@ -1,0 +1,29 @@
+uuid: fa0be8d7-3d56-405a-80f9-1ada826b40be
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pagina_en_la_que_aparecera
+    - node.type.galerias
+    - taxonomy.vocabulary.paginas
+id: node.galerias.field_pagina_en_la_que_aparecera
+field_name: field_pagina_en_la_que_aparecera
+entity_type: node
+bundle: galerias
+label: 'Página en la que aparecerá'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      paginas: paginas
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

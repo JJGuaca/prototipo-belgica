@@ -1,0 +1,94 @@
+.galerias{
+    .w-100{
+        .row{
+            .col-12{
+                .block{
+                    .view-galerias{
+                        .view-content{
+                            .views-row{
+                                .seccion-galerias{
+                                   @media (min-width:768px) {
+                                    padding-top: 5rem;
+                                    position: relative;
+                                    top: -7rem;
+                                    padding-left: 6rem;
+                                    padding-right: 5rem;
+                                    padding-bottom: 6rem;
+                                    width: 105%;
+                                    margin: auto;
+                                    left: -3%;
+                                    background-size: 128%;
+                                    background-position: center;
+                                    object-fit: contain;
+                                    object-position: center;
+                                    margin-bottom: -3rem;
+                                    background-repeat: no-repeat;
+                                   }
+                                    .row{
+                                        gap: 1rem;
+                                        .col-12{
+                                            display: flex;
+                                            flex-direction: row;
+                                            flex-wrap: wrap;
+                                            align-content: center;
+                                            justify-content: center;
+                                            align-items: center;
+                                            gap: 1rem;
+                                            max-width: 1400px;
+                                            margin-left: auto;
+                                            margin-right: auto;                                        
+                                            .card.item{
+                                                width: 100%;
+                                                max-width: 500px;
+                                                height: auto;
+                                                max-height: 500px;
+                                                border-radius: 0px;
+                                                .card-body{
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    flex-wrap: nowrap;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    gap: 0rem;
+                                                    .card-footer{
+                                                        display: flex;
+                                                        flex-direction: row;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        align-content: center;
+                                                        flex-wrap: wrap;
+                                                        p{
+                                                            text-transform: capitalize;
+                                                            font-weight: bold;
+                                                            font-size: 1.5rem;
+                                                            line-height: inherit;
+                                                            margin: unset;
+                                                            text-align: center;
+                                                        }
+                                                    }
+                                                    img{
+                                                        object-fit: contain;
+                                                        object-position: center;
+                                                        border-radius: 0;
+                                                    }
+                                                }
+                                            }
+                                            h2{
+                                                margin-top: 3rem;
+                                                margin-bottom: 3rem;
+                                                font-size: 150%;
+                                                @media (min-width:768px) {
+                                                    font-size: 80px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

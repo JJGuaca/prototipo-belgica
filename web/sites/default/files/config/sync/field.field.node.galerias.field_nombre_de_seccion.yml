@@ -1,0 +1,29 @@
+uuid: 50ddc4a6-3bf4-4e31-84d9-773bed0325b6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_de_seccion
+    - node.type.galerias
+    - taxonomy.vocabulary.tipos_de_galeria
+id: node.galerias.field_nombre_de_seccion
+field_name: field_nombre_de_seccion
+entity_type: node
+bundle: galerias
+label: 'nombre de seccion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipos_de_galeria: tipos_de_galeria
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

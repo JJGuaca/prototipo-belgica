@@ -1,0 +1,19 @@
+uuid: 0a888971-ded9-4d3f-872d-faf27adfaf59
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_link_de_enlace_de_modal
+field_name: field_link_de_enlace_de_modal
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 188a1405-9577-4fff-af27-0422ead6cff8
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.minicollage
+id: node.minicollage
+target_entity_type_id: node
+target_bundle: minicollage
+default_langcode: authors_default
+language_alterable: false

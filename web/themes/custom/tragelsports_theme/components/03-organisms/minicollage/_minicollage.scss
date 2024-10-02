@@ -1,0 +1,109 @@
+.mini-collage{
+    .container{
+        .row{
+            .col-12{
+                .block{
+                    .view-minicollage{
+                        .view-content{
+                            .views-row{
+                                .row.no-gutters{
+                                    @media (min-width:765px) {
+                                        min-width: 1180px;
+                                        min-height: 760px;
+                                        position: relative;
+                                    }
+                                    
+                                    .item{
+                                        @media (min-width:765px) {
+                                            position: absolute;
+                                        }
+                                    }
+                                    .item1{
+                                        @media (min-width:765px) {
+                                            position: relative;
+                                            padding-top: 12vh;
+                                            z-index: 3;
+                                            width: 500px;
+                                        }
+                                        .card{
+                                            background-color: transparent;
+                                            border-radius: 0;
+                                            &::before{
+                                                box-shadow: 0 0 1em 0 #e21a23;
+                                                position: absolute;
+                                                left: 0px;
+                                                right: 0;
+                                                height: 5px;
+                                                background-color: #e21a23;
+                                                content: "";
+                                                width: 100%;
+                                                bottom: 0px;
+                                            }
+                                            .cuerpo-card{
+                                                background-color: #fff;
+                                                height: auto;
+                                            }
+                                            .col-12{
+                                                padding: unset;
+                                                .card-body{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    text-align: center;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: space-around;
+                                                    align-items: center;
+                                                    h3{
+                                                        text-transform: uppercase;
+                                                        letter-spacing: -2px;
+                                                        line-height: 25px;
+                                                    }
+                                                    .card-footer{
+                                                        background-color: transparent;
+                                                        a.btn.btn-outline-light.btn-lg{
+                                                            background-color: #000;
+                                                            color: #fff;
+                                                            border: 1.5px solid #fff;
+                                                            transition: all 0.2s ease-in-out;
+                                                            text-transform: uppercase;
+                                                            &:hover{
+                                                                border: 1px solid red;
+                                                                box-shadow: 0px 0px 6px 2px #f826d4;
+                                                                text-shadow: 0 0 3px #f826d4;
+                                                                background-color: #fff;
+                                                                color: #000;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .item2{
+                                        right: 0;
+                                        bottom: 0;
+                                        left: auto;
+                                        z-index: 2;
+                                        top: 430px;
+                                        margin-right: 270px;
+                                        width: 440px;
+                                        height: 330px;
+                                    }
+                                    .item3{
+                                        top: 0;
+                                        right: 0;
+                                        bottom: auto;
+                                        left: auto;
+                                        z-index: 1;
+                                        width: 750px;
+                                        height: 565px;                                
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

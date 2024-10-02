@@ -1,0 +1,11 @@
+uuid: a6b870b2-4399-471c-aef7-231ffaf79165
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.modales_automatico
+id: node.modales_automatico
+target_entity_type_id: node
+target_bundle: modales_automatico
+default_langcode: authors_default
+language_alterable: false

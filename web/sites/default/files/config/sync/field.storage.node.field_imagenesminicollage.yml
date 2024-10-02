@@ -1,0 +1,20 @@
+uuid: 233a01ba-92fb-4396-b0ac-5a0e365e75de
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_imagenesminicollage
+field_name: field_imagenesminicollage
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

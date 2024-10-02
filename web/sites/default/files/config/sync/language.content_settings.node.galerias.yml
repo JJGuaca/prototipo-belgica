@@ -1,0 +1,11 @@
+uuid: 97a3a6a2-1464-420c-9934-ef9eefb9c022
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.galerias
+id: node.galerias
+target_entity_type_id: node
+target_bundle: galerias
+default_langcode: authors_default
+language_alterable: false

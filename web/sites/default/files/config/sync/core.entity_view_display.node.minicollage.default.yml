@@ -1,0 +1,62 @@
+uuid: 97b34708-451a-4bb0-bc24-a0e3c0403c6c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.minicollage.body
+    - field.field.node.minicollage.field_enlace_de_reserva
+    - field.field.node.minicollage.field_imagenesminicollage
+    - field.field.node.minicollage.field_pagina_en_la_que_aparecera
+    - node.type.minicollage
+  module:
+    - link
+    - text
+    - user
+id: node.minicollage.default
+targetEntityType: node
+bundle: minicollage
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_enlace_de_reserva:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_imagenesminicollage:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_pagina_en_la_que_aparecera:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

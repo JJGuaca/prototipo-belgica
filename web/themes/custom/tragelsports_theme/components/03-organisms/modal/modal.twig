@@ -1,0 +1,29 @@
+  <div class="modal fade" id="popup{{row.nid}}" tabindex="-1" aria-labelledby="popup{{row.nid}}Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="botonCerrar"></button>
+          {% if fields.body.content|render|striptags|trim != ""%}
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        {{fields.body.content}}
+                    </div>
+                    <div class="col-12">
+                        <a href="{{fields.field_link_de_enlace_de_modal.content|render|striptags|trim}}">
+                            {{fields.field_imagen_del_modal.content}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+          {% else %}
+            <a href="{{fields.field_link_de_enlace_de_modal.content|render|striptags|trim}}">
+                {{fields.field_imagen_del_modal.content}}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Button trigger modal -->
+  <button type="button" class="d-none btn btn-success" data-bs-toggle="modal" data-bs-target="#popup{{row.nid}}" id="lanzadorModal">MODAL</button>

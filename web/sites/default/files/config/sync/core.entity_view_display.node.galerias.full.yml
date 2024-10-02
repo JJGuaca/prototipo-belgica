@@ -1,0 +1,48 @@
+uuid: 4f8170fa-c649-448e-a66c-ebd66fadff9e
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.galerias.field_imagen_de_background
+    - field.field.node.galerias.field_imagen_de_galeria
+    - field.field.node.galerias.field_nombre_de_seccion
+    - field.field.node.galerias.field_pagina_en_la_que_aparecera
+    - node.type.galerias
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.galerias.full
+targetEntityType: node
+bundle: galerias
+mode: full
+content:
+  field_nombre_de_seccion:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_pagina_en_la_que_aparecera:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_imagen_de_background: true
+  field_imagen_de_galeria: true
+  langcode: true
