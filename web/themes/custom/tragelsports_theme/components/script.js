@@ -51,6 +51,7 @@ function menusFooter(cadena){
     }else if(cadena == "/" || cadena =="/steengrill"|| cadena =="/kidsparty" || cadena =="/feesten" || cadena =="/karaoke" || cadena =="/sports" || cadena =="/menu"|| cadena =="/bowling"){
         region= "principalFooter";
     }
+    console.log(region, cadena)
     togleActiveMenuFooter(region, cadena)
 }
 function togleActiveMenuFooter(region, cadena){
