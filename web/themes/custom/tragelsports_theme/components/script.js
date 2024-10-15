@@ -44,7 +44,6 @@ function addActive(valor,cadena){
 }
 
 function menusFooter(cadena){
-    console.log("ingresó al menú footer");
     let region ="";
     if(cadena == "/privacy-policy" || cadena == "/over_ons" || cadena == "/algemene_voorwaarden"){
         region = "nuestraEmpresa"
