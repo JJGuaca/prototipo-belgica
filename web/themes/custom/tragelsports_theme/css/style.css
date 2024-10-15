@@ -3736,6 +3736,98 @@ pre {
   text-decoration: underline;
 }
 
+.formulariosNuevos .container .row .col-12 .block .text-long .container h2 {
+  font-size: 2rem;
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form {
+  max-width: 1024px;
+  margin: auto;
+  font-size: 1.125rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8117647059);
+  color: #000;
+  border-top: 4px solid rgba(0, 0, 0, 0.5803921569);
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .form-group .form-row {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .form-group .form-row .col-8.mx-auto {
+  height: 37px;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form p .btn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper {
+  width: 100%;
+  max-width: unset;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper {
+  width: 100%;
+  max-width: unset;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper .form-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  gap: 0.5rem;
+  max-width: unset;
+  margin: 0 auto;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper .form-group input {
+  width: 100%;
+  max-width: unset;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper .form-group p {
+  text-align: left;
+  color: #000;
+  margin: 1rem 0rem;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper .form-group textarea {
+  width: 100%;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-item {
+  width: 100%;
+  max-width: unset;
+}
+
 @media (min-width: 48rem) {
   .galerias .w-100 .row .col-12 .block .view-galerias .view-content .views-row .seccion-galerias {
     padding-top: 5rem;
@@ -5704,6 +5796,98 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
 .items-menu .active .nivel2 .item-link.active a {
   color: red;
   text-decoration: underline;
+}
+
+.formulariosNuevos .container .row .col-12 .block .text-long .container h2 {
+  font-size: 2rem;
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form {
+  max-width: 1024px;
+  margin: auto;
+  font-size: 1.125rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8117647059);
+  color: #000;
+  border-top: 4px solid rgba(0, 0, 0, 0.5803921569);
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .form-group .form-row {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .form-group .form-row .col-8.mx-auto {
+  height: 37px;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form p .btn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper {
+  width: 100%;
+  max-width: unset;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper {
+  width: 100%;
+  max-width: unset;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper .form-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  gap: 0.5rem;
+  max-width: unset;
+  margin: 0 auto;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper .form-group input {
+  width: 100%;
+  max-width: unset;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper .form-group p {
+  text-align: left;
+  color: #000;
+  margin: 1rem 0rem;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-wrapper .js-webform-type-fieldset .fieldset-wrapper .form-group textarea {
+  width: 100%;
+}
+.formulariosNuevos .container .row .col-12 .block .text-long .container form .js-form-item {
+  width: 100%;
+  max-width: unset;
 }
 
 @media (min-width: 48rem) {

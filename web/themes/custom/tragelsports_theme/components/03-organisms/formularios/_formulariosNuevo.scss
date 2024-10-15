@@ -1,0 +1,83 @@
+.formulariosNuevos{
+    .container{
+        .row{
+            .col-12{
+                .block{
+                    .text-long{
+                        .container{
+                            h2{
+                                font-size: 2rem;
+                                color: #fff;
+                                width: fit-content;
+                                margin: 2rem auto;                            
+                            }
+                            form{
+                                max-width: 1024px;
+                                margin: auto;
+                                font-size: 1.125rem;
+                                padding: 1rem;
+                                background-color: rgba(255, 255, 255, 0.8117647059);
+                                color: #000;
+                                border-top: 4px solid rgba(0, 0, 0, 0.5803921569);
+                                .form-group{
+                                    .form-row{
+                                        gap: 1rem;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: flex-start;
+                                        .col-8.mx-auto {
+                                            height: 37px;
+                                        }
+                                    }
+                                }
+                                p{
+                                    .btn{
+                                        margin-top: 2rem;
+                                        margin-bottom: 2rem;
+                                    }
+                                }
+                                .js-form-wrapper{
+                                    width: 100%;
+                                    max-width: unset;
+                                    .js-webform-type-fieldset{
+                                        .fieldset-wrapper{
+                                            width: 100%;
+                                            max-width: unset;
+                                            .form-group{
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: flex-start;
+                                                justify-content: center;
+                                                width: 90%;
+                                                gap: 0.5rem;
+                                                max-width: unset;
+                                                margin: 0 auto;
+                                                input{
+                                                    width: 100%;
+                                                    max-width: unset;
+                                                }
+                                                p{
+                                                    text-align: left;
+                                                    color: #000;
+                                                    margin: 1rem 0rem;
+                                                }
+                                                textarea{
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .js-form-item{
+                                    width: 100%;
+                                    max-width: unset;   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
