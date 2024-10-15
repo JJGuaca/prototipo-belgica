@@ -28,6 +28,7 @@ function activeMenu(location){
     
 }
 function addActive(valor,cadena){
+    menusFooter(cadena);
     let item = "/"+valor.innerText.toLowerCase();
     item= item.replace(/ /g,"")
     if(item == "/home"){
@@ -39,11 +40,11 @@ function addActive(valor,cadena){
             valor.parentNode.parentNode.parentNode.classList.add('active');
         } 
     } 
-    menusFooter(cadena);   
+     
 }
 
 function menusFooter(cadena){
-    debugger;
+    console.log("ingresó al menú footer");
     let region ="";
     if(cadena == "/privacy-policy" || cadena == "/over_ons" || cadena == "/algemene_voorwaarden"){
         region = "nuestraEmpresa"
@@ -52,7 +53,6 @@ function menusFooter(cadena){
     }else if(cadena == "/" || cadena =="/steengrill"|| cadena =="/kidsparty" || cadena =="/feesten" || cadena =="/karaoke" || cadena =="/sports" || cadena =="/menu"|| cadena =="/bowling"){
         region= "principalFooter";
     }
-    console.log(region, cadena)
     togleActiveMenuFooter(region, cadena)
 }
 function togleActiveMenuFooter(region, cadena){
@@ -104,7 +104,5 @@ function modalHome(){
             let body = document.querySelector('.path-frontpage');
             body.classList.remove('modal-open');
         });
-    }else{
-        console.log("no hay modal");
     }    
 }
