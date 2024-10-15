@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     modalHome();
     activeMenu(location);
+    menusFooter(location);
 })
 
 function activeMenu(location){
@@ -27,8 +28,7 @@ function activeMenu(location){
     }
     
 }
-function addActive(valor,cadena){
-    menusFooter(cadena);
+function addActive(valor,cadena){    
     let item = "/"+valor.innerText.toLowerCase();
     item= item.replace(/ /g,"")
     if(item == "/home"){
