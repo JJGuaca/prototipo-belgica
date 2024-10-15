@@ -43,6 +43,7 @@ function addActive(valor,cadena){
 }
 
 function menusFooter(cadena){
+    debugger;
     let region ="";
     if(cadena == "/privacy-policy" || cadena == "/over_ons" || cadena == "/algemene_voorwaarden"){
         region = "nuestraEmpresa"
