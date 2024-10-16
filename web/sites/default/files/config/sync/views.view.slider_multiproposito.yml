@@ -8,9 +8,9 @@ dependencies:
     - node.type.slider_multiproposito
     - taxonomy.vocabulary.tipo_de_slider_home
   content:
-    - 'taxonomy_term:tipo_de_slider_home:495a2a48-8778-4a5d-b850-bc12f9484c87'
-    - 'taxonomy_term:tipo_de_slider_home:9d7454a8-1893-45e9-830c-714fdef841b4'
-    - 'taxonomy_term:tipo_de_slider_home:e85c8f92-56b7-4f2c-8d70-9a7eeccd0816'
+    - 'taxonomy_term:tipo_de_slider_home:2d78d859-8652-415f-97c2-12fc9f6df96e'
+    - 'taxonomy_term:tipo_de_slider_home:313429c3-8a20-416a-88ea-d6e265e570de'
+    - 'taxonomy_term:tipo_de_slider_home:e6ade5a6-9e89-4100-9ecc-49c756ad0d3b'
   module:
     - entity_reference_revisions
     - media
@@ -302,8 +302,81 @@ display:
           multi_type: separator
           separator: /
           field_api_classes: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            slider_multiproposito: slider_multiproposito
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            2: 2
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: tipo_de_slider_home
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       defaults:
         fields: false
+        filters: false
+        filter_groups: false
       display_description: ''
       display_extenders:
         ui_styles: {  }
@@ -420,7 +493,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            11: 11
+            1: 1
           group: 1
           exposed: false
           expose:
@@ -577,7 +650,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            2: 2
+            10: 10
           group: 1
           exposed: false
           expose:

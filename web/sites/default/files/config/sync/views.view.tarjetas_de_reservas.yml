@@ -14,7 +14,7 @@ dependencies:
     - node.type.cards_multiple
     - taxonomy.vocabulary.paginas
   content:
-    - 'taxonomy_term:paginas:b23efb03-c527-4605-98cc-40dd8a1f36e8'
+    - 'taxonomy_term:paginas:f44e1f7a-ec3e-4c54-a0d9-19c1965d21b1'
   module:
     - link
     - media
@@ -681,7 +681,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            12: 12
+            11: 11
           group: 1
           exposed: false
           expose:

@@ -9,13 +9,13 @@ dependencies:
     - node.type.cards_largas
     - taxonomy.vocabulary.paginas
   content:
-    - 'taxonomy_term:paginas:1ce41fda-0835-45ad-9365-ff16d65803ce'
-    - 'taxonomy_term:paginas:3f35b81b-0c69-400e-b64e-2ef9a71e58ef'
-    - 'taxonomy_term:paginas:5ffd6cb6-2bab-4006-ac35-3163d3afda1a'
-    - 'taxonomy_term:paginas:9ac16b8a-4fa6-40c8-b9b1-81b79d540101'
-    - 'taxonomy_term:paginas:a18c175a-f67d-484e-b070-1ccf4aff74e5'
-    - 'taxonomy_term:paginas:d4a6dbb3-a656-4630-a134-76de6fe78b84'
-    - 'taxonomy_term:paginas:db927ac1-486b-4fe4-be62-e71f09812f77'
+    - 'taxonomy_term:paginas:4af48f51-5376-4920-b270-e9ddd46c3d4d'
+    - 'taxonomy_term:paginas:4dbd35f7-2330-4555-bf57-2ad7f8aed9bf'
+    - 'taxonomy_term:paginas:69870698-b43e-4c57-a34b-00ec807a4956'
+    - 'taxonomy_term:paginas:8d4118ee-b5df-47f0-84aa-6be3366485b5'
+    - 'taxonomy_term:paginas:9ae86cc3-6a82-49a9-8e54-cbc4fa380217'
+    - 'taxonomy_term:paginas:b026b7e1-cc18-43ae-bab3-f9b9db607e10'
+    - 'taxonomy_term:paginas:f6b4c607-0ea7-4505-96d8-1f389f99e3d5'
   module:
     - link
     - media
@@ -678,7 +678,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            10: 10
+            6: 6
           group: 1
           exposed: false
           expose:
@@ -1129,7 +1129,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            8: 8
+            9: 9
           group: 1
           exposed: false
           expose:
@@ -1225,7 +1225,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            9: 9
+            8: 8
           group: 1
           exposed: false
           expose:
