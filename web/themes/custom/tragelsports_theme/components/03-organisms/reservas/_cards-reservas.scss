@@ -28,7 +28,7 @@
                                     font-weight: 700;
                                     color: #3f3b3b;
                                     transition: 0.3s;
-                                    max-width: 450px;
+                                    max-width: 350px;
                                     height: 550px;
                                     &::before{
                                         content: '';
@@ -132,7 +132,7 @@
                                                         display: flex;
                                                         flex: 1 0;
                                                         width: 100%;
-                                                        font-size: 30px;
+                                                        font-size: 1.2rem;
                                                         justify-content: space-evenly;
                                                         gap: 1rem;
                                                         flex-direction: row;

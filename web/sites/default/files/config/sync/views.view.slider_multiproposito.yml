@@ -8,9 +8,9 @@ dependencies:
     - node.type.slider_multiproposito
     - taxonomy.vocabulary.tipo_de_slider_home
   content:
-    - 'taxonomy_term:tipo_de_slider_home:2d78d859-8652-415f-97c2-12fc9f6df96e'
-    - 'taxonomy_term:tipo_de_slider_home:313429c3-8a20-416a-88ea-d6e265e570de'
-    - 'taxonomy_term:tipo_de_slider_home:e6ade5a6-9e89-4100-9ecc-49c756ad0d3b'
+    - 'taxonomy_term:paginas:1ce41fda-0835-45ad-9365-ff16d65803ce'
+    - 'taxonomy_term:tipo_de_slider_home:9d7454a8-1893-45e9-830c-714fdef841b4'
+    - 'taxonomy_term:tipo_de_slider_home:e85c8f92-56b7-4f2c-8d70-9a7eeccd0816'
   module:
     - entity_reference_revisions
     - media

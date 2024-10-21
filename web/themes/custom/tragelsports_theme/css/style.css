@@ -4422,6 +4422,11 @@ article.container-fluid .cabezote {
   max-width: 2560px;
   margin: auto;
 }
+@media (min-width: 48rem) {
+  article.container-fluid .cabezote {
+    margin-top: 5rem;
+  }
+}
 article.container-fluid .cabezote .w-100 .row .col-12 {
   padding: unset;
   margin: auto;
@@ -4972,7 +4977,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  max-width: 450px;
+  max-width: 350px;
   height: 550px;
 }
 .cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card::before {
@@ -5149,7 +5154,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
       -ms-flex: 1 0;
           flex: 1 0;
   width: 100%;
-  font-size: 1.875rem;
+  font-size: 1.2rem;
   -webkit-box-pack: space-evenly;
   -webkit-justify-content: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -5436,12 +5441,16 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   width: 100%;
 }
 
+.slider-basico .container .row .col-12 .block .view-slider-basico .view-content .carousel .carousel-inner .carousel-item .views-field .field-content {
+  height: 470px;
+}
 .slider-basico .container .row .col-12 .block .view-slider-basico .view-content .carousel .carousel-inner .carousel-item .views-field .field-content img {
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   -o-object-position: top;
      object-position: top;
-  max-height: 700px;
+  max-height: 470px;
+  height: 100%;
 }
 
 .reservas-salas {
@@ -5491,7 +5500,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row {
   width: 100%;
-  max-width: 350px;
+  max-width: 600px;
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta {
   -webkit-box-sizing: border-box;
@@ -5500,23 +5509,31 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   display: inline-block;
   margin: 0;
   max-width: 100%;
-  height: 240px;
   overflow: hidden;
+  height: 190px;
+}
+@media (min-width: 48rem) {
+  .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta {
+    height: 400px;
+  }
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover figcaption {
   background-color: #ffffff;
-  padding: 1rem;
-  top: 20px;
+  padding: 0rem;
+  top: 28px;
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-transform: translate3d(0px, -225px, 0px);
-          transform: translate3d(0px, -225px, 0px);
+  -webkit-transform: translate3d(0px, -240px, 0px);
+          transform: translate3d(0px, -240px, 0px);
   height: 240px;
 }
 @media (min-width: 48rem) {
   .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover figcaption {
     top: -10px;
+    -webkit-transform: translate3d(0px, -350px, 0px);
+            transform: translate3d(0px, -350px, 0px);
+    padding: 1rem;
   }
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover img {
@@ -5544,8 +5561,8 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   transition: all 0.32s ease;
   width: 100%;
   position: relative;
-  -webkit-transform: translate3d(0px, 10px, 10px);
-          transform: translate3d(0px, 10px, 10px);
+  -webkit-transform: translate3d(0px, 35px, 10px);
+          transform: translate3d(0px, 35px, 10px);
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table {
   margin: unset;
@@ -6484,6 +6501,11 @@ article.container-fluid .cabezote {
   max-width: 2560px;
   margin: auto;
 }
+@media (min-width: 48rem) {
+  article.container-fluid .cabezote {
+    margin-top: 5rem;
+  }
+}
 article.container-fluid .cabezote .w-100 .row .col-12 {
   padding: unset;
   margin: auto;
@@ -7034,7 +7056,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  max-width: 450px;
+  max-width: 350px;
   height: 550px;
 }
 .cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card::before {
@@ -7211,7 +7233,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
       -ms-flex: 1 0;
           flex: 1 0;
   width: 100%;
-  font-size: 1.875rem;
+  font-size: 1.2rem;
   -webkit-box-pack: space-evenly;
   -webkit-justify-content: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -7498,12 +7520,16 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   width: 100%;
 }
 
+.slider-basico .container .row .col-12 .block .view-slider-basico .view-content .carousel .carousel-inner .carousel-item .views-field .field-content {
+  height: 470px;
+}
 .slider-basico .container .row .col-12 .block .view-slider-basico .view-content .carousel .carousel-inner .carousel-item .views-field .field-content img {
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   -o-object-position: top;
      object-position: top;
-  max-height: 700px;
+  max-height: 470px;
+  height: 100%;
 }
 
 .reservas-salas {
@@ -7553,7 +7579,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row {
   width: 100%;
-  max-width: 350px;
+  max-width: 600px;
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta {
   -webkit-box-sizing: border-box;
@@ -7562,23 +7588,31 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   display: inline-block;
   margin: 0;
   max-width: 100%;
-  height: 240px;
   overflow: hidden;
+  height: 190px;
+}
+@media (min-width: 48rem) {
+  .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta {
+    height: 400px;
+  }
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover figcaption {
   background-color: #ffffff;
-  padding: 1rem;
-  top: 20px;
+  padding: 0rem;
+  top: 28px;
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-transform: translate3d(0px, -225px, 0px);
-          transform: translate3d(0px, -225px, 0px);
+  -webkit-transform: translate3d(0px, -240px, 0px);
+          transform: translate3d(0px, -240px, 0px);
   height: 240px;
 }
 @media (min-width: 48rem) {
   .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover figcaption {
     top: -10px;
+    -webkit-transform: translate3d(0px, -350px, 0px);
+            transform: translate3d(0px, -350px, 0px);
+    padding: 1rem;
   }
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta:hover img {
@@ -7606,8 +7640,8 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   transition: all 0.32s ease;
   width: 100%;
   position: relative;
-  -webkit-transform: translate3d(0px, 10px, 10px);
-          transform: translate3d(0px, 10px, 10px);
+  -webkit-transform: translate3d(0px, 35px, 10px);
+          transform: translate3d(0px, 35px, 10px);
 }
 .reservas-salas .container .row .col-12 .block .view-tarjetas-salas .view-content .views-row .tarjeta figcaption table {
   margin: unset;
@@ -8011,6 +8045,7 @@ body div.main {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 .menu-ppal .container-fluid #navbarNavDropdown .navbar-nav {
   gap: 1rem;
@@ -8275,7 +8310,7 @@ footer.footer .footer__menu #block-tragelsports-theme-footermarcaregistrada .mar
 
 /*ESTILOS PARA LOS TÍTULOS DE LAS PÁGINAS*/
 div#block-tragelsports-theme-page-title {
-  position: relative;
+  position: absolute;
   top: -18px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -8301,15 +8336,26 @@ div#block-tragelsports-theme-page-title {
   background-color: rgba(0, 0, 0, 0.5490196078);
   padding: 1rem;
   border-radius: 10px;
+  left: calc(100% - 100vw);
+  height: 40px;
+  top: 100px;
+  width: 100%;
 }
 @media (min-width: 48rem) {
   div#block-tragelsports-theme-page-title {
-    top: 180px;
+    top: 215px;
+    height: 80px;
+  }
+}
+@media (min-width: 61.875rem) {
+  div#block-tragelsports-theme-page-title {
+    top: 400px;
+    height: 120px;
   }
 }
 div#block-tragelsports-theme-page-title .heading {
-  font-size: 2rem;
-  line-height: 5.3125rem;
+  font-size: 100%;
+  line-height: 1rem;
   word-break: break-word;
   margin: unset;
   text-align: center;
@@ -8317,7 +8363,12 @@ div#block-tragelsports-theme-page-title .heading {
 }
 @media (min-width: 48rem) {
   div#block-tragelsports-theme-page-title .heading {
-    font-size: 5rem;
+    font-size: 200%;
+  }
+}
+@media (min-width: 61.875rem) {
+  div#block-tragelsports-theme-page-title .heading {
+    font-size: 3rem;
   }
 }
 

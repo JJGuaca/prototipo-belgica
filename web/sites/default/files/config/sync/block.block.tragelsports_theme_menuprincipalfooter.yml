@@ -16,7 +16,7 @@ provider: null
 plugin: 'system_menu_block:menu-principal-footer'
 settings:
   id: 'system_menu_block:menu-principal-footer'
-  label: 'Tragel Sport'
+  label: Tragelsport
   label_display: visible
   provider: system
   level: 1

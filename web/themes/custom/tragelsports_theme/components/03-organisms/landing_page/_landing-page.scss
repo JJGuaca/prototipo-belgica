@@ -9,6 +9,9 @@ article.container-fluid {
     .cabezote{
         max-width: 2560px;
         margin: auto;
+        @media (min-width:768px){
+            margin-top: 5rem;
+        }
         .w-100{
             .row{
                 .col-12{
