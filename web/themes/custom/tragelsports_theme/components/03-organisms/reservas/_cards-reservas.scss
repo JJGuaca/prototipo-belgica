@@ -29,6 +29,7 @@
                                     color: #3f3b3b;
                                     transition: 0.3s;
                                     max-width: 350px;
+                                    min-width:350px;
                                     height: 550px;
                                     &::before{
                                         content: '';
