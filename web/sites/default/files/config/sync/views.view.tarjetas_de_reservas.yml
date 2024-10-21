@@ -14,7 +14,7 @@ dependencies:
     - node.type.cards_multiple
     - taxonomy.vocabulary.paginas
   content:
-    - 'taxonomy_term:paginas:f44e1f7a-ec3e-4c54-a0d9-19c1965d21b1'
+    - 'taxonomy_term:paginas:be852abc-c0cf-41e4-8eb2-9fbbcda0516d'
   module:
     - link
     - media
@@ -200,14 +200,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: uri
-          type: link
+          click_sort_column: options
+          type: oembed
           settings:
-            trim_length: null
-            url_only: true
-            url_plain: true
-            rel: '0'
-            target: '0'
+            trim_length: ''
+            url_only: 0
+            url_plain: 0
+            rel: 0
+            target: 0
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -268,13 +268,13 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: uri
-          type: link
+          type: oembed
           settings:
-            trim_length: null
-            url_only: true
-            url_plain: true
-            rel: '0'
-            target: '0'
+            trim_length: ''
+            url_only: 0
+            url_plain: 0
+            rel: 0
+            target: 0
           group_column: ''
           group_columns: {  }
           group_rows: true
