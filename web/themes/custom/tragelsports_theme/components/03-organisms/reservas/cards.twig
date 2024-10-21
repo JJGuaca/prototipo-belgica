@@ -4,6 +4,22 @@
 {% set startPos = imagen|split(startTag) %}
 {% set endPos = startPos[1]|split(endTag) %}
 {% set href = endPos[0]|trim %}
+
+{% set urlPorJuego = fields.field_enlace_por_juego.content %}
+{% set startTag = 'href="' %}
+{% set endTag = '"' %}
+{% set startPos = urlPorJuego|split(startTag) %}
+{% set endPos = startPos[1]|split(endTag) %}
+{% set hrefPorJuego = endPos[0]|trim %}
+
+{% set urlPorHora = fields.field_enlace_por_hora.content %}
+{% set startTag = 'href="' %}
+{% set endTag = '"' %}
+{% set startPos = urlPorHora|split(startTag) %}
+{% set endPos = startPos[1]|split(endTag) %}
+{% set hrefPorHora = endPos[0]|trim %}
+
+
 <div class="booking-card" style="background-image: url({{href}})">
     <div class="book-container">
         <div class="content">
@@ -14,9 +30,9 @@
         <h2 class="title">{{ fields.field_texto_de_horario.content|render|striptags|trim }}</h2>
         <div class="more-information">
             <div class="info-and-date-container">
-                <a class="box info" href="{{fields.field_enlace_por_hora.content|render|striptags|trim}}" target="_blank">
+                <a class="box info" href="{{hrefPorHora}}" target="_blank">
                     <i class="bi bi-hourglass-top"></i>
-                    <p>Per uur</p>
+                    <p>{{fields.field_enlace_por_hora.content|render|striptags|trim}}</p>
                     {% if fields.field_valor_por_hora.content|render|striptags|trim == "0.00"%}
                         <span>Incl.</span>
                     {% else %}
@@ -24,9 +40,9 @@
                     {% endif %}
                     
                 </a>
-                <a class="box info" href="{{fields.field_enlace_por_juego.content|render|striptags|trim}}" target="_blank">
+                <a class="box info" href="{{hrefPorJuego}}" target="_blank">
                     <i class="icon bi bi-joystick"></i>
-                    <p>Per spel pp</p>
+                    <p>{{fields.field_enlace_por_juego.content|render|striptags|trim}}</p>
                     {% if fields.field_valor_por_juego.content|render|striptags|trim == "0.00"%}
                         <span>Incl.</span>
                     {% else %}
