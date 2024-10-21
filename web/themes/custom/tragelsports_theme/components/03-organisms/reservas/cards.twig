@@ -4,7 +4,6 @@
 {% set startPos = imagen|split(startTag) %}
 {% set endPos = startPos[1]|split(endTag) %}
 {% set href = endPos[0]|trim %}
-
 <div class="booking-card" style="background-image: url({{href}})">
     <div class="book-container">
         <div class="content">
@@ -18,12 +17,21 @@
                 <a class="box info" href="{{fields.field_enlace_por_hora.content|render|striptags|trim}}" target="_blank">
                     <i class="bi bi-hourglass-top"></i>
                     <p>Per uur</p>
-                    <span><i class="bi bi-cash"></i>{{fields.field_valor_por_hora.content|render|striptags|trim}} €</span>
+                    {% if fields.field_valor_por_hora.content|render|striptags|trim == "0.00"%}
+                        <span>Incl.</span>
+                    {% else %}
+                        <span><i class="bi bi-cash"></i>€ {{fields.field_valor_por_hora.content|render|striptags|trim}}</span>
+                    {% endif %}
+                    
                 </a>
                 <a class="box info" href="{{fields.field_enlace_por_juego.content|render|striptags|trim}}" target="_blank">
                     <i class="icon bi bi-joystick"></i>
                     <p>Per spel pp</p>
-                    <span><i class="bi bi-cash"></i>{{fields.field_valor_por_juego.content|render|striptags|trim}} €</span>
+                    {% if fields.field_valor_por_juego.content|render|striptags|trim == "0.00"%}
+                        <span>Incl.</span>
+                    {% else %}
+                        <span><i class="bi bi-cash"></i>€ {{fields.field_valor_por_juego.content|render|striptags|trim}}</span>
+                    {% endif %}                    
                 </a>
             </div>
             <h3 class="title">{{fields.field_texto_complementario.content|render|striptags|trim}}</h3>

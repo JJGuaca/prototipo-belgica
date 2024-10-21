@@ -10,10 +10,12 @@
                                     .carousel-item{
                                         .views-field{
                                             .field-content{
+                                                height: 470px;
                                                 img{
-                                                    object-fit: fill;
+                                                    object-fit: scale-down;
                                                     object-position: top;
-                                                    max-height: 700px;
+                                                    max-height: 470px;
+                                                    height: 100%;
                                                 }
                                             }
                                         }
