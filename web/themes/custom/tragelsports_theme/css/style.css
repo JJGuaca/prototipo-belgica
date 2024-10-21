@@ -4978,6 +4978,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   -o-transition: 0.3s;
   transition: 0.3s;
   max-width: 350px;
+  min-width: 350px;
   height: 550px;
 }
 .cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card::before {
@@ -7057,6 +7058,7 @@ article.container-fluid .formulario-contacto .container .row .col-12 .block .con
   -o-transition: 0.3s;
   transition: 0.3s;
   max-width: 350px;
+  min-width: 350px;
   height: 550px;
 }
 .cards-reservas .container .row .col-12 .block .view-tarjetas-de-reservas .view-content .views-row .booking-card::before {
