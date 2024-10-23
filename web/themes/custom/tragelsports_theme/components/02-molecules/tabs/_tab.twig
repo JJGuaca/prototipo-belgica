@@ -27,10 +27,12 @@
 {% endif %}
 <li{{ attributes }}>
   {# Detect if Drupal #}
-  {% if attributes %}
-    {{ link(link['#title'], link['#url'], { 'class' : link_classes }) }}
-  {% else %}
-    <a href="{{ tab_link }}" class="tabs__link tabs__link--local-tasks{% if key == 0 %} is-active{% endif %}">{{ tab_text }}</a>
+  {% if link['#url'].routeName != "user.register"%}
+    {% if attributes %}
+      {{ link(link['#title'], link['#url'], { 'class' : link_classes }) }}
+    {% else %}
+      <a href="{{ tab_link }}" class="tabs__link tabs__link--local-tasks{% if key == 0 %} is-active{% endif %}">{{ tab_text }}</a>
+    {% endif %}
   {% endif %}
 </li>
 {% if example %}
