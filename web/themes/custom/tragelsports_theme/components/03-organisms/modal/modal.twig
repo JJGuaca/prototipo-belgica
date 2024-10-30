@@ -16,10 +16,12 @@
                     </div>
                 </div>
             </div>
-          {% else %}
-            <a href="{{fields.field_link_de_enlace_de_modal.content|render|striptags|trim}}">
+          {% elseif fields.field_link_de_enlace_de_modal.content|render|striptags|trim != "" %}
+            <a href="{{fields.field_link_de_enlace_de_modal.content|render|striptags|trim}}" target="_blank">
                 {{fields.field_imagen_del_modal.content}}
             </a>
+          {% else %}
+            {{fields.field_imagen_del_modal.content}}
           {% endif %}
         </div>
       </div>
