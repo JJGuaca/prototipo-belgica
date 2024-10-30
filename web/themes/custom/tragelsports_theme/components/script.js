@@ -22,7 +22,7 @@ function activeMenu(location){
         }
     }
     let titulo = document.getElementById('block-tragelsports-theme-page-title');
-    if(titulo.children[0].innerText.toLowerCase() == "home" || titulo.children[0].innerText.toLowerCase() == "steengrill"|| titulo.children[0].innerText.toLowerCase() == "sports"){
+    if(titulo.children[0].innerText.toLowerCase() == "home" || titulo.children[0].innerText.toLowerCase() == "steengrill"|| titulo.children[0].innerText.toLowerCase() == "sports"|| titulo.children[0].innerText.toLowerCase() == "vacatures"){
         titulo.children[0].classList.add('d-none');
         titulo.classList.add('d-none');
     }
@@ -49,7 +49,7 @@ function menusFooter(cadena){
         region = "nuestraEmpresa"
     }else if(cadena == "/contacteer-ons"){
         region="accesoRapido";
-    }else if(cadena == "/" || cadena =="/steengrill"|| cadena =="/kidsparty" || cadena =="/feesten" || cadena =="/karaoke" || cadena =="/sports" || cadena =="/menu"|| cadena =="/bowling"){
+    }else if(cadena == "/" || cadena =="/steengrill"|| cadena =="/kidsparty" || cadena =="/feesten" || cadena =="/karaoke" || cadena =="/sports" || cadena =="/menu"|| cadena =="/bowling"|| cadena =="/vacatures"){
         region= "principalFooter";
     }
     togleActiveMenuFooter(region, cadena)
