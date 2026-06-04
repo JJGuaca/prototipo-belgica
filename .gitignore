@@ -66,3 +66,4 @@ web/sites/default/services.yml
 web/sites/default/settings.php
 /web/sites/default/files/
 /vendor/
+web/sites/default/settings.php
