@@ -56,8 +56,8 @@ article.container-fluid {
                                             img{
                                                 width: 100%;
                                                 object-fit: cover;
-                                                height: 500px;
-                                                object-position: center;
+                                                height: 560px;
+                                                object-position: center 30%;
                                                 @media (max-width:768px) {
                                                     height: 250px;
                                                 }
