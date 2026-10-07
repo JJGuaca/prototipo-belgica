@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Drupal\ui_styles\Render;
 
-use Drupal\Core\Render\Element as CoreElement;
 use Drupal\Core\Render\Element\RenderCallbackInterface;
+use Drupal\Core\Render\Element as CoreElement;
 use Drupal\Core\Security\TrustedCallbackInterface;
 use Drupal\Core\Template\AttributeHelper;
 
@@ -15,24 +15,14 @@ use Drupal\Core\Template\AttributeHelper;
 class Element extends CoreElement {
 
   /**
-   * The string searched for callback.
-   */
-  public const CALLBACK_NEEDLE = '::';
-
-  /**
-   * The length of the callback separator needle.
-   */
-  public const CALLBACK_NEEDLE_LENGTH = 2;
-
-  /**
    * List of #type to consider without attributes.
    *
    * @var array
    */
   public static $typeWithoutAttributes = [
     'inline_template',
-    'processed_text',
     'link',
+    'processed_text',
   ];
 
   /**
@@ -41,9 +31,10 @@ class Element extends CoreElement {
    * @var array
    */
   public static $typeWithAttributes = [
-    'view',
-    'pattern',
+    'component',
     'html_tag',
+    'pattern',
+    'view',
   ];
 
   /**
@@ -52,8 +43,8 @@ class Element extends CoreElement {
    * @var array
    */
   public static $themeWithAttributes = [
-    'layout',
     'block',
+    'layout',
   ];
 
   /**
@@ -65,9 +56,9 @@ class Element extends CoreElement {
    * @var array
    */
   public static $meaninglessThemeWrappers = [
-    'view',
-    'layout',
     'block',
+    'layout',
+    'view',
   ];
 
   /**

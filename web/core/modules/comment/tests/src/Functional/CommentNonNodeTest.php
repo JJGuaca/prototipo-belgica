@@ -27,6 +27,9 @@ class CommentNonNodeTest extends BrowserTestBase {
   use FieldUiTestTrait;
   use CommentTestTrait;
 
+  /**
+   * {@inheritdoc}
+   */
   protected static $modules = [
     'comment',
     'user',
@@ -203,7 +206,7 @@ class CommentNonNodeTest extends BrowserTestBase {
       $regex .= $comment->comment_body->value . '(.*?)';
       $regex .= '/s';
 
-      return (boolean) preg_match($regex, $this->getSession()->getPage()->getContent());
+      return (bool) preg_match($regex, $this->getSession()->getPage()->getContent());
     }
     else {
       return FALSE;

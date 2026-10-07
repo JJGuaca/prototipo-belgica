@@ -54,6 +54,8 @@ class DateTimePlus {
 
   /**
    * An array of possible date parts.
+   *
+   * @var string[]
    */
   protected static $dateParts = [
     'year',
@@ -108,20 +110,22 @@ class DateTimePlus {
 
   /**
    * The value of the language code passed to the constructor.
+   *
+   * @var string|null
    */
   protected $langcode = NULL;
 
   /**
    * An array of errors encountered when creating this date.
+   *
+   * @var string[]
    */
   protected $errors = [];
 
   /**
    * The DateTime object.
-   *
-   * @var \DateTime
    */
-  protected $dateTimeObject = NULL;
+  protected ?\DateTimeInterface $dateTimeObject = NULL;
 
   /**
    * Creates a date object from an input date object.
@@ -510,7 +514,7 @@ class DateTimePlus {
    *   otherwise.
    */
   public function hasErrors() {
-    return (boolean) count($this->errors);
+    return (bool) count($this->errors);
   }
 
   /**

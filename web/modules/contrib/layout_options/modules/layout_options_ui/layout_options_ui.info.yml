@@ -8,7 +8,7 @@ dependencies:
   - drupal:layout_discovery
   - layout_options:layout_options
 
-# Information added by Drupal.org packaging script on 2024-08-29
-version: '8.x-1.6'
+# Information added by Drupal.org packaging script on 2024-10-16
+version: '8.x-1.7'
 project: 'layout_options'
-datestamp: 1724921948
+datestamp: 1729077850

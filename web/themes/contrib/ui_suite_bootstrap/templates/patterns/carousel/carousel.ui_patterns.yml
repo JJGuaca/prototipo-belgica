@@ -19,7 +19,7 @@ carousel:
     with_controls:
       type: "boolean"
       label: "With controls?"
-      description: "Adding in the previous and next controls"
+      description: "Adding in the previous and next controls."
       preview: true
       allow_expose: true
       allow_token: true
@@ -69,6 +69,8 @@ carousel:
                 value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
         - type: "pattern"
           id: "carousel_item"
+          settings:
+            interval: 10000
           fields:
             image:
               theme: "image"
@@ -93,3 +95,10 @@ carousel:
               - type: "html_tag"
                 tag: "p"
                 value: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+  libraries:
+    - carousel:
+        js:
+          js/carousel.js: {}
+        dependencies:
+          - core/drupal
+          - core/once

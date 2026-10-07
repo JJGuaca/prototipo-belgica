@@ -4,7 +4,6 @@ namespace Drupal\bootstrap_layouts\Plugin\BootstrapLayouts;
 
 use Drupal\bootstrap_layouts\BootstrapLayout;
 use Drupal\Core\Plugin\PluginBase;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -12,17 +11,22 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 abstract class BootstrapLayoutsHandlerBase extends PluginBase implements BootstrapLayoutsHandlerInterface {
 
-  use ContainerAwareTrait;
+  /**
+   * The dependency injection container.
+   *
+   * @var \Symfony\Component\DependencyInjection\ContainerInterface
+   */
+  protected $container;
 
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, ContainerInterface $container = NULL) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, ?ContainerInterface $container = NULL) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     if (!isset($container)) {
       $container = \Drupal::getContainer();
     }
-    $this->setContainer($container);
+    $this->container = $container;
   }
 
   /**

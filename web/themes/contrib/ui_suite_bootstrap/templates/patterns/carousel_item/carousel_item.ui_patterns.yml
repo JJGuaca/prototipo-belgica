@@ -4,6 +4,14 @@ carousel_item:
   links:
     - 'https://getbootstrap.com/docs/5.3/components/carousel/'
   category: "Carousel"
+  settings:
+    interval:
+      type: "number"
+      label: "Interval"
+      description: "The amount of time to delay between automatically cycling to the next item. In ms."
+      preview: 3000
+      allow_expose: true
+      allow_token: true
   fields:
     image:
       type: "render"

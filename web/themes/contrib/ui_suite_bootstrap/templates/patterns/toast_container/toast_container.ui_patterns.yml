@@ -33,9 +33,7 @@ toast_container:
               attributes:
                 class:
                   - "text-muted"
-          content:
-            - type: "markup"
-              markup: "See? Just like this."
+          content: "See? Just like this."
         - type: "pattern"
           id: "toast"
           attributes:
@@ -60,17 +58,13 @@ toast_container:
               attributes:
                 class:
                   - "text-muted"
-          content:
-            - type: "markup"
-              markup: "Heads up, toasts will stack automatically"
+          content: "Heads up, toasts will stack automatically"
         - type: "pattern"
           id: "toast"
           attributes:
             class:
               - "show"
-          content:
-            - type: "markup"
-              markup: "Hello, world! This is a toast message."
+          content: "Hello, world! This is a toast message."
           flex_wrapper: true
         - type: "pattern"
           id: "toast"
@@ -78,8 +72,7 @@ toast_container:
             class:
               - "show"
           content:
-            - type: "markup"
-              markup: "Hello, world! This is a toast message."
+            - markup: "Hello, world! This is a toast message."
             - type: "html_tag"
               tag: "div"
               attributes:
@@ -108,8 +101,6 @@ toast_container:
               - "align-items-center"
               - "text-bg-primary"
               - "border-0"
-          content:
-            - type: "markup"
-              markup: "Hello, world! This is a toast message."
+          content: "Hello, world! This is a toast message."
           flex_wrapper: true
           close_button_variant: "white"

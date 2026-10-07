@@ -22,3 +22,4 @@ ui_styles_regions:
       colors_background_color: bg-light
       spacing_padding: p-3
     extra: ''
+container: 'container'

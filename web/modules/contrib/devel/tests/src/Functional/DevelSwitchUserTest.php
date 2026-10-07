@@ -20,6 +20,13 @@ class DevelSwitchUserTest extends DevelBrowserTestBase {
   protected $block;
 
   /**
+   * The devel user.
+   *
+   * @var \Drupal\user\Entity\User
+   */
+  protected $develUser;
+
+  /**
    * The switch user.
    *
    * @var \Drupal\user\Entity\User
@@ -99,7 +106,7 @@ class DevelSwitchUserTest extends DevelBrowserTestBase {
 
     // Use the form with username of the maximum length. Mimic the autofill
     // result by adding " (userid)" at the end.
-    $edit = ['userid' => $this->longUser->getDisplayName() . sprintf(' (%s)', $this->longUser->id())];
+    $edit = ['userid' => $this->longUser->getDisplayName() . " ({$this->longUser->id()})"];
     $this->submitForm($edit, 'Switch');
     $this->assertSessionByUid($this->longUser->id());
     $this->assertNoSessionByUid($this->switchUser->id());
@@ -112,7 +119,7 @@ class DevelSwitchUserTest extends DevelBrowserTestBase {
     $anonymous = \Drupal::config('user.settings')->get('anonymous');
 
     // Create some users for the test.
-    for ($i = 0; $i < 12; ++$i) {
+    for ($i = 0; $i < 12; $i++) {
       $this->drupalCreateUser();
     }
 
@@ -207,7 +214,7 @@ class DevelSwitchUserTest extends DevelBrowserTestBase {
     /** @var array<string, \Drupal\user\RoleInterface> $roles */
     $roles = $roleStorage->loadMultiple();
     unset($roles[AccountInterface::ANONYMOUS_ROLE]);
-    $roles = array_filter($roles, static fn($role): bool => $role->hasPermission('switch users'));
+    $roles = array_filter($roles, fn($role): bool => $role->hasPermission('switch users'));
     $roleStorage->delete($roles);
 
     $this->drupalGet('');
@@ -288,12 +295,10 @@ class DevelSwitchUserTest extends DevelBrowserTestBase {
    * @todo find a cleaner way to do this check.
    */
   protected function assertSessionByUid($uid) {
-    $result = \Drupal::database()
-      ->select('sessions')
-      ->fields('sessions', ['uid'])
-      ->condition('uid', $uid)
-      ->execute()->fetchAll();
-
+    $query = \Drupal::database()->select('sessions');
+    $query->fields('sessions', ['uid']);
+    $query->condition('uid', $uid);
+    $result = $query->execute()->fetchAll();
     // Check that we have some results.
     $this->assertNotEmpty($result, sprintf('No session found for uid %s', $uid));
     // If there is more than one session, then that must be unexpected.
@@ -311,13 +316,11 @@ class DevelSwitchUserTest extends DevelBrowserTestBase {
    * @todo find a cleaner way to do this check.
    */
   protected function assertNoSessionByUid($uid) {
-    $result = \Drupal::database()
-      ->select('sessions')
-      ->fields('sessions', ['uid'])
-      ->condition('uid', $uid)
-      ->execute()->fetchAll();
-
-    $this->assertEmpty($result, sprintf('No session for uid %d found.', $uid));
+    $query = \Drupal::database()->select('sessions');
+    $query->fields('sessions', ['uid']);
+    $query->condition('uid', $uid);
+    $result = $query->execute()->fetchAll();
+    $this->assertEmpty($result, "No session for uid $uid found.");
   }
 
 }

@@ -21,12 +21,9 @@
  * @ingroup themeable
  */
 #}
-
-<div data-drupal-messages>
 {% for type, messages in message_list %}
-
   {% set variant = '' %}
-  {% set variant = (type == 'status') ? 'info' : variant %}
+  {% set variant = (type == 'status') ? 'success' : variant %}
   {% set variant = (type == 'warning') ? 'warning' : variant %}
   {% set variant = (type == 'error') ? 'danger' : variant %}
 
@@ -43,7 +40,4 @@
       'dismissible': true
     }) }}
   {% endfor %}
-
 {% endfor %}
-</div>
-

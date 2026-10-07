@@ -71,6 +71,4 @@ toast:
       type: "render"
       label: "Content toast"
       description: "The toast item content."
-      preview:
-        - type: "markup"
-          markup: "Hello, world! This is a toast message."
+      preview: "Hello, world! This is a toast message."

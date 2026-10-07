@@ -62,7 +62,7 @@
     'form-text',
   ]
 %}
-{% set description_attributes = description_attributes|default(create_attribute()) %}
+{% set description_attributes = create_attribute(description_attributes|default({})) %}
 
 <div class="accordion mb-3" id="{{ accordion_id }}">
   <div{{ attributes.addClass('accordion-item') }}>

@@ -24,10 +24,11 @@
       </ul>
     {% endif %}
 
-    {% set item_attributes = item.attributes|default(create_attribute()) %}
-    {% set link_attributes = item.link_attributes|default(create_attribute()) %}
+    {% set item_attributes = create_attribute(item.attributes|default({})) %}
+    {% set link_attributes = create_attribute(item.link_attributes|default({})) %}
     {% if item.below %}
       {{ pattern('dropdown', {
+        'variant': 'dropdown',
         'title': item.title,
         'content': item.below,
         'dropdown_id': dropdown_id|default("dropdown-" ~ random())  ~ "-" ~ loop.index,
@@ -37,7 +38,7 @@
           'class': ['nav-item']
         }),
         'button_attributes': link_attributes
-      }, 'dropdown') }}
+      }) }}
     {% elseif item.url %}
       <li{{ item_attributes.addClass('nav-item') }}>
         <a{{ link_attributes.setAttribute('href', item.url).addClass('nav-link') }}>{{ item.title }}</a>

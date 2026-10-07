@@ -6,7 +6,7 @@ one_column:
     highlighted:
       label: "Highlighted"
   fields:
-    body:
+    content:
       type: "text"
-      label: "Body"
-      preview: "Body"
+      label: "Content"
+      preview: "Content"

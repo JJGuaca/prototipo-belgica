@@ -1,15 +1,14 @@
 global-styling:
   css:
     theme:
-      css/style.css: {  }
+      css/style.css: {}
   js:
-    theme:
-      js/script.js: {  }
-      
+    js/script.js: { attributes: { type: module } }
+
 main-menu:
   js:
     components/02-molecules/menus/main-menu/main-menu.js: {}
 
 main-js:
   js:
-    js/script.min.js: {}
+    js/script.js: { attributes: { type: module } }

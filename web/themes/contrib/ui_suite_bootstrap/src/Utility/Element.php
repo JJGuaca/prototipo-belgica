@@ -6,6 +6,7 @@ namespace Drupal\ui_suite_bootstrap\Utility;
 
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Component\Render\MarkupInterface;
+use Drupal\Component\Utility\DeprecationHelper;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element as CoreElement;
 
@@ -575,7 +576,12 @@ class Element extends DrupalAttributes {
     /** @var \Drupal\Core\Render\Renderer $renderer */
     // @phpstan-ignore-next-line
     $renderer = \Drupal::service('renderer');
-    return $renderer->renderPlain($this->array);
+    return DeprecationHelper::backwardsCompatibleCall(
+      currentVersion: \Drupal::VERSION,
+      deprecatedVersion: '10.3',
+      currentCallable: fn () => $renderer->renderInIsolation($this->array),
+      deprecatedCallable: fn () => $renderer->renderPlain($this->array),
+    );
   }
 
   /**

@@ -23,7 +23,7 @@ class PreprocessViewsMiniPager extends PreprocessPager {
     }
     $this->setLinksAriaLabel($variables['items']);
 
-    $variables['items'] = LinksSettingType::normalize(\array_filter([
+    $variables['preprocessed_items'] = LinksSettingType::normalize(\array_filter([
       $variables['items']['previous'] ?? [],
       [
         'title' => $variables['items']['current'],

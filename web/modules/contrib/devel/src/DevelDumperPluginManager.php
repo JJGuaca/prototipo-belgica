@@ -58,7 +58,6 @@ class DevelDumperPluginManager extends DefaultPluginManager implements DevelDump
     if (!$this->isPluginSupported($plugin_id)) {
       $plugin_id = $this->getFallbackPluginId($plugin_id);
     }
-
     return parent::createInstance($plugin_id, $configuration);
   }
 

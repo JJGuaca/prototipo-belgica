@@ -3,7 +3,6 @@
 namespace Drupal\devel_generate;
 
 use Drupal\Core\Cache\CacheBackendInterface;
-use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
@@ -55,8 +54,6 @@ class DevelGeneratePluginManager extends DefaultPluginManager {
    *   The language manager.
    * @param \Drupal\Core\StringTranslation\TranslationInterface $string_translation
    *   The translation manager.
-   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entityFieldManager
-   *   The entity field manager.
    */
   public function __construct(
     \Traversable $namespaces,
@@ -65,8 +62,7 @@ class DevelGeneratePluginManager extends DefaultPluginManager {
     EntityTypeManagerInterface $entity_type_manager,
     MessengerInterface $messenger,
     LanguageManagerInterface $language_manager,
-    TranslationInterface $string_translation,
-    protected EntityFieldManagerInterface $entityFieldManager,
+    TranslationInterface $string_translation
   ) {
     parent::__construct('Plugin/DevelGenerate', $namespaces, $module_handler, NULL, DevelGenerate::class);
     $this->entityTypeManager = $entity_type_manager;
@@ -93,12 +89,10 @@ class DevelGeneratePluginManager extends DefaultPluginManager {
           break;
         }
       }
-
       if ($plugin_available) {
         $definitions[$plugin_id] = $plugin_definition;
       }
     }
-
     return $definitions;
   }
 

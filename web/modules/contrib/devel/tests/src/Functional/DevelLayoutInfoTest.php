@@ -52,6 +52,7 @@ class DevelLayoutInfoTest extends DevelBrowserTestBase {
     $this->assertNotNull($table);
 
     // Ensures that the expected table headers are found.
+    /** @var \Behat\Mink\Element\NodeElement[] $headers */
     $headers = $table->findAll('css', 'thead th');
     $this->assertEquals(6, count($headers));
 
@@ -63,12 +64,11 @@ class DevelLayoutInfoTest extends DevelBrowserTestBase {
       'Regions',
       'Provider',
     ];
-    $actual_headers = array_map(static fn($element) => $element->getText(), $headers);
+    $actual_headers = array_map(fn($element) => $element->getText(), $headers);
     $this->assertSame($expected_headers, $actual_headers);
 
     // Ensures that all the layouts are listed in the table.
-    /** @var \Drupal\Core\Layout\LayoutPluginManagerInterface $layout_manager */
-    $layout_manager = $this->container->get('plugin.manager.core.layout');
+    $layout_manager = \Drupal::service('plugin.manager.core.layout');
     $layouts = $layout_manager->getDefinitions();
     $table_rows = $table->findAll('css', 'tbody tr');
     $this->assertEquals(count($layouts), count($table_rows));
@@ -79,13 +79,11 @@ class DevelLayoutInfoTest extends DevelBrowserTestBase {
       $this->assertEquals(6, count($cells));
 
       $cell_layout_icon = $cells[0];
-      $icon_path = $layout->getIconPath();
-      if ($icon_path === NULL || $icon_path === '') {
+      if (empty($layout->getIconPath())) {
         // @todo test that the icon path image is set correctly
       }
       else {
-        $cell_layout_icon_text = $cell_layout_icon->getText();
-        $this->assertTrue($cell_layout_icon_text === '');
+        $this->assertNull($cell_layout_icon->getText());
       }
 
       $cell_layout_label = $cells[1];
@@ -103,7 +101,7 @@ class DevelLayoutInfoTest extends DevelBrowserTestBase {
       $cell_layout_provider = $cells[5];
       $this->assertEquals($cell_layout_provider->getText(), $layout->getProvider());
 
-      ++$index;
+      $index++;
     }
 
     // Ensures that the page is accessible only to the users with the adequate

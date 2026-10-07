@@ -10,6 +10,7 @@ colors_background_gradient:
     - border
     - p-2
     - text-bg-primary
+  weight: -83
 
 spacing_margin_top:
   category: "Spacing"
@@ -34,6 +35,7 @@ spacing_margin_top:
     - border
     - p-2
     - bg-light
+  weight: -69
 
 spacing_margin_bottom:
   category: "Spacing"
@@ -58,6 +60,7 @@ spacing_margin_bottom:
     - border
     - p-2
     - bg-light
+  weight: -68
 
 spacing_margin_start:
   category: "Spacing"
@@ -82,6 +85,7 @@ spacing_margin_start:
     - border
     - p-2
     - bg-light
+  weight: -67
 
 spacing_margin_end:
   category: "Spacing"
@@ -106,3 +110,4 @@ spacing_margin_end:
     - border
     - p-2
     - bg-light
+  weight: -66

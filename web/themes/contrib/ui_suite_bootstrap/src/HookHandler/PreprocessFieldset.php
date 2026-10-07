@@ -42,7 +42,8 @@ class PreprocessFieldset extends PreprocessFormElement {
     $inner_wrapper_attributes = new Attribute($inner_wrapper_attributes);
 
     // Layout: horizontal form.
-    if ($this->element->getProperty('title_display') == 'inline') {
+    // _title_display is created by Webform.
+    if ($this->element->getProperty('title_display') == 'inline' || $this->element->getProperty('_title_display') == 'inline') {
       $wrapper_attributes->addClass([
         'row',
         'mb-3',

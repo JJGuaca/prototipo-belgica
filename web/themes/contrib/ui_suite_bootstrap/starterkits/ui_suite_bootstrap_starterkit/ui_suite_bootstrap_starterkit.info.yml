@@ -1,7 +1,7 @@
 name: 'UI Suite Bootstrap Starterkit'
 type: theme
 description: 'Example theme.'
-core_version_requirement: ^10 || ^11
+core_version_requirement: ^10.2 || ^11
 base theme: ui_suite_bootstrap
 hidden: true
 
@@ -35,7 +35,7 @@ libraries-extend:
   ui_suite_bootstrap/form:
     - ui_suite_bootstrap_starterkit/form
 
-# Information added by Drupal.org packaging script on 2024-06-09
-version: '5.0.0-alpha15'
+# Information added by Drupal.org packaging script on 2025-02-18
+version: '5.0.0-beta3'
 project: 'ui_suite_bootstrap'
-datestamp: 1717933759
+datestamp: 1739888792

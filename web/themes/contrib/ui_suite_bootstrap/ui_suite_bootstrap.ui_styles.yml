@@ -11,6 +11,7 @@ img_thumbnail:
   options:
     img-thumbnail: "Thumbnail"
   previewed_as: "hidden"
+  weight: -4
 
 ################################################################################
 # Helpers.
@@ -24,6 +25,7 @@ clearfix:
     - 'https://getbootstrap.com/docs/5.3/helpers/clearfix/'
   options:
     clearfix: "Clearfix"
+  weight: -44
 
 # Color & background is among the utilities.
 # Colored links is among the utilities.
@@ -45,6 +47,7 @@ focus_ring:
     focus-ring focus-ring-light: "Light"
     focus-ring focus-ring-dark: "Dark"
   previewed_as: hidden
+  weight: -5
 
 icon_link:
   category: "Link"
@@ -55,6 +58,8 @@ icon_link:
   options:
     icon-link: "Default"
     icon-link icon-link-hover: "Style on hover"
+  previewed_as: hidden
+  weight: -10
 
 position:
   category: "Position"
@@ -78,6 +83,7 @@ position:
     sticky-xl-bottom: "Sticky bottom from extra large"
     sticky-xxl-bottom: "Sticky bottom from extra extra large"
   previewed_as: "hidden"
+  weight: -30
 
 ratio_aspect:
   category: "Sizing"
@@ -91,6 +97,7 @@ ratio_aspect:
     ratio ratio-16x9: "16x9"
     ratio ratio-21x9: "21x9"
   previewed_as: "hidden"
+  weight: -55
 
 # Stacks is not implemented.
 
@@ -103,6 +110,7 @@ stretched_link:
   options:
     stretched-link: "Stretched"
   previewed_as: "hidden"
+  weight: -9
 
 text_text_truncate:
   category: "Text"
@@ -112,6 +120,7 @@ text_text_truncate:
     - 'https://getbootstrap.com/docs/5.3/helpers/text-truncation'
   options:
     text-truncate: "Truncate"
+  weight: -87
 
 vertical_rule:
   label: "Vertical rule"
@@ -119,10 +128,11 @@ vertical_rule:
   links:
     - 'https://getbootstrap.com/docs/5.3/helpers/vertical-rule'
   options:
-    vr: "Vertical rule"
+    vr: "Enable"
   previewed_as: "aside"
   previewed_with:
     - ms-2
+  weight: -1
 
 visually_hidden:
   category: "Visibility"
@@ -134,6 +144,7 @@ visually_hidden:
     visually-hidden: "Visually hidden"
     visually-hidden-focusable: "Visually hidden focusable"
   previewed_as: "hidden"
+  weight: -24
 
 ################################################################################
 # Utilities
@@ -185,6 +196,7 @@ colors_background_color:
   previewed_with:
     - border
     - p-2
+  weight: -85
 
 colors_background_opacity:
   category: "Background"
@@ -202,6 +214,7 @@ colors_background_opacity:
     - border
     - p-2
     - bg-primary
+  weight: -84
 
 borders_border:
   category: "Borders"
@@ -210,14 +223,31 @@ borders_border:
   links:
     - 'https://getbootstrap.com/docs/5.3/utilities/borders/#border'
   options:
-    border: "Additive All"
-    border-top: "Additive Top"
-    border-end: "Additive End"
-    border-bottom: "Additive Bottom"
-    border-start: "Additive Start"
+    border:
+      label: "Additive All"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/border-outer.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktYm9yZGVyLW91dGVyIiB2aWV3Qm94PSIwIDAgMTYgMTYiPgogIDxwYXRoIGQ9Ik03LjUgMS45MDZ2LjkzOGgxdi0uOTM4em0wIDEuODc1di45MzhoMVYzLjc4aC0xem0wIDEuODc1di45MzhoMXYtLjkzOHpNMS45MDYgOC41aC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMUgzLjc4djF6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHptMi44MTMgMHYtLjAzMUg4LjVWNy41M2gtLjAzMVY3LjVINy41M3YuMDMxSDcuNXYuOTM4aC4wMzFWOC41em0uOTM3IDBoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguOTM4di0xaC0uOTM4em0xLjg3NSAwaC45Mzh2LTFoLS45Mzh6TTcuNSA5LjQwNnYuOTM4aDF2LS45Mzh6bTAgMS44NzV2LjkzOGgxdi0uOTM4em0wIDEuODc1di45MzhoMXYtLjkzOHoiLz4KICA8cGF0aCBkPSJNMCAwdjE2aDE2VjB6bTEgMWgxNHYxNEgxeiIvPgo8L3N2Zz4K"
+    border-top:
+      label: "Additive Top"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/border-top.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktYm9yZGVyLXRvcCIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJNMCAwdjFoMTZWMHptMSAyLjg0NHYtLjkzOEgwdi45Mzh6bTYuNS0uOTM4di45MzhoMXYtLjkzOHptNy41IDB2LjkzOGgxdi0uOTM4ek0xIDQuNzE5VjMuNzhIMHYuOTM4aDF6bTYuNS0uOTM4di45MzhoMVYzLjc4aC0xem03LjUgMHYuOTM4aDFWMy43OGgtMXpNMSA2LjU5NHYtLjkzOEgwdi45Mzh6bTYuNS0uOTM4di45MzhoMXYtLjkzOHptNy41IDB2LjkzOGgxdi0uOTM4ek0uNSA4LjVoLjQ2OXYtLjAzMUgxVjcuNTNILjk2OVY3LjVILjV2LjAzMUgwdi45MzhoLjV6bTEuNDA2IDBoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguOTM4di0xSDMuNzh2MXptMS44NzUgMGguOTM4di0xaC0uOTM4em0yLjgxMyAwdi0uMDMxSDguNVY3LjUzaC0uMDMxVjcuNUg3LjUzdi4wMzFINy41di45MzhoLjAzMVY4LjV6bS45MzcgMGguOTM4di0xaC0uOTM4em0xLjg3NSAwaC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguNDY5di0uMDMxaC41VjcuNTNoLS41VjcuNWgtLjQ2OXYuMDMxSDE1di45MzhoLjAzMXpNMCA5LjQwNnYuOTM4aDF2LS45Mzh6bTcuNSAwdi45MzhoMXYtLjkzOHptOC41LjkzOHYtLjkzOGgtMXYuOTM4em0tMTYgLjkzN3YuOTM4aDF2LS45Mzh6bTcuNSAwdi45MzhoMXYtLjkzOHptOC41LjkzOHYtLjkzOGgtMXYuOTM4em0tMTYgLjkzN3YuOTM4aDF2LS45Mzh6bTcuNSAwdi45MzhoMXYtLjkzOHptOC41LjkzOHYtLjkzOGgtMXYuOTM4ek0wIDE2aC45Njl2LS41SDF2LS40NjlILjk2OVYxNUguNXYuMDMxSDB6bTEuOTA2IDBoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguOTM4di0xSDMuNzh2MXptMS44NzUgMGguOTM4di0xaC0uOTM4em0xLjg3NS0uNXYuNWguOTM4di0uNUg4LjV2LS40NjloLS4wMzFWMTVINy41M3YuMDMxSDcuNXYuNDY5em0xLjg3NS41aC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguOTM4di0xaC0uOTM4em0xLjg3NS0uNXYuNUgxNnYtLjk2OWgtLjVWMTVoLS40Njl2LjAzMUgxNXYuNDY5eiIvPgo8L3N2Zz4K"
+    border-bottom:
+      label: "Additive Bottom"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/border-bottom.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktYm9yZGVyLWJvdHRvbSIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJNLjk2OSAwSDB2Ljk2OWguNVYxaC40NjlWLjk2OUgxVi41SC45Njl6bS45MzcgMWguOTM4VjBoLS45Mzh6bTEuODc1IDBoLjkzOFYwSDMuNzh2MXptMS44NzUgMGguOTM4VjBoLS45Mzh6TTcuNTMxLjk2OVYxaC45MzhWLjk2OUg4LjVWLjVoLS4wMzFWMEg3LjUzdi41SDcuNXYuNDY5ek05LjQwNiAxaC45MzhWMGgtLjkzOHptMS44NzUgMGguOTM4VjBoLS45Mzh6bTEuODc1IDBoLjkzOFYwaC0uOTM4em0xLjg3NSAwaC40NjlWLjk2OWguNVYwaC0uOTY5di41SDE1di40NjloLjAzMXpNMSAyLjg0NHYtLjkzOEgwdi45Mzh6bTYuNS0uOTM4di45MzhoMXYtLjkzOHptNy41IDB2LjkzOGgxdi0uOTM4ek0xIDQuNzE5VjMuNzhIMHYuOTM4aDF6bTYuNS0uOTM4di45MzhoMVYzLjc4aC0xem03LjUgMHYuOTM4aDFWMy43OGgtMXpNMSA2LjU5NHYtLjkzOEgwdi45Mzh6bTYuNS0uOTM4di45MzhoMXYtLjkzOHptNy41IDB2LjkzOGgxdi0uOTM4ek0uNSA4LjVoLjQ2OXYtLjAzMUgxVjcuNTNILjk2OVY3LjVILjV2LjAzMUgwdi45MzhoLjV6bTEuNDA2IDBoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguOTM4di0xSDMuNzh2MXptMS44NzUgMGguOTM4di0xaC0uOTM4em0yLjgxMyAwdi0uMDMxSDguNVY3LjUzaC0uMDMxVjcuNUg3LjUzdi4wMzFINy41di45MzhoLjAzMVY4LjV6bS45MzcgMGguOTM4di0xaC0uOTM4em0xLjg3NSAwaC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguNDY5di0uMDMxaC41VjcuNTNoLS41VjcuNWgtLjQ2OXYuMDMxSDE1di45MzhoLjAzMXpNMCA5LjQwNnYuOTM4aDF2LS45Mzh6bTcuNSAwdi45MzhoMXYtLjkzOHptOC41LjkzOHYtLjkzOGgtMXYuOTM4em0tMTYgLjkzN3YuOTM4aDF2LS45Mzh6bTcuNSAwdi45MzhoMXYtLjkzOHptOC41LjkzOHYtLjkzOGgtMXYuOTM4em0tMTYgLjkzN3YuOTM4aDF2LS45Mzh6bTcuNSAwdi45MzhoMXYtLjkzOHptOC41LjkzOHYtLjkzOGgtMXYuOTM4ek0wIDE1aDE2djFIMHoiLz4KPC9zdmc+Cg=="
+    border-start:
+      label: "Additive Start"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/border-left.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktYm9yZGVyLWxlZnQiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTAgMHYxNmgxVjB6bTEuOTA2IDFoLjkzOFYwaC0uOTM4em0xLjg3NSAwaC45MzhWMEgzLjc4djF6bTEuODc1IDBoLjkzOFYwaC0uOTM4ek03LjUzMS45NjlWMWguOTM4Vi45NjlIOC41Vi41aC0uMDMxVjBINy41M3YuNUg3LjV2LjQ2OXpNOS40MDYgMWguOTM4VjBoLS45Mzh6bTEuODc1IDBoLjkzOFYwaC0uOTM4em0xLjg3NSAwaC45MzhWMGgtLjkzOHptMS44NzUgMGguNDY5Vi45NjloLjVWMGgtLjk2OXYuNUgxNXYuNDY5aC4wMzF6TTcuNSAxLjkwNnYuOTM4aDF2LS45Mzh6bTcuNSAwdi45MzhoMXYtLjkzOHpNNy41IDMuNzgxdi45MzhoMVYzLjc4aC0xem03LjUgMHYuOTM4aDFWMy43OGgtMXpNNy41IDUuNjU2di45MzhoMXYtLjkzOHptNy41IDB2LjkzOGgxdi0uOTM4ek0xLjkwNiA4LjVoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguOTM4di0xSDMuNzh2MXptMS44NzUgMGguOTM4di0xaC0uOTM4em0yLjgxMyAwdi0uMDMxSDguNVY3LjUzaC0uMDMxVjcuNUg3LjUzdi4wMzFINy41di45MzhoLjAzMVY4LjV6bS45MzcgMGguOTM4di0xaC0uOTM4em0xLjg3NSAwaC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguNDY5di0uMDMxaC41VjcuNTNoLS41VjcuNWgtLjQ2OXYuMDMxSDE1di45MzhoLjAzMXpNNy41IDkuNDA2di45MzhoMXYtLjkzOHptOC41LjkzOHYtLjkzOGgtMXYuOTM4em0tOC41LjkzN3YuOTM4aDF2LS45Mzh6bTguNS45Mzh2LS45MzhoLTF2LjkzOHptLTguNS45Mzd2LjkzOGgxdi0uOTM4em04LjUuOTM4di0uOTM4aC0xdi45Mzh6TTEuOTA2IDE2aC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMUgzLjc4djF6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHptMS44NzUtLjV2LjVoLjkzOHYtLjVIOC41di0uNDY5aC0uMDMxVjE1SDcuNTN2LjAzMUg3LjV2LjQ2OXptMS44NzUuNWguOTM4di0xaC0uOTM4em0xLjg3NSAwaC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHptMS44NzUtLjV2LjVIMTZ2LS45NjloLS41VjE1aC0uNDY5di4wMzFIMTV2LjQ2OXoiLz4KPC9zdmc+Cg=="
+    border-end:
+      label: "Additive End"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/border-right.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktYm9yZGVyLXJpZ2h0IiB2aWV3Qm94PSIwIDAgMTYgMTYiPgogIDxwYXRoIGQ9Ik0uOTY5IDBIMHYuOTY5aC41VjFoLjQ2OVYuOTY5SDFWLjVILjk2OXptLjkzNyAxaC45MzhWMGgtLjkzOHptMS44NzUgMGguOTM4VjBIMy43OHYxem0xLjg3NSAwaC45MzhWMGgtLjkzOHpNNy41MzEuOTY5VjFoLjkzOFYuOTY5SDguNVYuNWgtLjAzMVYwSDcuNTN2LjVINy41di40Njl6TTkuNDA2IDFoLjkzOFYwaC0uOTM4em0xLjg3NSAwaC45MzhWMGgtLjkzOHptMS44NzUgMGguOTM4VjBoLS45Mzh6TTE2IDBoLTF2MTZoMXpNMSAyLjg0NHYtLjkzOEgwdi45Mzh6bTYuNS0uOTM4di45MzhoMXYtLjkzOHpNMSA0LjcxOVYzLjc4SDB2LjkzOGgxem02LjUtLjkzOHYuOTM4aDFWMy43OGgtMXpNMSA2LjU5NHYtLjkzOEgwdi45Mzh6bTYuNS0uOTM4di45MzhoMXYtLjkzOHpNLjUgOC41aC40Njl2LS4wMzFIMVY3LjUzSC45NjlWNy41SC41di4wMzFIMHYuOTM4aC41em0xLjQwNiAwaC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMUgzLjc4djF6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHptMi44MTMgMHYtLjAzMUg4LjVWNy41M2gtLjAzMVY3LjVINy41M3YuMDMxSDcuNXYuOTM4aC4wMzFWOC41em0uOTM3IDBoLjkzOHYtMWgtLjkzOHptMS44NzUgMGguOTM4di0xaC0uOTM4em0xLjg3NSAwaC45Mzh2LTFoLS45Mzh6TTAgOS40MDZ2LjkzOGgxdi0uOTM4em03LjUgMHYuOTM4aDF2LS45Mzh6TTAgMTEuMjgxdi45MzhoMXYtLjkzOHptNy41IDB2LjkzOGgxdi0uOTM4ek0wIDEzLjE1NnYuOTM4aDF2LS45Mzh6bTcuNSAwdi45MzhoMXYtLjkzOHpNMCAxNmguOTY5di0uNUgxdi0uNDY5SC45NjlWMTVILjV2LjAzMUgwem0xLjkwNiAwaC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMUgzLjc4djF6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHptMS44NzUtLjV2LjVoLjkzOHYtLjVIOC41di0uNDY5aC0uMDMxVjE1SDcuNTN2LjAzMUg3LjV2LjQ2OXptMS44NzUuNWguOTM4di0xaC0uOTM4em0xLjg3NSAwaC45Mzh2LTFoLS45Mzh6bTEuODc1IDBoLjkzOHYtMWgtLjkzOHoiLz4KPC9zdmc+Cg=="
   previewed_with:
     - p-2
     - bg-light
+    - border-dark
+  weight: -80
 
 borders_border_subtractive:
   category: "Borders"
@@ -228,13 +258,15 @@ borders_border_subtractive:
   options:
     border-0: "All"
     border-top-0: "Top"
-    border-end-0: "End"
     border-bottom-0: "Bottom"
     border-start-0: "Start"
+    border-end-0: "End"
   previewed_with:
     - border
     - p-2
     - bg-light
+    - border-dark
+  weight: -79
 
 borders_border_color:
   category: "Borders"
@@ -265,6 +297,7 @@ borders_border_color:
     - border
     - p-2
     - bg-light
+  weight: -77
 
 borders_border_opacity:
   category: "Borders"
@@ -282,6 +315,7 @@ borders_border_opacity:
     - border
     - border-success
     - p-2
+  weight: -76
 
 borders_border_width:
   category: "Borders"
@@ -298,6 +332,8 @@ borders_border_width:
     - border
     - p-2
     - bg-light
+    - border-dark
+  weight: -78
 
 borders_border_radius:
   category: "Borders"
@@ -313,6 +349,8 @@ borders_border_radius:
     - border
     - p-2
     - bg-light
+    - border-dark
+  weight: -74
 
 borders_border_radius_position:
   category: "Borders"
@@ -321,13 +359,15 @@ borders_border_radius_position:
     - 'https://getbootstrap.com/docs/5.3/utilities/borders/#radius'
   options:
     rounded-top: "Top"
-    rounded-end: "End"
     rounded-bottom: "Bottom"
     rounded-start: "Start"
+    rounded-end: "End"
   previewed_with:
     - border
     - p-2
     - bg-light
+    - border-dark
+  weight: -72
 
 borders_border_radius_width:
   category: "Borders"
@@ -345,6 +385,8 @@ borders_border_radius_width:
     - border
     - p-2
     - bg-light
+    - border-dark
+  weight: -73
 
 colors_color:
   category: "Text"
@@ -379,6 +421,7 @@ colors_color:
     text-white-50: "White 50 (deprecated)"
     text-muted: "Muted (deprecated)"
     text-reset: "Reset"
+  weight: -98
 
 colors_opacity:
   category: "Text"
@@ -392,6 +435,7 @@ colors_opacity:
     text-opacity-25: "25%"
   previewed_with:
     - text-primary
+  weight: -91
 
 display_all:
   category: "Display"
@@ -412,6 +456,7 @@ display_all:
     d-flex: "Flex"
     d-inline-flex: "Inline flex"
   previewed_as: "hidden"
+  weight: -53
 
 display_small:
   category: "Display"
@@ -432,6 +477,7 @@ display_small:
     d-sm-flex: "Display: flex on small screens and above"
     d-sm-inline-flex: "Display: inline-flex on small screens and above"
   previewed_as: "hidden"
+  weight: -52
 
 display_medium:
   category: "Display"
@@ -452,6 +498,7 @@ display_medium:
     d-md-flex: "Display: flex on medium screens and above"
     d-md-inline-flex: "Display: inline-flex on medium screens and above"
   previewed_as: "hidden"
+  weight: -51
 
 display_large:
   category: "Display"
@@ -472,6 +519,7 @@ display_large:
     d-lg-flex: "Display: flex on large screens and above"
     d-lg-inline-flex: "Display: inline-flex on large screens and above"
   previewed_as: "hidden"
+  weight: -50
 
 display_x_large:
   category: "Display"
@@ -492,6 +540,7 @@ display_x_large:
     d-xl-flex: "Display: flex on x-large screens and xx-large screens."
     d-xl-inline-flex: "Display: inline-flex on x-large screens and xx-large screens."
   previewed_as: "hidden"
+  weight: -49
 
 display_xx_large:
   category: "Display"
@@ -512,6 +561,7 @@ display_xx_large:
     d-xxl-flex: "Display: flex only on xx-large screens."
     d-xxl-inline-flex: "Display: inline-flex only on xx-large screens."
   previewed_as: "hidden"
+  weight: -48
 
 display_print:
   category: "Display"
@@ -532,6 +582,7 @@ display_print:
     d-print-flex: "Display as flex for printing."
     d-print-inline-flex: "Display as inline-flex for printing."
   previewed_as: "hidden"
+  weight: -47
 
 flex_flex:
   category: "Flex"
@@ -542,10 +593,8 @@ flex_flex:
   options:
     d-flex: "Flex"
     d-inline-flex: "Inline flex"
-  previewed_with:
-    - border
-    - p-2
-    - bg-light
+  previewed_as: hidden
+  weight: -42
 
 flex_direction:
   category: "Flex"
@@ -558,11 +607,8 @@ flex_direction:
     flex-row-reverse: "Reverse flex row"
     flex-column: "Flex column"
     flex-column-reverse: "Reverse flex column"
-  previewed_with:
-    - d-flex
-    - border
-    - p-2
-    - bg-light
+  previewed_as: hidden
+  weight: -41
 
 flex_justify_content:
   category: "Flex"
@@ -577,11 +623,8 @@ flex_justify_content:
     justify-content-between: "Between"
     justify-content-around: "Around"
     justify-content-evenly: "Evenly"
-  previewed_with:
-    - d-flex
-    - border
-    - p-2
-    - bg-light
+  previewed_as: hidden
+  weight: -39
 
 flex_align_content:
   category: "Flex"
@@ -596,6 +639,8 @@ flex_align_content:
     align-content-between: "Between"
     align-content-around: "Around"
     align-content-stretch: "Stretch"
+  previewed_as: hidden
+  weight: -40
 
 flex_align_items:
   category: "Flex"
@@ -609,11 +654,8 @@ flex_align_items:
     align-items-center: "Center"
     align-items-baseline: "Baseline"
     align-items-stretch: "Stretch"
-  previewed_with:
-    - d-flex
-    - border
-    - p-2
-    - bg-light
+  previewed_as: hidden
+  weight: -38
 
 flex_align_self:
   category: "Flex"
@@ -627,11 +669,8 @@ flex_align_self:
     align-self-center: "Center"
     align-self-baseline: "Baseline"
     align-self-stretch: "Stretch"
-  previewed_with:
-    - d-flex
-    - border
-    - p-2
-    - bg-light
+  previewed_as: hidden
+  weight: -37
 
 flex_fill:
   category: "Flex"
@@ -641,6 +680,8 @@ flex_fill:
     - 'https://getbootstrap.com/docs/5.3/utilities/flex/#fill'
   options:
     flex-fill: "Fill"
+  previewed_as: hidden
+  weight: -35
 
 flex_grow_shrink:
   category: "Flex"
@@ -653,6 +694,8 @@ flex_grow_shrink:
     flex-grow-1: "Grow 1"
     flex-shrink-0: "Shrink 0"
     flex-shrink-1: "Shrink 1"
+  previewed_as: hidden
+  weight: -34
 
 flex_wrap:
   category: "Flex"
@@ -664,6 +707,8 @@ flex_wrap:
     flex-nowrap: "No wrap"
     flex-wrap: "Wrap"
     flex-wrap-reverse: "Reverse wrap"
+  previewed_as: hidden
+  weight: -36
 
 flex_order:
   category: "Flex"
@@ -680,6 +725,8 @@ flex_order:
     order-3: "Order 3"
     order-4: "Order 4"
     order-5: "Order 5"
+  previewed_as: hidden
+  weight: -33
 
 float:
   category: "Float"
@@ -691,6 +738,8 @@ float:
     float-start: "Start"
     float-end: "End"
     float-none: "None"
+  previewed_as: widget_hidden
+  weight: -45
 
 interactions_text_selection:
   category: "Interactions"
@@ -702,6 +751,8 @@ interactions_text_selection:
     user-select-all: "Select all"
     user-select-auto: "Default"
     user-select-none: "Not selectable"
+  previewed_as: widget_hidden
+  weight: -5
 
 interactions_pointer_events:
   category: "Interactions"
@@ -712,6 +763,8 @@ interactions_pointer_events:
   options:
     pe-none: "Not clickable"
     pe-auto: "Default"
+  previewed_as: widget_hidden
+  weight: -6
 
 link_opacity:
   category: "Link"
@@ -726,6 +779,7 @@ link_opacity:
     link-opacity-25: "25%"
     link-opacity-10: "10%"
   previewed_as: hidden
+  weight: -14
 
 link_opacity_hover:
   category: "Link"
@@ -740,10 +794,11 @@ link_opacity_hover:
     link-opacity-25-hover: "25%"
     link-opacity-10-hover: "10%"
   previewed_as: hidden
+  weight: -13
 
 link_underline:
   category: "Link"
-  label: "Link underline"
+  label: "Link underline color"
   description: "Change the underline's color independent of the link text color."
   links:
     - 'https://getbootstrap.com/docs/5.3/utilities/link/#underline-color'
@@ -759,6 +814,7 @@ link_underline:
     link-underline-dark: "Dark"
   previewed_with:
     - text-decoration-underline
+  weight: -17
 
 link_underline_opacity:
   category: "Link"
@@ -776,6 +832,7 @@ link_underline_opacity:
   previewed_with:
     - text-decoration-underline
     - link-underline
+  weight: -12
 
 link_underline_opacity_hover:
   category: "Link"
@@ -789,9 +846,11 @@ link_underline_opacity_hover:
     link-underline-opacity-25-hover: "25%"
     link-underline-opacity-10-hover: "10%"
     link-underline-opacity-0-hover: "0%"
+  previewed_as: widget_hidden
   previewed_with:
     - text-decoration-underline
     - link-underline
+  weight: -11
 
 link_colored:
   category: "Link"
@@ -808,6 +867,7 @@ link_colored:
     link-light: "Light"
     link-dark: "Dark"
     link-body-emphasis: "Emphasis"
+  weight: -18
 
 link_offset:
   category: "Link"
@@ -821,6 +881,7 @@ link_offset:
     link-offset-3: "3"
   previewed_with:
     - text-decoration-underline
+  weight: -16
 
 link_offset_hover:
   category: "Link"
@@ -831,8 +892,10 @@ link_offset_hover:
     link-offset-1-hover: "1"
     link-offset-2-hover: "2"
     link-offset-3-hover: "3"
+  previewed_as: widget_hidden
   previewed_with:
     - text-decoration-underline
+  weight: -15
 
 object_fit:
   category: "Object fit"
@@ -845,6 +908,8 @@ object_fit:
     object-fit-fill: "Fill"
     object-fit-scale: "Scale"
     object-fit-none: "None"
+  previewed_as: hidden
+  weight: -8
 
 opacity:
   category: "Visibility"
@@ -863,6 +928,7 @@ opacity:
     - border
     - p-2
     - bg-light
+  weight: -23
 
 overflow:
   category: "Visibility"
@@ -875,6 +941,7 @@ overflow:
     overflow-hidden: "Hidden"
     overflow-visible: "Visible"
     overflow-scroll: "Scroll"
+  weight: -22
 
 overflow_horizontal:
   category: "Visibility"
@@ -886,6 +953,7 @@ overflow_horizontal:
     overflow-x-hidden: "Hidden"
     overflow-x-visible: "Visible"
     overflow-x-scroll: "Scroll"
+  weight: -21
 
 overflow_vertical:
   category: "Visibility"
@@ -897,6 +965,7 @@ overflow_vertical:
     overflow-y-hidden: "Hidden"
     overflow-y-visible: "Visible"
     overflow-y-scroll: "Scroll"
+  weight: -20
 
 position_position:
   category: "Position"
@@ -911,6 +980,7 @@ position_position:
     position-fixed: "Fixed"
     position-sticky: "Sticky"
   previewed_as: "hidden"
+  weight: -31
 
 position_arrange_vertical:
   category: "Position"
@@ -925,6 +995,7 @@ position_arrange_vertical:
     bottom-50: "Bottom 50%"
     bottom-100: "Bottom 100%"
   previewed_as: "hidden"
+  weight: -27
 
 position_arrange_horizontal:
   category: "Position"
@@ -939,6 +1010,7 @@ position_arrange_horizontal:
     end-50: "End 50%"
     end-100: "End 100%"
   previewed_as: "hidden"
+  weight: -28
 
 position_center:
   category: "Position"
@@ -949,6 +1021,7 @@ position_center:
     translate-middle-x: "Center horizontally"
     translate-middle-y: "Center vertically"
   previewed_as: "hidden"
+  weight: -29
 
 shadows:
   category: "Borders"
@@ -963,9 +1036,11 @@ shadows:
     shadow-lg: "Large"
   previewed_with:
     - border
+    - border-dark
     - p-2
     - bg-light
     - m-3
+  weight: -75
 
 sizing_width:
   category: "Sizing"
@@ -983,6 +1058,7 @@ sizing_width:
     vw-100: "Width 100% of viewport"
     min-vw-100: "Min-width 100% of viewport"
   previewed_as: "hidden"
+  weight: -57
 
 sizing_height:
   category: "Sizing"
@@ -1000,6 +1076,7 @@ sizing_height:
     vh-100: "Height 100% of viewport"
     min-vh-100: "Min-height 100% of viewport"
   previewed_as: "hidden"
+  weight: -56
 
 spacing_margin:
   category: "Spacing"
@@ -1018,6 +1095,7 @@ spacing_margin:
     - border
     - p-2
     - bg-light
+  weight: -70
 
 spacing_margin_top:
   category: "Spacing"
@@ -1036,6 +1114,7 @@ spacing_margin_top:
     - border
     - p-2
     - bg-light
+  weight: -69
 
 spacing_margin_bottom:
   category: "Spacing"
@@ -1054,6 +1133,7 @@ spacing_margin_bottom:
     - border
     - p-2
     - bg-light
+  weight: -68
 
 spacing_margin_start:
   category: "Spacing"
@@ -1072,6 +1152,7 @@ spacing_margin_start:
     - border
     - p-2
     - bg-light
+  weight: -67
 
 spacing_margin_end:
   category: "Spacing"
@@ -1090,6 +1171,7 @@ spacing_margin_end:
     - border
     - p-2
     - bg-light
+  weight: -66
 
 spacing_padding:
   category: "Spacing"
@@ -1106,6 +1188,7 @@ spacing_padding:
   previewed_with:
     - border
     - bg-light
+  weight: -65
 
 spacing_padding_top:
   category: "Spacing"
@@ -1122,6 +1205,7 @@ spacing_padding_top:
   previewed_with:
     - border
     - bg-light
+  weight: -64
 
 spacing_padding_bottom:
   category: "Spacing"
@@ -1138,6 +1222,7 @@ spacing_padding_bottom:
   previewed_with:
     - border
     - bg-light
+  weight: -63
 
 spacing_padding_start:
   category: "Spacing"
@@ -1154,6 +1239,7 @@ spacing_padding_start:
   previewed_with:
     - border
     - bg-light
+  weight: -62
 
 spacing_padding_end:
   category: "Spacing"
@@ -1171,6 +1257,7 @@ spacing_padding_end:
     - border
     - bg-light
     - text-end
+  weight: -61
 
 spacing_horizontal_centering:
   category: "Spacing"
@@ -1179,7 +1266,56 @@ spacing_horizontal_centering:
   links:
     - 'https://getbootstrap.com/docs/5.3/utilities/spacing/#horizontal-centering'
   options:
-    mx-auto: "Horizontal centering"
+    mx-auto: "Center"
+  weight: -60
+
+spacing_gap:
+  category: "Spacing"
+  label: "Gap"
+  description: "When using display: grid or display: flex, you can make use of gap utilities on the parent element. This can save on having to add margin utilities to individual children of a grid or flex container. Gap utilities are responsive by default."
+  links:
+    - 'https://getbootstrap.com/docs/5.3/utilities/spacing/#gap'
+  options:
+    gap-0: "0"
+    gap-1: "1"
+    gap-2: "2"
+    gap-3: "3"
+    gap-4: "4"
+    gap-5: "5"
+  previewed_as: hidden
+  weight: -58
+
+spacing_gap_row:
+  category: "Spacing"
+  label: "Row gap"
+  description: "row-gap sets the vertical space between children items in the specified container."
+  links:
+    - 'https://getbootstrap.com/docs/5.3/utilities/spacing/#row-gap'
+  options:
+    row-gap-0: "0"
+    row-gap-1: "1"
+    row-gap-2: "2"
+    row-gap-3: "3"
+    row-gap-4: "4"
+    row-gap-5: "5"
+  previewed_as: hidden
+  weight: -57
+
+spacing_gap_column:
+  category: "Spacing"
+  label: "Column gap"
+  description: "column-gap sets the horizontal space between children items in the specified container."
+  links:
+    - 'https://getbootstrap.com/docs/5.3/utilities/spacing/#column-gap'
+  options:
+    column-gap-0: "0"
+    column-gap-1: "1"
+    column-gap-2: "2"
+    column-gap-3: "3"
+    column-gap-4: "4"
+    column-gap-5: "5"
+  previewed_as: hidden
+  weight: -56
 
 text_font_weight:
   category: "Text"
@@ -1195,6 +1331,7 @@ text_font_weight:
     fw-normal: "Normal"
     fw-light: "Light"
     fw-lighter: "Lighter (relative to the parent element)"
+  weight: -97
 
 text_font_italics:
   category: "Text"
@@ -1203,8 +1340,15 @@ text_font_italics:
   links:
     - 'https://getbootstrap.com/docs/5.3/utilities/text/#font-weight-and-italics'
   options:
-    fst-italic: "Italic"
-    fst-normal: "Normal"
+    fst-italic:
+      label: "Italic"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/type-italic.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktdHlwZS1pdGFsaWMiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTcuOTkxIDExLjY3NCA5LjUzIDQuNDU1Yy4xMjMtLjU5NS4yNDYtLjcxIDEuMzQ3LS44MDdsLjExLS41Mkg3LjIxMWwtLjExLjUyYzEuMDYuMDk2IDEuMTI4LjIxMiAxLjAwNS44MDdMNi41NyAxMS42NzRjLS4xMjMuNTk1LS4yNDYuNzEtMS4zNDYuODA2bC0uMTEuNTJoMy43NzRsLjExLS41MmMtMS4wNi0uMDk1LTEuMTI5LS4yMTEtMS4wMDYtLjgwNnoiLz4KPC9zdmc+Cg=="
+    fst-normal:
+      label: "Normal"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/fonts.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktZm9udHMiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTEyLjI1OCAzaC04LjUxbC0uMDgzIDIuNDZoLjQ3OWMuMjYtMS41NDQuNzU4LTEuNzgzIDIuNjkzLTEuODQ1bC40MjQtLjAxM3Y3LjgyN2MwIC42NjMtLjE0NC44Mi0xLjMuOTIzdi41Mmg0LjA4MnYtLjUyYy0xLjE2Mi0uMTAzLTEuMzA2LS4yNi0xLjMwNi0uOTIzVjMuNjAybC40MzEuMDEzYzEuOTM0LjA2MiAyLjQzNC4zMDEgMi42OTMgMS44NDZoLjQ3OXoiLz4KPC9zdmc+Cg=="
+  weight: -96
 
 text_line_height:
   category: "Text"
@@ -1217,6 +1361,7 @@ text_line_height:
     lh-sm: "Small"
     lh-base: "Base"
     lh-lg: "Large"
+  weight: -93
 
 text_font_monospace:
   category: "Text"
@@ -1226,6 +1371,7 @@ text_font_monospace:
     - 'https://getbootstrap.com/docs/5.3/utilities/text/#monospace'
   options:
     font-monospace: "Monospace"
+  weight: -92
 
 text_text_decoration:
   category: "Text"
@@ -1234,9 +1380,16 @@ text_text_decoration:
   links:
     - 'https://getbootstrap.com/docs/5.3/utilities/text/#text-decoration'
   options:
-    text-decoration-underline: "Underline"
-    text-decoration-line-through: "Line through"
+    text-decoration-underline:
+      label: "Underline"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/type-underline.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktdHlwZS11bmRlcmxpbmUiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTUuMzEzIDMuMTM2aC0xLjIzVjkuNTRjMCAyLjEwNSAxLjQ3IDMuNjIzIDMuOTE3IDMuNjIzczMuOTE3LTEuNTE4IDMuOTE3LTMuNjIzVjMuMTM2aC0xLjIzdjYuMzIzYzAgMS40OS0uOTc4IDIuNTctMi42ODcgMi41N3MtMi42ODctMS4wOC0yLjY4Ny0yLjU3ek0xMi41IDE1aC05di0xaDl6Ii8+Cjwvc3ZnPgo="
+    text-decoration-line-through:
+      label: "Line through"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/type-strikethrough.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktdHlwZS1zdHJpa2V0aHJvdWdoIiB2aWV3Qm94PSIwIDAgMTYgMTYiPgogIDxwYXRoIGQ9Ik02LjMzMyA1LjY4NmMwIC4zMS4wODMuNTgxLjI3LjgxNEg1LjE2NmEyLjggMi44IDAgMCAxLS4wOTktLjc2YzAtMS42MjcgMS40MzYtMi43NjggMy40OC0yLjc2OCAxLjk2OSAwIDMuMzkgMS4xNzUgMy40NDUgMi44NWgtMS4yM2MtLjExLTEuMDgtLjk2NC0xLjc0My0yLjI1LTEuNzQzLTEuMjMgMC0yLjE4LjYwMi0yLjE4IDEuNjA3em0yLjE5NCA3LjQ3OGMtMi4xNTMgMC0zLjU4OS0xLjEwNy0zLjcwNS0yLjgxaDEuMjNjLjE0NCAxLjA2IDEuMTI5IDEuNzAzIDIuNTQ0IDEuNzAzIDEuMzQgMCAyLjMxLS43MDUgMi4zMS0xLjY3NSAwLS44MjctLjU0Ny0xLjM3NC0xLjkxNC0xLjY3NUw4LjA0NiA4LjVIMXYtMWgxNHYxaC0zLjUwNGMuNDY4LjQzNy42NzUuOTk0LjY3NSAxLjY5NyAwIDEuODI2LTEuNDM2IDIuOTY3LTMuNjQ0IDIuOTY3Ii8+Cjwvc3ZnPgo="
     text-decoration-none: "None"
+  weight: -94
 
 text_text_alignment:
   category: "Text"
@@ -1245,13 +1398,23 @@ text_text_alignment:
   links:
     - 'https://getbootstrap.com/docs/5.3/utilities/text/#text-alignment'
   options:
-    text-start: "Start"
-    text-center: "Center"
-    text-end: "End"
+    text-start:
+      label: "Start"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/text-left.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktdGV4dC1sZWZ0IiB2aWV3Qm94PSIwIDAgMTYgMTYiPgogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTIgMTIuNWEuNS41IDAgMCAxIC41LS41aDdhLjUuNSAwIDAgMSAwIDFoLTdhLjUuNSAwIDAgMS0uNS0uNW0wLTNhLjUuNSAwIDAgMSAuNS0uNWgxMWEuNS41IDAgMCAxIDAgMWgtMTFhLjUuNSAwIDAgMS0uNS0uNW0wLTNhLjUuNSAwIDAgMSAuNS0uNWg3YS41LjUgMCAwIDEgMCAxaC03YS41LjUgMCAwIDEtLjUtLjVtMC0zYS41LjUgMCAwIDEgLjUtLjVoMTFhLjUuNSAwIDAgMSAwIDFoLTExYS41LjUgMCAwIDEtLjUtLjUiLz4KPC9zdmc+Cg=="
+    text-center:
+      label: "Center"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/text-center.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktdGV4dC1jZW50ZXIiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNCAxMi41YS41LjUgMCAwIDEgLjUtLjVoN2EuNS41IDAgMCAxIDAgMWgtN2EuNS41IDAgMCAxLS41LS41bS0yLTNhLjUuNSAwIDAgMSAuNS0uNWgxMWEuNS41IDAgMCAxIDAgMWgtMTFhLjUuNSAwIDAgMS0uNS0uNW0yLTNhLjUuNSAwIDAgMSAuNS0uNWg3YS41LjUgMCAwIDEgMCAxaC03YS41LjUgMCAwIDEtLjUtLjVtLTItM2EuNS41IDAgMCAxIC41LS41aDExYS41LjUgMCAwIDEgMCAxaC0xMWEuNS41IDAgMCAxLS41LS41Ii8+Cjwvc3ZnPgo="
+    text-end:
+      label: "End"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/text-right.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktdGV4dC1yaWdodCIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02IDEyLjVhLjUuNSAwIDAgMSAuNS0uNWg3YS41LjUgMCAwIDEgMCAxaC03YS41LjUgMCAwIDEtLjUtLjVtLTQtM2EuNS41IDAgMCAxIC41LS41aDExYS41LjUgMCAwIDEgMCAxaC0xMWEuNS41IDAgMCAxLS41LS41bTQtM2EuNS41IDAgMCAxIC41LS41aDdhLjUuNSAwIDAgMSAwIDFoLTdhLjUuNSAwIDAgMS0uNS0uNW0tNC0zYS41LjUgMCAwIDEgLjUtLjVoMTFhLjUuNSAwIDAgMSAwIDFoLTExYS41LjUgMCAwIDEtLjUtLjUiLz4KPC9zdmc+Cg=="
   previewed_with:
     - border
     - p-2
     - bg-light
+  weight: -90
 
 text_text_wrapping:
   category: "Text"
@@ -1259,12 +1422,16 @@ text_text_wrapping:
   links:
     - 'https://getbootstrap.com/docs/5.3/utilities/text/#text-wrapping-and-overflow'
   options:
-    text-wrap: "Wrap"
-    text-nowrap: "No wrap"
-  previewed_with:
-    - border
-    - p-2
-    - bg-light
+    text-wrap:
+      label: "Wrap"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/text-wrap.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktdGV4dC13cmFwIiB2aWV3Qm94PSIwIDAgMTYgMTYiPgogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTIgMy41YS41LjUgMCAwIDEgLjUtLjVoMTFhLjUuNSAwIDAgMSAwIDFoLTExYS41LjUgMCAwIDEtLjUtLjVtMCA0YS41LjUgMCAwIDEgLjUtLjVoOWEyLjUgMi41IDAgMCAxIDAgNWgtMS4yOTNsLjY0Ny42NDZhLjUuNSAwIDAgMS0uNzA4LjcwOGwtMS41LTEuNWEuNS41IDAgMCAxIDAtLjcwOGwxLjUtMS41YS41LjUgMCAwIDEgLjcwOC43MDhsLS42NDcuNjQ2SDExLjVhMS41IDEuNSAwIDAgMCAwLTNoLTlhLjUuNSAwIDAgMS0uNS0uNW0wIDRhLjUuNSAwIDAgMSAuNS0uNUg3YS41LjUgMCAwIDEgMCAxSDIuNWEuNS41IDAgMCAxLS41LS41Ii8+Cjwvc3ZnPgo="
+    text-nowrap:
+      label: "No wrap"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/text-nowrap.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktdGV4dC1ub3dyYXAiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGgKICAgICBmaWxsLXJ1bGU9ImV2ZW5vZGQiCiAgICAgZD0iTSAyLDMuNSBDIDIsMy4yMjM4NTc2IDIuMjIzODU3NiwzIDIuNSwzIGggMTEgYyAwLjY2NjY2NiwwIDAuNjY2NjY2LDEgMCwxIEggMi41IEMgMi4yMjM4NTc2LDQgMiwzLjc3NjE0MjQgMiwzLjUgbSAwLDQgQyAyLDcuMjIzODU3NiAyLjIyMzg1NzYsNyAyLjUsNyA1LjE2MDQ2NDEsNyAxMi4wNzIxOTcsNy4wMTQ4NyAxNC4yMjE1MjgsNy4wMTQ4NyBsIC0wLjY0NywtMC42NDYgYyAtMC40NzIsLTAuNDcyIDAuMjM2LC0xLjE4IDAuNzA4LC0wLjcwOCBsIDEuNSwxLjUgYyAwLjE5NTg1OSwwLjE5NTM2NCAwLjE5NTg1OSwwLjUxMjYzNiAwLDAuNzA4IGwgLTEuNSwxLjUwMDAwMDMgYyAtMC40NzIsMC40NzIgLTEuMTgsLTAuMjM2MDAwMyAtMC43MDgsLTAuNzA4MDAwMyBsIDAuNjQ3LC0wLjY0NiBDIDEwLjE4OTIxNyw4LjAxNDg3IDQuOTI0NDkxNSw4IDIuNSw4IDIuMjIzODU3Niw4IDIsNy43NzYxNDI0IDIsNy41IG0gMCw0IEMgMiwxMS4yMjM4NTggMi4yMjM4NTc2LDExIDIuNSwxMSBoIDExLjE0MTg4NCBjIDAuNjY2NjY2LDAgMC42NjY2NjYsMSAwLDEgSCAyLjUgQyAyLjIyMzg1NzYsMTIgMiwxMS43NzYxNDIgMiwxMS41Ii8+Cjwvc3ZnPgo="
+  previewed_as: hidden
+  weight: -89
 
 text_text_word_break:
   category: "Text"
@@ -1277,6 +1444,7 @@ text_text_word_break:
     - border
     - p-2
     - bg-light
+  weight: -88
 
 text_text_transform:
   category: "Text"
@@ -1288,6 +1456,7 @@ text_text_transform:
     text-lowercase: "Lowercase"
     text-uppercase: "Uppercase"
     text-capitalize: "Capitalize"
+  weight: -95
 
 typography:
   category: "Text"
@@ -1318,6 +1487,9 @@ typography:
     fs-4: "Font size 4"
     fs-5: "Font size 5"
     fs-6: "Font size 6"
+    small: "Small"
+    mark: "Mark"
+  weight: -99
 
 vertical_align:
   category: "Spacing"
@@ -1332,6 +1504,8 @@ vertical_align:
     align-bottom: "Bottom"
     align-text-bottom: "Text-bottom"
     align-text-top: "Text-top"
+  previewed_as: hidden
+  weight: -59
 
 visibility:
   category: "Visibility"
@@ -1341,11 +1515,18 @@ visibility:
     - 'https://getbootstrap.com/docs/5.3/utilities/visibility/'
   previewed_as: "aside"
   options:
-    visible: "Visible"
-    invisible: "Invisible"
+    visible:
+      label: "Visible"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/eye.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktZXllIiB2aWV3Qm94PSIwIDAgMTYgMTYiPgogIDxwYXRoIGQ9Ik0xNiA4cy0zLTUuNS04LTUuNVMwIDggMCA4czMgNS41IDggNS41UzE2IDggMTYgOE0xLjE3MyA4YTEzIDEzIDAgMCAxIDEuNjYtMi4wNDNDNC4xMiA0LjY2OCA1Ljg4IDMuNSA4IDMuNXMzLjg3OSAxLjE2OCA1LjE2OCAyLjQ1N0ExMyAxMyAwIDAgMSAxNC44MjggOHEtLjA4Ni4xMy0uMTk1LjI4OGMtLjMzNS40OC0uODMgMS4xMi0xLjQ2NSAxLjc1NUMxMS44NzkgMTEuMzMyIDEwLjExOSAxMi41IDggMTIuNXMtMy44NzktMS4xNjgtNS4xNjgtMi40NTdBMTMgMTMgMCAwIDEgMS4xNzIgOHoiLz4KICA8cGF0aCBkPSJNOCA1LjVhMi41IDIuNSAwIDEgMCAwIDUgMi41IDIuNSAwIDAgMCAwLTVNNC41IDhhMy41IDMuNSAwIDEgMSA3IDAgMy41IDMuNSAwIDAgMS03IDAiLz4KPC9zdmc+Cg=="
+    invisible:
+      label: "Invisible"
+      # icon: 'theme://ui_suite_bootstrap/assets/images/icons/bootstrap/eye-slash.svg'
+      icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktZXllLXNsYXNoIiB2aWV3Qm94PSIwIDAgMTYgMTYiPgogIDxwYXRoIGQ9Ik0xMy4zNTkgMTEuMjM4QzE1LjA2IDkuNzIgMTYgOCAxNiA4cy0zLTUuNS04LTUuNWE3IDcgMCAwIDAtMi43OS41ODhsLjc3Ljc3MUE2IDYgMCAwIDEgOCAzLjVjMi4xMiAwIDMuODc5IDEuMTY4IDUuMTY4IDIuNDU3QTEzIDEzIDAgMCAxIDE0LjgyOCA4cS0uMDg2LjEzLS4xOTUuMjg4Yy0uMzM1LjQ4LS44MyAxLjEyLTEuNDY1IDEuNzU1cS0uMjQ3LjI0OC0uNTE3LjQ4NnoiLz4KICA8cGF0aCBkPSJNMTEuMjk3IDkuMTc2YTMuNSAzLjUgMCAwIDAtNC40NzQtNC40NzRsLjgyMy44MjNhMi41IDIuNSAwIDAgMSAyLjgyOSAyLjgyOXptLTIuOTQzIDEuMjk5LjgyMi44MjJhMy41IDMuNSAwIDAgMS00LjQ3NC00LjQ3NGwuODIzLjgyM2EyLjUgMi41IDAgMCAwIDIuODI5IDIuODI5Ii8+CiAgPHBhdGggZD0iTTMuMzUgNS40N3EtLjI3LjI0LS41MTguNDg3QTEzIDEzIDAgMCAwIDEuMTcyIDhsLjE5NS4yODhjLjMzNS40OC44MyAxLjEyIDEuNDY1IDEuNzU1QzQuMTIxIDExLjMzMiA1Ljg4MSAxMi41IDggMTIuNWMuNzE2IDAgMS4zOS0uMTMzIDIuMDItLjM2bC43Ny43NzJBNyA3IDAgMCAxIDggMTMuNUMzIDEzLjUgMCA4IDAgOHMuOTM5LTEuNzIxIDIuNjQxLTMuMjM4bC43MDguNzA5em0xMC4yOTYgOC44ODQtMTItMTIgLjcwOC0uNzA4IDEyIDEyeiIvPgo8L3N2Zz4K"
+  weight: -25
 
-z-index:
-  category: "z-index"
+z_index:
+  category: "Z-index"
   label: "Z-index"
   description: "Use our low-level z-index utilities to quickly change the stack level of an element or component."
   links:
@@ -1357,3 +1538,16 @@ z-index:
     z-0: "0"
     z-n1: "-1"
   previewed_as: hidden
+  weight: -19
+
+z-index:
+  category: "Z-index"
+  label: "Z-index (deprecated)"
+  options:
+    z-3: "3"
+    z-2: "2"
+    z-1: "1"
+    z-0: "0"
+    z-n1: "-1"
+  previewed_as: hidden
+  weight: -18

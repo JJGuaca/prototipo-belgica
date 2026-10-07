@@ -13,13 +13,15 @@ class TestRouteSubscriber extends RouteSubscriberBase {
 
   /**
    * The state store.
+   *
+   * @var Drupal\Core\State\State
    */
-  protected State $state;
+  protected $state;
 
   /**
    * Constructor method.
    *
-   * @param \Drupal\Core\State\State $state
+   * @param Drupal\Core\State\State $state
    *   The object State.
    */
   public function __construct(State $state) {

@@ -128,7 +128,7 @@ class LayoutOptionsTest extends KernelTestBase {
       ->set('default', 'test_layout_options_theme')
       ->save();
 
-    if ($this->getName() == 'testGetLayoutOptionsSchemaBadYamlFile') {
+    if ($this->name() == 'testGetLayoutOptionsSchemaBadYamlFile') {
       $this->container->get('module_installer')
         ->install(['layout_options_test_bad_yaml']);
     }

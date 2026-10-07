@@ -46,6 +46,7 @@
 
   {% if not hide_close_button and not header %}
     {{ pattern('close_button', {
+      variant: close_button_variant,
       attributes: create_attribute({
         'data-bs-dismiss': 'toast',
         'class': [
@@ -53,7 +54,7 @@
           'm-auto'
         ]
       })
-    }, close_button_variant) }}
+    }) }}
   {% endif %}
 
   {% if flex_wrapper %}

@@ -18,8 +18,7 @@ blockquote:
       label: "Footer"
       description: "For identifying the source. Wrap the name of the source work in <cite>."
       preview:
-        - type: "markup"
-          markup: "Someone famous in "
+        - markup: "Someone famous in "
         - type: "html_tag"
           tag: "cite"
           value: "Source Title"

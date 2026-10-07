@@ -1,7 +1,7 @@
 name: 'UI Suite Bootstrap'
 type: theme
 description: "A site-builder friendly Bootstrap theme, using the UI Suite modules."
-core_version_requirement: ^10 || ^11
+core_version_requirement: ^10.2 || ^11
 base theme: false
 dependencies:
   - layout_options:layout_options
@@ -33,6 +33,7 @@ libraries-override:
     js:
       misc/active-link.js: assets/js/misc/active-link.js
   core/drupal.dropbutton: false
+  core/drupal.tableheader: false
   text/drupal.text: ui_suite_bootstrap/drupal.text
   clientside_validation_jquery/cv.jquery.ife: false
   commerce_cart/cart_block: false
@@ -45,12 +46,6 @@ libraries-extend:
     - ui_suite_bootstrap/drupal.ajax
   core/drupal.checkbox:
     - ui_suite_bootstrap/drupal.checkbox
-  #  core/drupal.dialog:
-  #    - ui_suite_bootstrap/drupal.dialog
-  #  core/drupal.dialog.ajax:
-  #    - ui_suite_bootstrap/drupal.dialog.ajax
-  core/drupal.dialog.off_canvas:
-    - ui_suite_bootstrap/drupal.dialog.off_canvas
   core/drupal.message:
     - ui_suite_bootstrap/drupal.message
   core/drupal.progress:
@@ -65,7 +60,7 @@ libraries-extend:
   clientside_validation_jquery/cv.jquery.validate:
     - ui_suite_bootstrap/jquery.validate
 
-# Information added by Drupal.org packaging script on 2024-06-09
-version: '5.0.0-alpha15'
+# Information added by Drupal.org packaging script on 2025-02-18
+version: '5.0.0-beta3'
 project: 'ui_suite_bootstrap'
-datestamp: 1717933759
+datestamp: 1739888792

@@ -13,8 +13,9 @@
  * @ingroup themeable
  */
 #}
-{% if items %}
+{% if items.previous or items.next %}
   {{ pattern('pagination', {
-    'items': items,
+    'items': preprocessed_items,
+    'attributes': attributes.addClass('js-pager__items'),
   }) }}
 {% endif %}

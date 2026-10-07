@@ -5,6 +5,7 @@ namespace Drupal\devel\Controller;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Render\ElementInfoManagerInterface;
+use Drupal\Core\StringTranslation\TranslationInterface;
 use Drupal\Core\Url;
 use Drupal\devel\DevelDumperManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -26,15 +27,34 @@ class ElementInfoController extends ControllerBase {
   protected DevelDumperManagerInterface $dumper;
 
   /**
+   * EventInfoController constructor.
+   *
+   * @param \Drupal\Core\Render\ElementInfoManagerInterface $element_info
+   *   Element info manager service.
+   * @param \Drupal\devel\DevelDumperManagerInterface $dumper
+   *   The dumper service.
+   * @param \Drupal\Core\StringTranslation\TranslationInterface $string_translation
+   *   The translation manager.
+   */
+  public function __construct(
+    ElementInfoManagerInterface $element_info,
+    DevelDumperManagerInterface $dumper,
+    TranslationInterface $string_translation
+  ) {
+    $this->elementInfo = $element_info;
+    $this->dumper = $dumper;
+    $this->stringTranslation = $string_translation;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container): static {
-    $instance = parent::create($container);
-    $instance->elementInfo = $container->get('element_info');
-    $instance->dumper = $container->get('devel.dumper');
-    $instance->stringTranslation = $container->get('string_translation');
-
-    return $instance;
+    return new static(
+      $container->get('element_info'),
+      $container->get('devel.dumper'),
+      $container->get('string_translation'),
+    );
   }
 
   /**

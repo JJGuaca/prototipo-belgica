@@ -54,7 +54,7 @@
     'form-text',
   ]
 %}
-{% set inner_wrapper_attributes = inner_wrapper_attributes|default(create_attribute()) %}
+{% set inner_wrapper_attributes = create_attribute(inner_wrapper_attributes|default({})) %}
 
 <fieldset{{ attributes.addClass(classes) }}>
   {# Always wrap fieldset legends in a <span> for CSS positioning. #}

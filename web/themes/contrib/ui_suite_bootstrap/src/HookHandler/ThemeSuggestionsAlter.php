@@ -133,9 +133,13 @@ class ThemeSuggestionsAlter implements ContainerInjectionInterface {
       'editor.link_dialog',
       'editor.media_dialog',
       'layout_builder.add_block',
+      // @see https://www.drupal.org/project/drupal/issues/3134371
+      'layout_builder.change_section_layout',
       'layout_builder.choose_block',
       'layout_builder.choose_inline_block',
       'layout_builder.choose_section',
+      // @see https://www.drupal.org/project/drupal/issues/3134371
+      'layout_builder.configure_changed_section_layout',
       'layout_builder.remove_block',
       'layout_builder.remove_section',
       'media_library.ui',

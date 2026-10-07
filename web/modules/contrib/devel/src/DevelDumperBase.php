@@ -2,7 +2,6 @@
 
 namespace Drupal\devel;
 
-use Drupal\Component\Render\MarkupInterface;
 use Drupal\Core\Plugin\PluginBase;
 use Drupal\devel\Render\FilteredMarkup;
 use Drupal\devel\Twig\Extension\Debug;
@@ -34,13 +33,13 @@ abstract class DevelDumperBase extends PluginBase implements DevelDumperInterfac
   /**
    * Wrapper for \Drupal\Core\Render\Markup::create().
    *
-   * @param mixed $input
-   *   The input to mark as a safe string.
+   * @param string $input
+   *   The input string to mark as safe.
    *
-   * @return \Drupal\Component\Render\MarkupInterface|string
+   * @return string
    *   The unaltered input value.
    */
-  protected function setSafeMarkup(mixed $input): MarkupInterface|string {
+  protected function setSafeMarkup($input) {
     return FilteredMarkup::create($input);
   }
 

@@ -2,7 +2,6 @@
 
 namespace Drupal\Tests\devel\Unit;
 
-use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\devel\Element\ClientSideFilterTable;
 use Drupal\Tests\UnitTestCase;
 
@@ -35,7 +34,7 @@ class DevelClientSideFilterTableTest extends UnitTestCase {
       ],
     ];
 
-    $table = new ClientSideFilterTable([], 'test', 'test');
+    $table = new ClientSideFilterTable([], 'test', 'test', $translation);
     $table->setStringTranslation($translation);
     $this->assertEquals($expected_info, $table->getInfo());
   }
@@ -52,24 +51,19 @@ class DevelClientSideFilterTableTest extends UnitTestCase {
   /**
    * Data provider for preRenderHtmlTag test.
    */
-  public static function providerPreRenderTable(): array {
+  public function providerPreRenderTable(): array {
     $data = [];
-    $filter_label = new TranslatableMarkup('Label 1');
-    $filter_label_2 = new TranslatableMarkup('Label 2');
-    $filter_placeholder = new TranslatableMarkup('Placeholder 1');
-    $filter_placeholder_2 = new TranslatableMarkup('Placeholder 2');
-    $filter_description = new TranslatableMarkup('Description 1');
-    $filter_description_2 = new TranslatableMarkup('Description 2');
-    $empty = new TranslatableMarkup('Empty');
-    $empty_2 = new TranslatableMarkup('Empty 2');
+
+    $t = $this->getStringTranslationStub();
+
     $actual = [
       '#type' => 'devel_table_filter',
-      '#filter_label' => $filter_label,
-      '#filter_placeholder' => $filter_placeholder,
-      '#filter_description' => $filter_description,
+      '#filter_label' => $t->translate('Label 1'),
+      '#filter_placeholder' => $t->translate('Placeholder 1'),
+      '#filter_description' => $t->translate('Description 1'),
       '#header' => [],
       '#rows' => [],
-      '#empty' => $empty,
+      '#empty' => $t->translate('Empty 1'),
       '#responsive' => TRUE,
       '#sticky' => TRUE,
       '#attributes' => [
@@ -86,13 +80,13 @@ class DevelClientSideFilterTableTest extends UnitTestCase {
       'name' => [
         '#type' => 'search',
         '#size' => 30,
-        '#title' => $filter_label,
-        '#placeholder' => $filter_placeholder,
+        '#title' => $t->translate('Label 1'),
+        '#placeholder' => $t->translate('Placeholder 1'),
         '#attributes' => [
           'class' => ['table-filter-text'],
           'data-table' => ".js-devel-table-filter",
           'autocomplete' => 'off',
-          'title' => $filter_description,
+          'title' => $t->translate('Description 1'),
         ],
       ],
     ];
@@ -100,7 +94,7 @@ class DevelClientSideFilterTableTest extends UnitTestCase {
       '#type' => 'table',
       '#header' => [],
       '#rows' => [],
-      '#empty' => $empty,
+      '#empty' => $t->translate('Empty 1'),
       '#responsive' => TRUE,
       '#sticky' => TRUE,
       '#attributes' => [
@@ -118,9 +112,9 @@ class DevelClientSideFilterTableTest extends UnitTestCase {
 
     $actual = [
       '#type' => 'devel_table_filter',
-      '#filter_label' => $filter_label_2,
-      '#filter_placeholder' => $filter_placeholder_2,
-      '#filter_description' => $filter_description_2,
+      '#filter_label' => $t->translate('Label 2'),
+      '#filter_placeholder' => $t->translate('Placeholder 2'),
+      '#filter_description' => $t->translate('Description 2'),
       '#header' => $headers,
       '#rows' => [
         [
@@ -137,7 +131,7 @@ class DevelClientSideFilterTableTest extends UnitTestCase {
           ],
         ],
       ],
-      '#empty' => $empty_2,
+      '#empty' => $t->translate('Empty 2'),
       '#responsive' => FALSE,
       '#sticky' => FALSE,
       '#attributes' => [
@@ -154,13 +148,13 @@ class DevelClientSideFilterTableTest extends UnitTestCase {
       'name' => [
         '#type' => 'search',
         '#size' => 30,
-        '#title' => $filter_label_2,
-        '#placeholder' => $filter_placeholder_2,
+        '#title' => $t->translate('Label 2'),
+        '#placeholder' => $t->translate('Placeholder 2'),
         '#attributes' => [
           'class' => ['table-filter-text'],
           'data-table' => ".js-devel-table-filter--2",
           'autocomplete' => 'off',
-          'title' => $filter_description_2,
+          'title' => $t->translate('Description 2'),
         ],
       ],
     ];
@@ -190,7 +184,7 @@ class DevelClientSideFilterTableTest extends UnitTestCase {
           ],
         ],
       ],
-      '#empty' => $empty_2,
+      '#empty' => $t->translate('Empty 2'),
       '#responsive' => FALSE,
       '#sticky' => FALSE,
       '#attributes' => [

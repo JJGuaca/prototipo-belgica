@@ -57,7 +57,7 @@ class UiPatternsFieldRenderTest extends WebDriverTestBase {
 
     $node = $this->drupalCreateNode([
       'title' => 'Test article',
-      'body' => 'Test body',
+      'field_content' => 'Test content',
       'type' => 'article',
     ]);
 
@@ -65,18 +65,18 @@ class UiPatternsFieldRenderTest extends WebDriverTestBase {
 
     // Assert correct variant suggestions.
     $suggestions = [
-      'pattern-field--variant-default--ds-field-template--body--node--article--full.html.twig',
-      'pattern-field--variant-default--ds-field-template--body--node--full.html.twig',
-      'pattern-field--variant-default--ds-field-template--body--node--article.html.twig',
-      'pattern-field--variant-default--ds-field-template--body--node.html.twig',
-      'pattern-field--variant-default--ds-field-template--body.html.twig',
+      'pattern-field--variant-default--ds-field-template--field-content--node--article--full.html.twig',
+      'pattern-field--variant-default--ds-field-template--field-content--node--full.html.twig',
+      'pattern-field--variant-default--ds-field-template--field-content--node--article.html.twig',
+      'pattern-field--variant-default--ds-field-template--field-content--node.html.twig',
+      'pattern-field--variant-default--ds-field-template--field-content.html.twig',
       'pattern-field--variant-default--ds-field-template.html.twig',
 
-      'pattern-field--ds-field-template--body--node--article--full.html.twig',
-      'pattern-field--ds-field-template--body--node--full.html.twig',
-      'pattern-field--ds-field-template--body--node--article.html.twig',
-      'pattern-field--ds-field-template--body--node.html.twig',
-      'pattern-field--ds-field-template--body.html.twig',
+      'pattern-field--ds-field-template--field-content--node--article--full.html.twig',
+      'pattern-field--ds-field-template--field-content--node--full.html.twig',
+      'pattern-field--ds-field-template--field-content--node--article.html.twig',
+      'pattern-field--ds-field-template--field-content--node.html.twig',
+      'pattern-field--ds-field-template--field-content.html.twig',
       'pattern-field--ds-field-template.html.twig',
 
       'pattern-field--variant-default.html.twig',
@@ -87,7 +87,7 @@ class UiPatternsFieldRenderTest extends WebDriverTestBase {
     }
 
     // Test content is rendered in the pattern.
-    $assert_session->pageTextContains('Value: Test body');
+    $assert_session->pageTextContains('Value: Test content');
   }
 
 }

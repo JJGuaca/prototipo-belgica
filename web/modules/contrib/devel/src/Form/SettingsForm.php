@@ -20,6 +20,8 @@ class SettingsForm extends ConfigFormBase {
 
   /**
    * The 'devel.settings' config object.
+   *
+   * @var \Drupal\Core\Config\Config
    */
   protected Config $config;
 
@@ -59,9 +61,9 @@ class SettingsForm extends ConfigFormBase {
 
     $form['page_alter'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Display $attachments array'),
+      '#title' => $this->t('Display $page array'),
       '#default_value' => $this->config->get('page_alter'),
-      '#description' => $this->t('Display $attachments array from <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_page_attachments_alter/10">hook_page_attachments_alter()</a> in the messages area of each page.'),
+      '#description' => $this->t('Display $page array from <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_page_attachments_alter/8">hook_page_attachments_alter()</a> in the messages area of each page.'),
     ];
     $form['raw_names'] = [
       '#type' => 'checkbox',
@@ -116,15 +118,14 @@ class SettingsForm extends ConfigFormBase {
 
     $form['error_handlers']['#size'] = count($form['error_handlers']['#options']);
     if ($request->query->has('demo')) {
-      if ($request->getMethod() === 'GET') {
+      if ($request->getMethod() == 'GET') {
         $this->demonstrateErrorHandlers($request->query->get('demo'));
       }
-
       $request->query->remove('demo');
     }
 
     $dumper = $this->config->get('devel_dumper');
-    $default = $this->dumperManager->isPluginSupported($dumper) ? $dumper : $this->dumperManager->getFallbackPluginId('');
+    $default = $this->dumperManager->isPluginSupported($dumper) ? $dumper : $this->dumperManager->getFallbackPluginId(NULL);
 
     $form['dumper'] = [
       '#type' => 'radios',
@@ -187,7 +188,7 @@ class SettingsForm extends ConfigFormBase {
    * @param string $severity
    *   The severity level for which demonstrate the error handler capabilities.
    */
-  protected function demonstrateErrorHandlers(string $severity): void {
+  protected function demonstrateErrorHandlers($severity) {
     switch ($severity) {
       case 'notice':
         trigger_error('This is an example notice', E_USER_NOTICE);
@@ -202,6 +203,7 @@ class SettingsForm extends ConfigFormBase {
         trigger_error('This is an example notice', E_USER_NOTICE);
         trigger_error('This is an example warning', E_USER_WARNING);
         trigger_error('This is an example error', E_USER_ERROR);
+        break;
     }
   }
 

@@ -2,7 +2,7 @@
 
 namespace Drupal\Tests\ui_patterns_library\FunctionalJavascript;
 
-use Drupal\Core\Serialization\Yaml;
+use Drupal\Component\Serialization\Yaml;
 use Drupal\Core\Url;
 use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 

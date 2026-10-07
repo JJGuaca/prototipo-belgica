@@ -34,8 +34,11 @@ class PreprocessPager {
 
     $pages = LinksSettingType::normalize($variables['items']['pages'] ?? []);
     if (isset($variables['current'])) {
-      $current_page_index = $variables['current'] - 1;
-      unset($pages[$current_page_index]['url']);
+      foreach ($pages as $key => $page) {
+        if ($page['title'] == $variables['current']) {
+          unset($pages[$key]['url']);
+        }
+      }
     }
 
     $after = LinksSettingType::normalize(\array_filter([
@@ -43,7 +46,7 @@ class PreprocessPager {
       $variables['items']['last'] ?? [],
     ]));
 
-    $variables['items'] = \array_merge($before, $pages, $after);
+    $variables['preprocessed_items'] = \array_merge($before, $pages, $after);
   }
 
   /**

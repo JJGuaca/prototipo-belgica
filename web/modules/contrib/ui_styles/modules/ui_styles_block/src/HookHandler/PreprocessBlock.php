@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Drupal\ui_styles_block\HookHandler;
 
-use Drupal\block\BlockInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Template\AttributeHelper;
+use Drupal\block\BlockInterface;
 use Drupal\ui_styles\StylePluginManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -50,7 +50,6 @@ class PreprocessBlock implements ContainerInjectionInterface {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container): static {
-    // @phpstan-ignore-next-line
     return new static(
       $container->get('entity_type.manager'),
       $container->get('plugin.manager.ui_styles')

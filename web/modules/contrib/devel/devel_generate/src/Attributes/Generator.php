@@ -13,10 +13,11 @@ use Consolidation\AnnotatedCommand\Parser\CommandInfo;
 class Generator {
 
   public function __construct(
-    public string $id,
-  ) {}
+        public string $id,
+    ) {
+  }
 
-  public static function handle(\ReflectionAttribute $attribute, CommandInfo $commandInfo): void {
+  public static function handle(\ReflectionAttribute $attribute, CommandInfo $commandInfo) {
     $args = $attribute->getArguments();
     $commandInfo->addAnnotation('pluginId', $args['id']);
   }

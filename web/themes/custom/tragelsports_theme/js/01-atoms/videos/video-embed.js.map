@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../components/01-atoms/videos/video-embed.js"],
+  "sourcesContent": ["Drupal.behaviors.responsiveEmbeddedVideos = {\n  attach(context) {\n    // List of Video Vendors embeds you want to support\n    const players = context.querySelectorAll(\n      'iframe[src*=\"youtube.com\"]',\n      'iframe[src*=\"vimeo.com\"]',\n    );\n\n    // If there are videos on the page...\n    if (players) {\n      // Loop through videos\n      Array.from(players).forEach((player) => {\n        // Get Video Information\n        const width = player.getAttribute(\"width\");\n        const height = player.getAttribute(\"height\");\n        const aspectRatio = `${width} / ${height}`;\n        const parentDiv = player.parentNode;\n\n        parentDiv.style.aspectRatio = aspectRatio;\n\n        // Clear static height/width attributes for responsive styles\n        player.removeAttribute(\"height\");\n        player.removeAttribute(\"width\");\n      });\n    }\n  },\n};\n"],
+  "mappings": "AAAA,OAAO,UAAU,yBAA2B,CAC1C,OAAOA,EAAS,CAEd,MAAMC,EAAUD,EAAQ,iBACtB,6BACA,0BACF,EAGIC,GAEF,MAAM,KAAKA,CAAO,EAAE,QAASC,GAAW,CAEtC,MAAMC,EAAQD,EAAO,aAAa,OAAO,EACnCE,EAASF,EAAO,aAAa,QAAQ,EACrCG,EAAc,GAAGF,CAAK,MAAMC,CAAM,GAClCE,EAAYJ,EAAO,WAEzBI,EAAU,MAAM,YAAcD,EAG9BH,EAAO,gBAAgB,QAAQ,EAC/BA,EAAO,gBAAgB,OAAO,CAChC,CAAC,CAEL,CACF",
+  "names": ["context", "players", "player", "width", "height", "aspectRatio", "parentDiv"]
+}

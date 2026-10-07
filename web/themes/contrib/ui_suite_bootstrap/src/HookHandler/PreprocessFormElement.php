@@ -114,7 +114,8 @@ class PreprocessFormElement {
     ]));
 
     // Layout: horizontal form.
-    if ($this->element->getProperty('title_display') == 'inline') {
+    // _title_display is created by Webform.
+    if ($this->element->getProperty('title_display') == 'inline' || $this->element->getProperty('_title_display') == 'inline') {
       $this->variables->addClass('row');
       $this->variables->offsetSet('inner_wrapper', TRUE);
       $label->addClass('col-form-label');

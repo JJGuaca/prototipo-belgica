@@ -17,7 +17,7 @@ use Drupal\options\Plugin\Field\FieldType\ListItemBase;
  *   label = @Translation("Image Style"),
  *   description = @Translation("This field stores an image style in the database"),
  *   default_widget = "options_select",
- *   default_formatter = "image_style_image_formatter"
+ *   default_formatter = "list_default"
  * )
  */
 class ImageStyleItem extends ListItemBase {

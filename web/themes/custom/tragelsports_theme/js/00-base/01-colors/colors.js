@@ -1,0 +1,2 @@
+Drupal.behaviors.displayColorDefinitions={attach(){function e(o){return`0${parseInt(o,10).toString(16)}`.slice(-2)}function c(o){const t=o.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);return`#${e(t[1])}${e(t[2])}${e(t[3])}`}const r=document.querySelectorAll(".cl-colors__item");r&&r.forEach(o=>{const t=window.getComputedStyle(o.querySelector(".cl-colors__swatch"),null).getPropertyValue("background-color"),n=o.querySelector(".cl-colors__definition");n.textContent=c(t)})}};
+//# sourceMappingURL=colors.js.map

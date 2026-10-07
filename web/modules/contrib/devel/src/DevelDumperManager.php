@@ -4,7 +4,6 @@ namespace Drupal\devel;
 
 use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
 use Drupal\Component\Plugin\Exception\PluginNotFoundException;
-use Drupal\Component\Render\MarkupInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\Entity\EntityInterface;
@@ -70,7 +69,7 @@ class DevelDumperManager implements DevelDumperManagerInterface {
     DevelDumperPluginManagerInterface $dumper_manager,
     EntityTypeManagerInterface $entityTypeManager,
     MessengerInterface $messenger,
-    TranslationInterface $string_translation,
+    TranslationInterface $string_translation
   ) {
     $this->config = $config_factory->get('devel.settings');
     $this->account = $account;
@@ -93,7 +92,6 @@ class DevelDumperManager implements DevelDumperManagerInterface {
     if (!$plugin_id || !$this->dumperManager->isPluginSupported($plugin_id)) {
       $plugin_id = $this->config->get('devel_dumper');
     }
-
     return $this->dumperManager->createInstance($plugin_id);
   }
 
@@ -109,16 +107,14 @@ class DevelDumperManager implements DevelDumperManagerInterface {
   /**
    * {@inheritdoc}
    */
-  public function export(mixed $input, ?string $name = NULL, ?string $plugin_id = NULL, bool $load_references = FALSE): MarkupInterface|string {
-    if (!$this->hasAccessToDevelInformation()) {
-      return '';
+  public function export($input, $name = NULL, $plugin_id = NULL, $load_references = FALSE) {
+    if ($this->hasAccessToDevelInformation()) {
+      if ($load_references && $input instanceof EntityInterface) {
+        $input = $this->entityToArrayWithReferences($input);
+      }
+      return $this->createInstance($plugin_id)->export($input, $name);
     }
-
-    if ($load_references && $input instanceof EntityInterface) {
-      $input = $this->entityToArrayWithReferences($input);
-    }
-
-    return $this->createInstance($plugin_id)->export($input, $name);
+    return NULL;
   }
 
   /**
@@ -141,7 +137,6 @@ class DevelDumperManager implements DevelDumperManagerInterface {
     if (empty($file)) {
       $file = 'temporary://drupal_debug.txt';
     }
-
     if (file_put_contents($file, $output, FILE_APPEND) === FALSE && $this->hasAccessToDevelInformation()) {
       $this->messenger->addError($this->t('Devel was unable to write to %file.', ['%file' => $file]));
       return FALSE;
@@ -157,10 +152,8 @@ class DevelDumperManager implements DevelDumperManagerInterface {
       if ($export) {
         return $dumper->export($input, $name);
       }
-
       $dumper->dump($input, $name);
     }
-
     return NULL;
   }
 
@@ -172,10 +165,8 @@ class DevelDumperManager implements DevelDumperManagerInterface {
       if ($load_references && $input instanceof EntityInterface) {
         $input = $this->entityToArrayWithReferences($input);
       }
-
       return $this->createInstance($plugin_id)->exportAsRenderable($input, $name);
     }
-
     return [];
   }
 
@@ -186,7 +177,7 @@ class DevelDumperManager implements DevelDumperManagerInterface {
    *   TRUE if the user has the permission, FALSE otherwise.
    */
   protected function hasAccessToDevelInformation(): bool {
-    return $this->account->hasPermission('access devel information');
+    return $this->account && $this->account->hasPermission('access devel information');
   }
 
   /**

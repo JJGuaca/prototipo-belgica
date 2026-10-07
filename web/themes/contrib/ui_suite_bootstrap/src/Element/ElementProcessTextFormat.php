@@ -41,6 +41,7 @@ class ElementProcessTextFormat {
       $element_object->format->guidelines->setProperty('access', FALSE);
 
       // Format (select).
+      $element_object->format->format->setProperty('is_text_format', TRUE);
       $element_object->format->format->setProperty('title_display', 'invisible');
       $element_object->format->format->addClass([
         'me-auto',

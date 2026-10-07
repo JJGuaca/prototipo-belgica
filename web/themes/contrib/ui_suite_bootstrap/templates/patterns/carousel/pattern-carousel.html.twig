@@ -37,13 +37,7 @@
   {% endif %}
 
   <div class="carousel-inner">
-    {% for slide in slides %}
-      {% if loop.first %}
-        {{ slide|add_class('carousel-item', 'active') }}
-      {% else %}
-        {{ slide|add_class('carousel-item') }}
-      {% endif %}
-    {% endfor %}
+    {{ slides }}
   </div>
 
   {% if with_controls %}

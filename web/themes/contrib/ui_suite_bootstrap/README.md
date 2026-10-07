@@ -9,7 +9,6 @@ views, blocks...).
 See the [docs](./docs) folder for more detailed documentation on:
 - [details element](./docs/Details.md)
 - [form API](./docs/Forms.md)
-- [modal](./docs/Modal.md)
 - [what is out of scope](./docs/Out-of-scope.md)
 
 
@@ -24,14 +23,21 @@ This theme requires the following modules:
 This theme requires the Bootstrap library to be placed in the `libraries`
 folder.
 
-
-### Install Bootstrap library manually
-
-You can download the library on its [GitHub](https://github.com/twbs/bootstrap)
-page.
+Optionally, this theme provides integration with
+[Bootstrap icons](https://icons.getbootstrap.com), icons needs to be placed in
+the `libraries` folder.
 
 
-### Install Bootstrap library with Composer
+### Install libraries manually
+
+You can download the Bootstrap library on its
+[GitHub](https://github.com/twbs/bootstrap) page.
+
+You can download the Bootstrap icons library on its
+[GitHub](https://github.com/twbs/icons) page.
+
+
+### Install libraries with Composer
 
 #### With Asset Packagist
 
@@ -43,7 +49,8 @@ composer.json can be like:
     "require": {
         "composer/installers": "2.*",
         "oomphinc/composer-installers-extender": "2.*",
-        "npm-asset/bootstrap": "5.3.3"
+        "npm-asset/bootstrap": "5.3.3",
+        "npm-asset/bootstrap-icons": "1.11.3"
     },
     "repositories": {
         "asset-packagist": {
@@ -71,13 +78,14 @@ This version of Bootstrap will only contain compiled CSS/JS and SASS files.
 
 #### With a package repository
 
-You can declare a custom [package repository](https://getcomposer.org/doc/05-repositories.md#package-2),
+You can declare a custom [package repositories](https://getcomposer.org/doc/05-repositories.md#package-2),
 Example:
 
 ```json
 {
     "require": {
-        "asset/bootstrap": "5.3.2",
+        "asset/bootstrap": "5.3.3",
+        "asset/bootstrap-icons": "1.11.3",
         "composer/installers": "2.*"
     },
     "repositories": {
@@ -94,6 +102,22 @@ Example:
                     "type": "zip",
                     "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6e1f75f420f68e1d52733b8e407fc7c3766c9dba",
                     "reference": "6e1f75f420f68e1d52733b8e407fc7c3766c9dba"
+                }
+            }
+        },
+        "asset-bootstrap-icons": {
+            "type": "package",
+            "package": {
+                "name": "asset/bootstrap-icons",
+                "version": "1.11.3",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "bootstrap-icons"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/twbs/icons/zipball/8d88686c03c3768a2d82ba4f20c3c4e1b100fa29",
+                    "reference": "8d88686c03c3768a2d82ba4f20c3c4e1b100fa29"
                 }
             }
         }

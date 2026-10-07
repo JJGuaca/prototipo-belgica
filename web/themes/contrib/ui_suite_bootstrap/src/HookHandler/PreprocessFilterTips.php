@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Drupal\ui_suite_bootstrap\HookHandler;
 
-use Drupal\Component\Utility\Html;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Routing\CurrentRouteMatch;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Url;
+use Drupal\filter\FilterFormatInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -57,7 +57,7 @@ class PreprocessFilterTips implements ContainerInjectionInterface {
   }
 
   /**
-   * Add button style to local actions.
+   * Get all filter format tips as tabs and tab content.
    *
    * @param array $variables
    *   The preprocessed variables.
@@ -67,8 +67,7 @@ class PreprocessFilterTips implements ContainerInjectionInterface {
     $current_format = $this->currentRouteMatch->getParameter('filter_format');
     $current_format_id = $current_format ? $current_format->id() : FALSE;
 
-    $build = [];
-    $build['tabs'] = [
+    $build = [
       '#type' => 'pattern',
       '#id' => 'nav',
       '#variant' => 'tabs',
@@ -78,16 +77,7 @@ class PreprocessFilterTips implements ContainerInjectionInterface {
         ],
       ],
       '#items' => [],
-    ];
-
-    // Create a placeholder for the panes.
-    $build['panes'] = [
-      '#type' => 'container',
-      '#attributes' => [
-        'class' => [
-          'tab-content',
-        ],
-      ],
+      '#tab_content' => [],
     ];
 
     foreach (\filter_formats($this->currentUser) as $format_id => $format) {
@@ -95,68 +85,70 @@ class PreprocessFilterTips implements ContainerInjectionInterface {
       if (!$current_format_id) {
         $current_format_id = $format_id;
       }
-      $tab_id = Html::getId('tab-' . $format_id);
-      $pane_id = Html::getId('pane-' . $format_id);
       $active = $current_format_id === $format_id;
 
-      $tab = [
-        '#type' => 'pattern',
-        '#id' => 'nav_item',
-        '#active' => $active,
-        '#toggle' => $pane_id,
-        '#link' => [
-          '#type' => 'link',
-          '#title' => $format->label(),
-          '#url' => Url::fromRoute('filter.tips', [
-            'filter_format' => $format_id,
-          ]),
-          '#attributes' => [
-            'id' => $tab_id,
-          ],
-        ],
-      ];
-      $build['tabs']['#items'][] = $tab;
-
-      // Construct the pane.
-      $tips = [];
-      // Iterate over each format's enabled filters.
-      /** @var \Drupal\filter\FilterPluginCollection $filters */
-      $filters = $format->filters();
-      foreach ($filters->getAll() as $filter) {
-        // Ignore filters that are not enabled.
-        if (!$filter->status) {
-          continue;
-        }
-
-        $tip = $filter->tips(TRUE);
-        if (isset($tip)) {
-          $tips[] = ['#markup' => $tip];
-        }
-      }
-
-      $pane = [
-        '#type' => 'container',
-        '#attributes' => [
-          'class' => [
-            'tab-pane',
-            'fade',
-            $active ? 'active' : '',
-            $active ? 'show' : '',
-          ],
-          'id' => $pane_id,
-          'role' => 'tabpanel',
-          'aria-labelledby' => $tab_id,
-          'tabindex' => 0,
-        ],
-        'list' => [
-          '#theme' => 'item_list',
-          '#items' => $tips,
-        ],
-      ];
-      $build['panes'][] = $pane;
+      $build['#items'][] = $this->getTab($format, $active);
+      $build['#tab_content'][] = $this->getPane($format);
     }
 
     $variables['tips'] = $build;
+  }
+
+  /**
+   * Get a tab.
+   *
+   * @param \Drupal\filter\FilterFormatInterface $format
+   *   The filter format.
+   * @param bool $active
+   *   If the tab should be active or not.
+   *
+   * @return array
+   *   The tab element.
+   */
+  protected function getTab(FilterFormatInterface $format, bool $active): array {
+    return [
+      'title' => $format->label(),
+      'url' => Url::fromRoute('filter.tips', [
+        'filter_format' => $format->id(),
+      ])->toString(),
+      'link_attributes' => [
+        'class' => [
+          $active ? 'active' : '',
+        ],
+      ],
+    ];
+  }
+
+  /**
+   * Get a pane.
+   *
+   * @param \Drupal\filter\FilterFormatInterface $format
+   *   The filter format.
+   *
+   * @return array
+   *   The pane element.
+   */
+  protected function getPane(FilterFormatInterface $format): array {
+    $tips = [];
+    // Iterate over each format's enabled filters.
+    /** @var \Drupal\filter\FilterPluginCollection $filters */
+    $filters = $format->filters();
+    foreach ($filters->getAll() as $filter) {
+      // Ignore filters that are not enabled.
+      if (!$filter->status) {
+        continue;
+      }
+
+      $tip = $filter->tips(TRUE);
+      if (isset($tip)) {
+        $tips[] = ['#markup' => $tip];
+      }
+    }
+
+    return [
+      '#theme' => 'item_list',
+      '#items' => $tips,
+    ];
   }
 
 }

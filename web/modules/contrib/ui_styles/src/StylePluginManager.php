@@ -123,6 +123,12 @@ class StylePluginManager extends DefaultPluginManager implements StylePluginMana
     $definitions = $definitions ?? $this->getDefinitions();
 
     \uasort($definitions, static function (StyleDefinition $item1, StyleDefinition $item2) {
+      // Sort by weight.
+      $weight = $item1->getWeight() <=> $item2->getWeight();
+      if ($weight != 0) {
+        return $weight;
+      }
+
       // Sort by category.
       $category1 = $item1->getCategory();
       if ($category1 instanceof TranslatableMarkup) {
@@ -134,12 +140,6 @@ class StylePluginManager extends DefaultPluginManager implements StylePluginMana
       }
       if ($category1 != $category2) {
         return \strnatcasecmp($category1, $category2);
-      }
-
-      // Sort by weight.
-      $weight = $item1->getWeight() <=> $item2->getWeight();
-      if ($weight != 0) {
-        return $weight;
       }
 
       // Sort by label ignoring parenthesis.
@@ -234,8 +234,11 @@ class StylePluginManager extends DefaultPluginManager implements StylePluginMana
 
   /**
    * {@inheritdoc}
+   *
+   * @SuppressWarnings(PHPMD.ErrorControlOperator)
    */
   public function alterForm(array $form, array $selected = [], string $extra = '', string $theme = ''): array {
+    @\trigger_error('StylePluginManagerInterface::alterForm() is deprecated in ui_styles:8.x-1.14 and is removed in ui_styles:2.0.0. See https://www.drupal.org/node/3500750', \E_USER_DEPRECATED);
     if (!empty($theme)) {
       $grouped_plugin_definitions = $this->getDefinitionsForTheme($theme);
     }
@@ -250,7 +253,7 @@ class StylePluginManager extends DefaultPluginManager implements StylePluginMana
     if (\count($grouped_plugin_definitions) == 1) {
       $multiple_groups = FALSE;
     }
-    $suffix = ' (' . $this->t('used') . ')';
+    $suffix = ' <sup>(<mark>' . $this->t('applied') . '</mark>)</sup>';
     $global_used = $extra;
     foreach ($grouped_plugin_definitions as $group_plugin_definitions) {
       $group_used = FALSE;
@@ -304,7 +307,7 @@ class StylePluginManager extends DefaultPluginManager implements StylePluginMana
     $form['_ui_styles_extra'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Extra classes'),
-      '#description' => $this->t('You can add many values using spaces as separators'),
+      '#description' => $this->t('You can add many values using spaces as separators.'),
       '#default_value' => $extra ?: '',
     ];
 

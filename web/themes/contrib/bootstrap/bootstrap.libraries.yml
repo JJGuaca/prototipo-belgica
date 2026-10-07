@@ -1,3 +1,9 @@
+bootstrap_pre_init:
+  js:
+    js/bootstrap-pre-init.js: {}
+  dependencies:
+    - core/jquery
+
 attributes:
   js:
     js/attributes.js: {}
@@ -128,10 +134,6 @@ drupal.tabledrag:
   js:
     js/misc/tabledrag.js: {}
 
-drupal.tableheader:
-  js:
-    js/misc/tableheader.js: {}
-
 image_widget_crop:
   js:
     js/modules/image_widget_crop/ImageWidgetCrop.js: {}
@@ -151,7 +153,6 @@ drupal.batch:
     - core/once
 
 drupal.filter:
-  version: VERSION
   js:
     js/modules/filter/filter.js: {}
   dependencies:

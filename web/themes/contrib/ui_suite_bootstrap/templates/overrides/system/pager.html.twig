@@ -35,6 +35,7 @@
 #}
 {% if items %}
   {{ pattern('pagination', {
-  'items': items,
-}) }}
+    'items': preprocessed_items,
+    'attributes': attributes.addClass('js-pager__items'),
+  }) }}
 {% endif %}

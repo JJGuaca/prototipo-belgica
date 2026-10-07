@@ -20,7 +20,7 @@
  */
 #}
 {{ pattern('navbar_nav', {
+  'variant': 'default',
   'items': preprocessed_items,
   'attributes': attributes.addClass(classes ?: ['menu', 'menu--' ~ menu_name|clean_class]),
-  'variant': 'default'
 }) }}

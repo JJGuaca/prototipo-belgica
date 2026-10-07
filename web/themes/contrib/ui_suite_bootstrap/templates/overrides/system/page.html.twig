@@ -45,18 +45,18 @@
  * @ingroup themeable
  */
 #}
-{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
     <div class="{{ container }} bg-light">
       {{ pattern('navbar', {
+        variant: 'expand_lg',
         placement: 'default',
         toggler_position: 'end',
         toggle_action: 'collapse',
         navigation: page.navigation,
         navigation_collapsible: page.navigation_collapsible,
-      }, 'expand_lg') }}
+      }) }}
     </div>
   {% endblock %}
 {% endif %}

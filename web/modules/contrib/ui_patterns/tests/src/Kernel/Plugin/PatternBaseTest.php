@@ -34,8 +34,8 @@ class PatternBaseTest extends UiPatternsTestBase {
    * @return array
    *   A set of dump data for testing.
    */
-  public function hookLibraryInfoBuildDataProvider() {
-    return $this->getFixtureContent('libraries.yml');
+  public static function hookLibraryInfoBuildDataProvider() {
+    return static::getFixtureContent('libraries.yml');
   }
 
   /**
@@ -50,13 +50,16 @@ class PatternBaseTest extends UiPatternsTestBase {
    *   Mock object.
    */
   protected function getUiPatternBaseMock(array $plugin_definition = [], array $methods = []) {
-    return $this->getMockForAbstractClass(PatternBase::class, [
-      [],
-      'plugin_id',
-      $plugin_definition,
-      \Drupal::getContainer()->getParameter('app.root'),
-      \Drupal::service('module_handler'),
-    ], '', TRUE, TRUE, TRUE, $methods);
+    return $this->getMockBuilder(PatternBase::class)
+      ->setConstructorArgs([
+        [],
+        'plugin_id',
+        $plugin_definition,
+        \Drupal::getContainer()->getParameter('app.root'),
+        \Drupal::service('module_handler'),
+      ])
+      ->onlyMethods($methods)
+      ->getMock();
   }
 
 }

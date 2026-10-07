@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
+    - field.field.node.article.field_content
     - node.type.article
   module:
     - field_layout
@@ -21,10 +21,10 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
-  body:
+  field_content:
     type: text_default
     weight: 0
-    region: body
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }

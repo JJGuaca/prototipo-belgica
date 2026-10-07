@@ -2,7 +2,6 @@
 
 namespace Drupal\devel_dumper_test\Plugin\Devel\Dumper;
 
-use Drupal\Component\Render\MarkupInterface;
 use Drupal\devel\DevelDumperBase;
 
 /**
@@ -27,9 +26,8 @@ class NotAvailableTestDumper extends DevelDumperBase {
   /**
    * {@inheritdoc}
    */
-  public function export(mixed $input, ?string $name = NULL): MarkupInterface|string {
+  public function export($input, $name = NULL) {
     $input = '<pre>' . $input . '</pre>';
-
     return $this->setSafeMarkup($input);
   }
 

@@ -71,3 +71,8 @@ Responsive variations have not been added in the styles.
 
 [Object fit](https://getbootstrap.com/docs/5.3/utilities/object-fit/):
 Responsive variations have not been added in the styles.
+
+#### Spacing
+
+[Spacing](https://getbootstrap.com/docs/5.3/utilities/spacing/):
+Responsive variations have not been added in the styles.

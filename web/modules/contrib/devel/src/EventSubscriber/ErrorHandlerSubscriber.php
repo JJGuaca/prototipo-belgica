@@ -34,11 +34,9 @@ class ErrorHandlerSubscriber implements EventSubscriberInterface {
    *   The event to process.
    */
   public function registerErrorHandler(RequestEvent $event = NULL): void {
-    if (!$this->account->hasPermission('access devel information')) {
-      return;
+    if ($this->account && $this->account->hasPermission('access devel information')) {
+      devel_set_handler(devel_get_handlers());
     }
-
-    devel_set_handler(devel_get_handlers());
   }
 
   /**

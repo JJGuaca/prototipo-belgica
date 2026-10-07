@@ -1,6 +1,6 @@
 card_layout:
-  label: "Card Layout"
-  description: "In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, these layout options are not yet responsive."
+  label: "Card Layout (deprecated)"
+  description: "Use the Card group pattern instead."
   links:
     - 'https://getbootstrap.com/docs/5.3/components/card/#card-layout'
   category: "Card"

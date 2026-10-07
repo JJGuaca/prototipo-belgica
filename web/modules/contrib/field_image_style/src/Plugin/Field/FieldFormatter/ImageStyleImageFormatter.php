@@ -33,15 +33,20 @@ class ImageStyleImageFormatter extends ImageFormatter {
    * {@inheritdoc}
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
-    $options = array();
+    $options = [];
+    $entity_type = $form['#entity_type'];
+    $bundle = $form['#bundle'];
+    $fields = $form['#fields'];
 
     // @todo: find a way to get all image_style fields of the current entity bundle
-    $entityfieldmanager = \Drupal::service('entity_field.manager');
-    $fields_image_style = $entityfieldmanager->getFieldMapByFieldType('image_style');
-    $fields_image_style = array_intersect_key($fields_image_style[$form['#entity_type']], array_flip($form['#fields']));
-    foreach($fields_image_style as $field_name => $info) {
-      if(in_array($form['#bundle'], $info['bundles'])) {
-        $options[$field_name] = $field_name;
+    $entityFieldManager = \Drupal::service('entity_field.manager');
+    $fields_image_style_map = $entityFieldManager->getFieldMapByFieldType('image_style');
+    if (isset($fields_image_style_map[$entity_type])) {
+      $fields_matched = array_intersect_key($fields_image_style_map[$entity_type], array_flip($fields));
+      foreach ($fields_matched as $field_name => $info) {
+        if (in_array($bundle, $info['bundles'])) {
+          $options[$field_name] = $field_name;
+        }
       }
     }
 
@@ -98,7 +103,7 @@ class ImageStyleImageFormatter extends ImageFormatter {
    * {@inheritdoc}
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
-    $elements = array();
+    $elements = [];
     $files = $this->getEntitiesToView($items, $langcode);
 
     // Early opt-out if the field is empty.

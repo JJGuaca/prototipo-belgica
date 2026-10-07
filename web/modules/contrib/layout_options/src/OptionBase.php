@@ -201,7 +201,7 @@ abstract class OptionBase extends PluginBase implements OptionInterface {
    *
    * @param string[] $regions
    *   The regions being built.
-   * @param string[] $build
+   * @param array $build
    *   The render array.
    * @param string $region
    *   The region being processed.

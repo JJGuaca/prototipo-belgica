@@ -216,121 +216,121 @@ class StylePluginManagerTest extends UnitTestCase {
    */
   public function testGetSortedDefinitions(): void {
     $this->stylePluginManager->setStyles([
-      'id_z1z2' => [
-        'category' => 'Z',
+      'id_1zz2' => [
         'weight' => 1,
+        'category' => 'Z',
         'label' => '(Z)',
-        'id' => 'id_z1z2',
+        'id' => 'id_1zz2',
       ],
-      'id_z1z1' => [
-        'category' => 'Z',
+      'id_1zz1' => [
         'weight' => 1,
+        'category' => 'Z',
         'label' => 'Z',
-        'id' => 'id_z1z1',
+        'id' => 'id_1zz1',
       ],
-      'id_z1a2' => [
-        'category' => 'Z',
+      'id_1za2' => [
         'weight' => 1,
+        'category' => 'Z',
         'label' => '(A)',
-        'id' => 'id_z1a2',
+        'id' => 'id_1za2',
       ],
-      'id_z1a1' => [
-        'category' => 'Z',
+      'id_1za1' => [
         'weight' => 1,
-        'label' => 'A',
-        'id' => 'id_z1a1',
-      ],
-      'id_z0z2' => [
         'category' => 'Z',
-        'weight' => 0,
+        'label' => 'A',
+        'id' => 'id_1za1',
+      ],
+      'id_1az2' => [
+        'weight' => 1,
+        'category' => 'A',
         'label' => '(Z)',
-        'id' => 'id_z0z2',
+        'id' => 'id_1az2',
       ],
-      'id_z0z1' => [
-        'category' => 'Z',
-        'weight' => 0,
-        'label' => 'Z',
-        'id' => 'id_z0z1',
-      ],
-      'id_z0a2' => [
-        'category' => 'Z',
-        'weight' => 0,
-        'label' => '(A)',
-        'id' => 'id_z0a2',
-      ],
-      'id_z0a1' => [
-        'category' => 'Z',
-        'weight' => 0,
-        'label' => 'A',
-        'id' => 'id_z0a1',
-      ],
-      'id_a1z2' => [
-        'category' => 'A',
+      'id_1az1' => [
         'weight' => 1,
+        'category' => 'A',
+        'label' => 'Z',
+        'id' => 'id_1az1',
+      ],
+      'id_1aa2' => [
+        'weight' => 1,
+        'category' => 'A',
+        'label' => '(A)',
+        'id' => 'id_1aa2',
+      ],
+      'id_1aa1' => [
+        'weight' => 1,
+        'category' => 'A',
+        'label' => 'A',
+        'id' => 'id_1aa1',
+      ],
+      'id_0zz2' => [
+        'weight' => 0,
+        'category' => 'Z',
         'label' => '(Z)',
-        'id' => 'id_a1z2',
+        'id' => 'id_0zz2',
       ],
-      'id_a1z1' => [
-        'category' => 'A',
-        'weight' => 1,
-        'label' => 'Z',
-        'id' => 'id_a1z1',
-      ],
-      'id_a1a2' => [
-        'category' => 'A',
-        'weight' => 1,
-        'label' => '(A)',
-        'id' => 'id_a1a2',
-      ],
-      'id_a1a1' => [
-        'category' => 'A',
-        'weight' => 1,
-        'label' => 'A',
-        'id' => 'id_a1a1',
-      ],
-      'id_a0z2' => [
-        'category' => 'A',
+      'id_0zz1' => [
         'weight' => 0,
+        'category' => 'Z',
+        'label' => 'Z',
+        'id' => 'id_0zz1',
+      ],
+      'id_0za2' => [
+        'weight' => 0,
+        'category' => 'Z',
+        'label' => '(A)',
+        'id' => 'id_0za2',
+      ],
+      'id_0za1' => [
+        'weight' => 0,
+        'category' => 'Z',
+        'label' => 'A',
+        'id' => 'id_0za1',
+      ],
+      'id_0az2' => [
+        'weight' => 0,
+        'category' => 'A',
         'label' => '(Z)',
-        'id' => 'id_a0z2',
+        'id' => 'id_0az2',
       ],
-      'id_a0z1' => [
-        'category' => 'A',
+      'id_0az1' => [
         'weight' => 0,
+        'category' => 'A',
         'label' => 'Z',
-        'id' => 'id_a0z1',
+        'id' => 'id_0az1',
       ],
-      'id_a0a2' => [
-        'category' => 'A',
+      'id_0aa2' => [
         'weight' => 0,
+        'category' => 'A',
         'label' => '(A)',
-        'id' => 'id_a0a2',
+        'id' => 'id_0aa2',
       ],
-      'id_a0a1' => [
-        'category' => 'A',
+      'id_0aa1' => [
         'weight' => 0,
+        'category' => 'A',
         'label' => 'A',
-        'id' => 'id_a0a1',
+        'id' => 'id_0aa1',
       ],
     ]);
 
     $expected = [
-      'id_a0a1',
-      'id_a0a2',
-      'id_a0z1',
-      'id_a0z2',
-      'id_a1a1',
-      'id_a1a2',
-      'id_a1z1',
-      'id_a1z2',
-      'id_z0a1',
-      'id_z0a2',
-      'id_z0z1',
-      'id_z0z2',
-      'id_z1a1',
-      'id_z1a2',
-      'id_z1z1',
-      'id_z1z2',
+      'id_0aa1',
+      'id_0aa2',
+      'id_0az1',
+      'id_0az2',
+      'id_0za1',
+      'id_0za2',
+      'id_0zz1',
+      'id_0zz2',
+      'id_1aa1',
+      'id_1aa2',
+      'id_1az1',
+      'id_1az2',
+      'id_1za1',
+      'id_1za2',
+      'id_1zz1',
+      'id_1zz2',
     ];
 
     $sorted_definitions = $this->stylePluginManager->getSortedDefinitions();
@@ -362,7 +362,7 @@ class StylePluginManagerTest extends UnitTestCase {
         'weight' => 0,
       ],
       'cat_2_0_a' => [
-        'id' => 'cat_1_0_a',
+        'id' => 'cat_2_0_a',
         'category' => 'Cat 2',
         'label' => 'A',
         'weight' => 0,
@@ -403,13 +403,13 @@ class StylePluginManagerTest extends UnitTestCase {
    * @covers ::alterForm
    */
   public function testAlterForm(): void {
-    $suffix = ' (used)';
     $form = [
       '#type' => 'details',
       '#title' => 'Main',
       '#open' => FALSE,
     ];
 
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [
       'test1' => 'opt2',
       'test2' => 'opt3',
@@ -420,12 +420,13 @@ class StylePluginManagerTest extends UnitTestCase {
     $this->assertSame('opt2', $altered_form['ui_styles_test1']['#default_value']);
     $this->assertSame('opt3', $altered_form['ui_styles_test2']['#default_value']);
     $this->assertSame($this->styles[0]['options'], $altered_form['ui_styles_test1']['#options']);
-    $this->assertSame($this->styles[0]['label'] . $suffix, $altered_form['ui_styles_test1']['#title']);
+    $this->assertSame($this->styles[0]['label'] . StylesElementTest::APPLIED_SUFFIX, $altered_form['ui_styles_test1']['#title']);
     $this->assertSame($this->styles[1]['options'], $altered_form['ui_styles_test2']['#options']);
-    $this->assertSame($this->styles[1]['label'] . $suffix, $altered_form['ui_styles_test2']['#title']);
-    $this->assertSame('Main' . $suffix, $altered_form['#title']);
+    $this->assertSame($this->styles[1]['label'] . StylesElementTest::APPLIED_SUFFIX, $altered_form['ui_styles_test2']['#title']);
+    $this->assertSame('Main' . StylesElementTest::APPLIED_SUFFIX, $altered_form['#title']);
 
     // Test that if no value is used suffix is not set.
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [], '');
     $this->assertArrayHasKey('ui_styles_test1', $altered_form);
     $this->assertArrayHasKey('ui_styles_test2', $altered_form);
@@ -436,12 +437,11 @@ class StylePluginManagerTest extends UnitTestCase {
   }
 
   /**
-   * Test if used suffix is correctly placed.
+   * Test if applied suffix is correctly placed.
    *
    * @covers ::alterForm
    */
-  public function testUsedSuffix(): void {
-    $suffix = ' (used)';
+  public function testAppliedSuffix(): void {
     $form = [
       '#type' => 'details',
       '#title' => 'Main',
@@ -465,6 +465,7 @@ class StylePluginManagerTest extends UnitTestCase {
     $this->stylePluginManager->setStyles($ungrouped_styles);
 
     // No values.
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [
       'test1' => '',
       'test2' => '',
@@ -476,35 +477,38 @@ class StylePluginManagerTest extends UnitTestCase {
     $this->assertSame($this->styles[1]['label'], $altered_form['ui_styles_test2']['#title']);
 
     // Value on test1.
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [
       'test1' => 'opt1',
       'test2' => '',
     ], '');
     $this->assertArrayHasKey('ui_styles_test1', $altered_form);
     $this->assertArrayHasKey('ui_styles_test2', $altered_form);
-    $this->assertSame('Main' . $suffix, $altered_form['#title']);
-    $this->assertSame($this->styles[0]['label'] . $suffix, $altered_form['ui_styles_test1']['#title']);
+    $this->assertSame('Main' . StylesElementTest::APPLIED_SUFFIX, $altered_form['#title']);
+    $this->assertSame($this->styles[0]['label'] . StylesElementTest::APPLIED_SUFFIX, $altered_form['ui_styles_test1']['#title']);
     $this->assertSame($this->styles[1]['label'], $altered_form['ui_styles_test2']['#title']);
 
     // Value on test2.
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [
       'test1' => '',
       'test2' => 'opt1',
     ], '');
     $this->assertArrayHasKey('ui_styles_test1', $altered_form);
     $this->assertArrayHasKey('ui_styles_test2', $altered_form);
-    $this->assertSame('Main' . $suffix, $altered_form['#title']);
+    $this->assertSame('Main' . StylesElementTest::APPLIED_SUFFIX, $altered_form['#title']);
     $this->assertSame($this->styles[0]['label'], $altered_form['ui_styles_test1']['#title']);
-    $this->assertSame($this->styles[1]['label'] . $suffix, $altered_form['ui_styles_test2']['#title']);
+    $this->assertSame($this->styles[1]['label'] . StylesElementTest::APPLIED_SUFFIX, $altered_form['ui_styles_test2']['#title']);
 
     // Value on extra.
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [
       'test1' => '',
       'test2' => '',
     ], 'extra');
     $this->assertArrayHasKey('ui_styles_test1', $altered_form);
     $this->assertArrayHasKey('ui_styles_test2', $altered_form);
-    $this->assertSame('Main' . $suffix, $altered_form['#title']);
+    $this->assertSame('Main' . StylesElementTest::APPLIED_SUFFIX, $altered_form['#title']);
     $this->assertSame($this->styles[0]['label'], $altered_form['ui_styles_test1']['#title']);
     $this->assertSame($this->styles[1]['label'], $altered_form['ui_styles_test2']['#title']);
 
@@ -525,6 +529,7 @@ class StylePluginManagerTest extends UnitTestCase {
     $this->stylePluginManager->setStyles($grouped_styles);
 
     // No values.
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [
       'test1' => '',
       'test2' => '',
@@ -540,6 +545,7 @@ class StylePluginManagerTest extends UnitTestCase {
     $this->assertSame($this->styles[1]['label'], $altered_form['main_2']['ui_styles_test2']['#title']);
 
     // Value on test1.
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [
       'test1' => 'opt1',
       'test2' => '',
@@ -548,13 +554,14 @@ class StylePluginManagerTest extends UnitTestCase {
     $this->assertArrayHasKey('main_2', $altered_form);
     $this->assertArrayHasKey('ui_styles_test1', $altered_form['main']);
     $this->assertArrayHasKey('ui_styles_test2', $altered_form['main_2']);
-    $this->assertSame('Main' . $suffix, $altered_form['#title']);
-    $this->assertSame('Main' . $suffix, $altered_form['main']['#title']);
+    $this->assertSame('Main' . StylesElementTest::APPLIED_SUFFIX, $altered_form['#title']);
+    $this->assertSame('Main' . StylesElementTest::APPLIED_SUFFIX, $altered_form['main']['#title']);
     $this->assertSame('Main 2', $altered_form['main_2']['#title']);
-    $this->assertSame($this->styles[0]['label'] . $suffix, $altered_form['main']['ui_styles_test1']['#title']);
+    $this->assertSame($this->styles[0]['label'] . StylesElementTest::APPLIED_SUFFIX, $altered_form['main']['ui_styles_test1']['#title']);
     $this->assertSame($this->styles[1]['label'], $altered_form['main_2']['ui_styles_test2']['#title']);
 
     // Value on test2.
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [
       'test1' => '',
       'test2' => 'opt2',
@@ -563,13 +570,14 @@ class StylePluginManagerTest extends UnitTestCase {
     $this->assertArrayHasKey('main_2', $altered_form);
     $this->assertArrayHasKey('ui_styles_test1', $altered_form['main']);
     $this->assertArrayHasKey('ui_styles_test2', $altered_form['main_2']);
-    $this->assertSame('Main' . $suffix, $altered_form['#title']);
+    $this->assertSame('Main' . StylesElementTest::APPLIED_SUFFIX, $altered_form['#title']);
     $this->assertSame('Main', $altered_form['main']['#title']);
-    $this->assertSame('Main 2' . $suffix, $altered_form['main_2']['#title']);
+    $this->assertSame('Main 2' . StylesElementTest::APPLIED_SUFFIX, $altered_form['main_2']['#title']);
     $this->assertSame($this->styles[0]['label'], $altered_form['main']['ui_styles_test1']['#title']);
-    $this->assertSame($this->styles[1]['label'] . $suffix, $altered_form['main_2']['ui_styles_test2']['#title']);
+    $this->assertSame($this->styles[1]['label'] . StylesElementTest::APPLIED_SUFFIX, $altered_form['main_2']['ui_styles_test2']['#title']);
 
     // Value on extra.
+    // @phpstan-ignore-next-line
     $altered_form = $this->stylePluginManager->alterForm($form, [
       'test1' => '',
       'test2' => '',
@@ -578,7 +586,7 @@ class StylePluginManagerTest extends UnitTestCase {
     $this->assertArrayHasKey('main_2', $altered_form);
     $this->assertArrayHasKey('ui_styles_test1', $altered_form['main']);
     $this->assertArrayHasKey('ui_styles_test2', $altered_form['main_2']);
-    $this->assertSame('Main' . $suffix, $altered_form['#title']);
+    $this->assertSame('Main' . StylesElementTest::APPLIED_SUFFIX, $altered_form['#title']);
     $this->assertSame('Main', $altered_form['main']['#title']);
     $this->assertSame('Main 2', $altered_form['main_2']['#title']);
     $this->assertSame($this->styles[0]['label'], $altered_form['main']['ui_styles_test1']['#title']);

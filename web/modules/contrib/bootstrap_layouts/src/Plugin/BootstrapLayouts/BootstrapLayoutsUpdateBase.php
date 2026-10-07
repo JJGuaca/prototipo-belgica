@@ -5,12 +5,9 @@ namespace Drupal\bootstrap_layouts\Plugin\BootstrapLayouts;
 use Drupal\bootstrap_layouts\BootstrapLayout;
 use Drupal\bootstrap_layouts\BootstrapLayoutsManager;
 use Drupal\Core\Plugin\PluginBase;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class BootstrapLayoutsUpdateBase extends PluginBase implements BootstrapLayoutsUpdateInterface {
-
-  use ContainerAwareTrait;
 
   /**
    * The path to the provider.
@@ -22,7 +19,7 @@ class BootstrapLayoutsUpdateBase extends PluginBase implements BootstrapLayoutsU
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, ContainerInterface $container = NULL) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, ?ContainerInterface $container = NULL) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     if (!isset($container)) {
       $container = \Drupal::getContainer();

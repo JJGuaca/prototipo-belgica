@@ -45,7 +45,6 @@ class EntityView implements ContainerInjectionInterface {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container): static {
-    // @phpstan-ignore-next-line
     return new static(
       $container->get('plugin.manager.ui_styles')
     );
@@ -82,8 +81,8 @@ class EntityView implements ContainerInjectionInterface {
       return;
     }
 
-    $selected = $settings['selected'];
-    $extra = $settings['extra'];
+    $selected = $settings['selected'] ?? [];
+    $extra = $settings['extra'] ?? '';
     $extra_array = \explode(' ', $extra);
     $styles = \array_merge($selected, $extra_array);
     $styles = \array_unique(\array_filter($styles));

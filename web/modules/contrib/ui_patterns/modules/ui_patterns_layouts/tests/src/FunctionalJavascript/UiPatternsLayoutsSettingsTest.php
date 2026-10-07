@@ -53,7 +53,7 @@ class UiPatternsLayoutsSettingsTest extends WebDriverTestBase {
     $this->drupalLogin($user);
 
     // Visit Article's default display settings page.
-    $this->drupalGet('/admin/structure/types/manage/article/display');
+    $this->drupalGet('/admin/structure/types/manage/article/display/default');
 
     // Click on Pattern settings.
     $page->pressButton('Layout settings');

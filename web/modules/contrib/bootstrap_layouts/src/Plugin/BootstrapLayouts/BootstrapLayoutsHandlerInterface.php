@@ -6,12 +6,11 @@ use Drupal\bootstrap_layouts\BootstrapLayout;
 use Drupal\Component\Plugin\DerivativeInspectionInterface;
 use Drupal\Component\Plugin\PluginInspectionInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
 /**
  * Interface BootstrapLayoutsHandlerInterface
  */
-interface BootstrapLayoutsHandlerInterface extends ContainerAwareInterface, ContainerFactoryPluginInterface, DerivativeInspectionInterface, PluginInspectionInterface {
+interface BootstrapLayoutsHandlerInterface extends ContainerFactoryPluginInterface, DerivativeInspectionInterface, PluginInspectionInterface {
 
   /**
    * Retrieves the human readable label for the plugin.
@@ -42,7 +41,7 @@ interface BootstrapLayoutsHandlerInterface extends ContainerAwareInterface, Cont
    * @return \Drupal\bootstrap_layouts\BootstrapLayout[]
    *   An associative array of BootstrapLayout instances, keyed by identifier.
    */
-  public function loadInstances(array $ids = NULL);
+  public function loadInstances(?array $ids = NULL);
 
   /**
    * Saves a specific layout instance.

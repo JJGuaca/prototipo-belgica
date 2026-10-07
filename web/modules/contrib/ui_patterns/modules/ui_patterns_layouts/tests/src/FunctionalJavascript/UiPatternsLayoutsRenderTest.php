@@ -54,7 +54,7 @@ class UiPatternsLayoutsRenderTest extends WebDriverTestBase {
 
     $node = $this->drupalCreateNode([
       'title' => 'Test article',
-      'body' => 'Test body',
+      'field_content' => 'Test content',
       'type' => 'article',
     ]);
 
@@ -86,7 +86,7 @@ class UiPatternsLayoutsRenderTest extends WebDriverTestBase {
     }
 
     // Test content is rendered in the pattern.
-    $assert_session->elementContains('css', 'article', 'Test body');
+    $assert_session->elementContains('css', 'article', 'Test content');
   }
 
 }

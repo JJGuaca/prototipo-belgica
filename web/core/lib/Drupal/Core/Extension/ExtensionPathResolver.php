@@ -81,20 +81,8 @@ class ExtensionPathResolver {
    * @throws \Drupal\Core\Extension\Exception\UnknownExtensionException
    *   If the extension is unknown.
    */
-  // public function getPath(string $type, string $name): string {
-  //   return dirname($this->getPathname($type, $name));
-  // }
   public function getPath(string $type, string $name): string {
-    try {
-        $pathname = $this->getPathname($type, $name);
-        if ($pathname === null || !is_string($pathname)) {
-            throw new UnknownExtensionException('Invalid path returned for type "' . $type . '" and name "' . $name . '".');
-        }
-        return dirname($pathname);
-    } catch (UnknownExtensionException $e) {
-        // Handle the exception, e.g., log an error or return a default value
-        throw new \Exception('Failed to get path: ' . $e->getMessage());
-    }
-}
+    return dirname($this->getPathname($type, $name));
+  }
 
 }

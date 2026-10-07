@@ -77,7 +77,7 @@ class MediaLibrary extends WebformElementBase {
       '#title' => $this->t('Media types'),
       '#description' => $this->t('Select which media types are selectable.'),
       '#required' => TRUE,
-      '#options' => array_map(function($bundle) {
+      '#options' => array_map(function ($bundle) {
         return $bundle['label'];
       }, $this->entityTypeBundleInfo->getBundleInfo('media')),
     ];
@@ -88,7 +88,7 @@ class MediaLibrary extends WebformElementBase {
   /**
    * {@inheritdoc}
    */
-  public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL) {
+  public function prepare(array &$element, ?WebformSubmissionInterface $webform_submission = NULL) {
     parent::prepare($element, $webform_submission);
 
     $element['#allowed_bundles'] = $this->getMediaTypes($element);
@@ -130,7 +130,7 @@ class MediaLibrary extends WebformElementBase {
   /**
    * {@inheritdoc}
    */
-  protected function prepareElementValidateCallbacks(array &$element, WebformSubmissionInterface $webform_submission = NULL) {
+  protected function prepareElementValidateCallbacks(array &$element, ?WebformSubmissionInterface $webform_submission = NULL) {
     parent::prepareElementValidateCallbacks($element, $webform_submission);
 
     $element['#element_validate'][] = [get_class($this), 'validateMediaLibrary'];

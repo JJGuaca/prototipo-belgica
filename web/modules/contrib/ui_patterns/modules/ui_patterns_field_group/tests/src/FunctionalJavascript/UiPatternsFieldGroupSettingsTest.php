@@ -79,7 +79,7 @@ class UiPatternsFieldGroupSettingsTest extends WebDriverTestBase {
     $this->drupalLogin($user);
 
     // Visit Article's default view mode page.
-    $this->drupalGet('/admin/structure/types/manage/article/display');
+    $this->drupalGet('/admin/structure/types/manage/article/display/default');
 
     // Click on field group settings button.
     $page->pressButton('group_pattern_group_group_settings_edit');
@@ -88,7 +88,6 @@ class UiPatternsFieldGroupSettingsTest extends WebDriverTestBase {
     // Choose variant.
     $page->selectFieldOption('Variant', 'Second');
     $page->selectFieldOption('Destination for Text', 'Field 2');
-    $assert_session->assertWaitOnAjaxRequest();
 
     // Submit field group settings.
     $page->pressButton('Update');

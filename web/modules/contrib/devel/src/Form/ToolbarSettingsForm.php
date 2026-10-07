@@ -2,10 +2,12 @@
 
 namespace Drupal\devel\Form;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -19,14 +21,34 @@ class ToolbarSettingsForm extends ConfigFormBase {
   protected MenuLinkTreeInterface $menuLinkTree;
 
   /**
+   * ToolbarSettingsForm constructor.
+   *
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   *   The config factory.
+   * @param \Drupal\Core\Menu\MenuLinkTreeInterface $menu_link_tree
+   *   The menu link tree service.
+   * @param \Drupal\Core\StringTranslation\TranslationInterface $string_translation
+   *   The translation manager.
+   */
+  public function __construct(
+    ConfigFactoryInterface $config_factory,
+    MenuLinkTreeInterface $menu_link_tree,
+    TranslationInterface $string_translation
+  ) {
+    parent::__construct($config_factory);
+    $this->menuLinkTree = $menu_link_tree;
+    $this->stringTranslation = $string_translation;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container): static {
-    $instance = parent::create($container);
-    $instance->menuLinkTree = $container->get('menu.link_tree');
-    $instance->stringTranslation = $container->get('string_translation');
-
-    return $instance;
+    return new static(
+      $container->get('config.factory'),
+      $container->get('menu.link_tree'),
+      $container->get('string_translation'),
+    );
   }
 
   /**

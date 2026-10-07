@@ -40,7 +40,7 @@ class UiPatternsManager extends DefaultPluginManager implements UiPatternsManage
     \Traversable $namespaces,
     CacheBackendInterface $cache_backend,
     ModuleHandlerInterface $module_handler,
-    ThemeHandlerInterface $theme_handler
+    ThemeHandlerInterface $theme_handler,
   ) {
     parent::__construct('Plugin/UiPatterns/Pattern', $namespaces, $module_handler, 'Drupal\ui_patterns\Plugin\PatternInterface', 'Drupal\ui_patterns\Annotation\UiPattern');
     $this->setCacheBackend($cache_backend, 'ui_patterns', ['ui_patterns']);
@@ -98,6 +98,12 @@ class UiPatternsManager extends DefaultPluginManager implements UiPatternsManage
     $definitions = $definitions ?? $this->getDefinitions();
 
     \uasort($definitions, static function (PatternDefinition $item1, PatternDefinition $item2) {
+      // Sort by weight.
+      $weight = $item1->getWeight() <=> $item2->getWeight();
+      if ($weight != 0) {
+        return $weight;
+      }
+
       // Sort by category.
       $category1 = $item1->getCategory();
       if ($category1 instanceof TranslatableMarkup) {
@@ -109,12 +115,6 @@ class UiPatternsManager extends DefaultPluginManager implements UiPatternsManage
       }
       if ($category1 != $category2) {
         return \strnatcasecmp($category1, $category2);
-      }
-
-      // Sort by weight.
-      $weight = $item1->getWeight() <=> $item2->getWeight();
-      if ($weight != 0) {
-        return $weight;
       }
 
       // Sort by label ignoring parenthesis.

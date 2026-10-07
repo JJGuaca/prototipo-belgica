@@ -8,7 +8,7 @@
   {% for item in items %}
     {% if item.url %}
     <li class="page-item">
-      {% set item_attributes = item.attributes|default(create_attribute()) %}
+      {% set item_attributes = create_attribute(item.attributes|default({})) %}
       <a{{ item_attributes.addClass('page-link').setAttribute('href', item.url) }}>
         {% if item_attributes.hasAttribute('aria-label') %}
           <span aria-hidden="true">{{ item.title }}</span>

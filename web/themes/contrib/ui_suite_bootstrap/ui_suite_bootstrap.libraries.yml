@@ -35,22 +35,6 @@ drupal.checkbox:
   dependencies:
     - core/drupal
 
-drupal.dialog:
-  js:
-    assets/js/misc/dialog/dialog.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupalSettings
-
-drupal.dialog.ajax:
-  js:
-    assets/js/misc/dialog/dialog.ajax.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupal.ajax
-
 drupal.dialog.off_canvas:
   css:
     component:

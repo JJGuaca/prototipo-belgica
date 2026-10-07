@@ -16,8 +16,7 @@ class PreprocessPage {
    *   The preprocessed variables.
    */
   public function preprocess(array &$variables): void {
-    // @todo Will be moved to a future UI Skins feature.
-    $variables['container'] = 'container';
+    $variables['container'] = \theme_get_setting('container') ?? 'container';
   }
 
 }

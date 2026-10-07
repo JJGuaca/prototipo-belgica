@@ -55,7 +55,8 @@ function menusFooter(cadena){
     togleActiveMenuFooter(region, cadena)
 }
 function togleActiveMenuFooter(region, cadena){
-    let item = "."+region+" .item-link";
+    let regionClass = region.trim();
+    let item = "." + regionClass + " .item-link";
     let items = document.querySelectorAll(item)
     for(let i=0; i< items.length;i++){
         if(items[i].children[0].attributes[0].value == cadena){

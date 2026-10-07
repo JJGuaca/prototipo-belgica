@@ -42,7 +42,7 @@ bs_tertiary_color:
     "[data-bs-theme=\"dark\"]": "#adb5bd80"
   weight: 5
 bs_tertiary_bg:
-  category: "COlors"
+  category: "Colors"
   type: "color"
   label: "Background color tertiary"
   default_values:
